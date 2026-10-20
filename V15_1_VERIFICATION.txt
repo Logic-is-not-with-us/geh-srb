@@ -1,0 +1,9 @@
+V15.1 GitHub preview verification, 2026-10-20
+Original isolated V15 CSS SHA-256 verified identical.
+Four language dashboard HTML pages load original V15 CSS and V15 JS.
+Patched missing localized source-link labels (undefined).
+Node syntax checks: 4 PASS.
+Node offline transformation fixture PASS.
+Node GitHub Pages build PASS; clean dist contains no Python files.
+External API and actual GitHub deployment: NOT VERIFIED.
+GitHub Actions must run and show per-source records before declaring live-data success.

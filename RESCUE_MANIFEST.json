@@ -1,0 +1,26 @@
+{
+  "assets/js/energy-console-v15.js": {
+    "sha256": "f4097d855c6ec1b7bc99ebf78efe1c852dfc778907ec398b02891f3eb23549aa",
+    "bytes": 22793
+  },
+  "assets/css/energy-console-v15.css": {
+    "sha256": "b8528984274ec36e0a41a82afcf6dca1cdd54d831021f5a0bd9039fd2ccbf0a4",
+    "bytes": 19415
+  },
+  ".github/workflows/pages-energy.yml": {
+    "sha256": "42484182fb43d390d932d07add9792a4e6c3693fac0e6c0d9ee3fd1fcedf49f0",
+    "bytes": 1229
+  },
+  "scripts/fetch-energy.mjs": {
+    "sha256": "bd54638e5026634a575fd06dcef11362d9029ca69b9c3dad0017b84a9c7e2060",
+    "bytes": 7037
+  },
+  "scripts/build-pages.mjs": {
+    "sha256": "32dcebde3e24d46cad5fd182587e833cd17075c98e4340c26a93cc067565072e",
+    "bytes": 857
+  },
+  "sr-lat/energetski-monitor.html": {
+    "sha256": "627a20e5a9ff931a15d339bce9901f181a28983cc4115e8fd486caa2dffe60cf",
+    "bytes": 10545
+  }
+}

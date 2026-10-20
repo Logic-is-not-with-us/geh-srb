@@ -1,0 +1,10 @@
+/* V15 consolidated site-wide header fix. Retain stable header height while scrolling. */
+.header,.header.shrink{height:90px!important;min-height:90px!important;max-height:90px!important;transition:box-shadow .25s ease!important;overflow:visible!important;align-items:center!important;z-index:500!important;background:#fff!important;padding-block:0!important}
+.header .brand{align-self:center!important;max-height:80px!important;flex:0 0 clamp(175px,14vw,260px)!important;width:clamp(175px,14vw,260px)!important}
+.header .brand img{display:block!important;width:100%!important;height:auto!important;max-height:76px!important;object-fit:contain!important;object-position:center!important}
+.v8-nav-secondary{display:none!important}
+.header .main-nav{align-self:stretch!important}
+.header-tools{align-self:center!important}
+@media(max-width:1210px){.header,.header.shrink{height:80px!important;min-height:80px!important;max-height:80px!important}.header .brand{flex:0 1 220px!important;width:min(35vw,220px)!important}.header .brand img{max-height:69px!important}}
+@media(max-width:570px){.header,.header.shrink{height:74px!important;min-height:74px!important;max-height:74px!important}.header .brand{flex:0 1 180px!important;width:min(43vw,180px)!important}.header .brand img{max-height:64px!important}}
+@media(max-width:380px){.header .brand{flex:0 1 135px!important;width:min(37vw,135px)!important}}

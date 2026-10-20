@@ -1,0 +1,31 @@
+
+/* V6 - corporate identity, authorized user-supplied night logo, widescreen refinement.
+   Corporate typeface loaded ONLY from locally installed font. No font bytes are bundled. */
+@font-face{font-family:'GEH Helios';src:local('HeliosCond'),local('HeliosCond Regular');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'GEH Helios';src:local('HeliosCond Bold'),local('HeliosCond-Bold');font-weight:700;font-style:normal;font-display:swap}
+:root{--gazprom-blue:#0072cc;--gazprom-navy:#061e35;--gazprom-ice:#e6f5ff}
+.hero h1,.inner-hero h1,.section-title,.intro-editorial h2,.group-home h2,.partnership h2,.fact strong,.group-index,.panel h3{font-family:'GEH Helios','Barlow Condensed','Arial Narrow',sans-serif;letter-spacing:-.025em}
+.hero-photo{background:#061e35}.hero-img,.full-photo{object-fit:cover;object-position:center;filter:contrast(1.06) saturate(.95)}
+.hero-img{object-position:50% 48%}
+.hero-photo::after{content:'';pointer-events:none;position:absolute;inset:0;background:linear-gradient(90deg,rgba(1,20,39,.15),transparent 38%),linear-gradient(0deg,rgba(2,19,39,.5),transparent 40%)}
+.hero-photo-label{z-index:2;position:relative}
+.header{backdrop-filter:saturate(1.1) blur(12px)}
+.header .brand img{object-fit:contain}
+.footer-brand>a{display:block;max-width:385px}
+.footer-brand img{display:block;width:100%;height:auto;max-height:165px;object-fit:contain;object-position:left center}
+.footer-photo-credit{display:inline-flex;margin:5px clamp(18px,2.75vw,112px) 18px;color:#99c2e6;font-size:13px;text-decoration:underline;text-underline-offset:4px}
+.source-page{min-height:75vh;padding-top:clamp(80px,7vw,200px)!important;padding-bottom:80px}.source-page h1{font-family:'GEH Helios','Barlow Condensed',sans-serif;font-size:clamp(54px,7vw,128px);line-height:1.02;max-width:100%}
+.credit-list{list-style:decimal;padding-left:30px;max-width:1000px;margin:40px 0}.credit-list li{padding:16px 0;border-bottom:1px solid #dae4ed;line-height:1.65}.credit-list a{color:#006dbb}
+/* content width fluid without 4K whitespace; impose only readable paragraphs */
+.hero-copy p,.intro-editorial p,.section-intro,.panel p{max-width:66ch}
+@media (min-width:2560px){.hero h1{font-size:clamp(110px,4.1vw,172px)}.intro-editorial h2{font-size:clamp(82px,3.5vw,144px)}.fact strong{font-size:clamp(48px,2vw,82px)}.footer-brand>a{max-width:480px}}
+@media(max-width:800px){.hero-img{object-position:52% center}.footer-brand>a{max-width:290px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+.hse-contact-box{margin-top:clamp(40px,4vw,90px);padding:clamp(25px,3vw,70px);background:#103251;border:1px solid #4a6c884f;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 35px;align-items:start}.hse-contact-box h3{font-family:'GEH Helios','Barlow Condensed',sans-serif;font-size:clamp(32px,3vw,62px);line-height:1.05;margin:0;grid-column:1/-1}.hse-contact-box>p{grid-column:1/-1;max-width:70ch;margin:0 0 15px;color:#d6e9f6}.hse-contact-box .hse-person{border-top:1px solid #4e7395;padding-top:24px;display:flex;flex-direction:column;gap:8px;min-width:0}.hse-person strong{color:white;font-size:19px}.hse-person span{color:#b6cfdf}.hse-person a{color:#ccecff;overflow-wrap:anywhere}.hse-contact-box>.text-link{margin-top:12px;grid-column:1/-1}@media(max-width:770px){.hse-contact-box{grid-template-columns:1fr}.hse-contact-box h3{font-size:38px}}
+
+.hse-contact-box{margin-top:clamp(40px,4vw,90px);padding:clamp(25px,3vw,70px);background:#103251;border:1px solid #4a6c884f;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 35px;align-items:start}.hse-contact-box h3{font-family:'GEH Helios','Barlow Condensed',sans-serif;font-size:clamp(32px,3vw,62px);line-height:1.05;margin:0;grid-column:1/-1}.hse-contact-box>p{grid-column:1/-1;max-width:70ch;margin:0 0 15px;color:#d6e9f6}.hse-contact-box .hse-person{border-top:1px solid #4e7395;padding-top:24px;display:flex;flex-direction:column;gap:8px;min-width:0}.hse-person strong{color:white;font-size:19px}.hse-person span{color:#b6cfdf}.hse-person a{color:#ccecff;overflow-wrap:anywhere}.hse-contact-box>.text-link{margin-top:12px;grid-column:1/-1}@media(max-width:770px){.hse-contact-box{grid-template-columns:1fr}.hse-contact-box h3{font-size:38px}}
+
+/* V6.1: supplied architectural dusk photo — responsive focal point */
+.hero-photo img.hero-img{object-position:57% 50%}
+@media(max-width:850px){.hero-photo img.hero-img{object-position:73% center}}

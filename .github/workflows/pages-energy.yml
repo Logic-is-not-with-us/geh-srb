@@ -1,0 +1,51 @@
+name: GEH Serbia · Pages + Energy data
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # 15-minute cadence, offset away from :00 to reduce queue congestion.
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: geh-pages
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Fetch public energy data
+        env:
+          PAGES_BASE_URL: ${{ steps.pages.outputs.base_url }}
+        run: node scripts/fetch-energy.mjs
+      - name: Build public V15 static artifact
+        run: node scripts/build-pages.mjs
+      - name: Upload static website and JSON
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: 'dist'
+
+  deploy:
+    needs: prepare
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

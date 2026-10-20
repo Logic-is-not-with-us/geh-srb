@@ -1,0 +1,166 @@
+/* GEH Serbia / V17.2 — INDUSTRIAL ATLAS
+   Deliberately independent presentation system. Technology is illustrative;
+   real-time numerical claims continue exclusively through V15.2 data model. */
+.bc-v16 .bc-plant-scene{grid-template-columns:minmax(290px,.68fr) minmax(0,1.32fr);background:#061a2a;border-color:#2b5266}
+.bc-v16 .bc-plant-intro{background:radial-gradient(circle at 16% 45%,#123750 0,#071d2e 58%,#051725 100%)}
+.bc-v16 .v18-plant-art{background:radial-gradient(ellipse at 39% 62%,#144762 0,#09273c 50%,#061727 90%);min-width:0;isolation:isolate}
+.bc-v16 .v18-plant-art:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(100deg,transparent 40%,rgba(112,214,247,.035) 55%,transparent 72%);background-size:200% 100%;z-index:0}
+.bc-v16 .v18-plant-art .bc-technical-head{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;min-height:72px;padding:14px 26px;background:linear-gradient(180deg,#071c2eeb,#08263a66);border-bottom:1px solid #2c61784c}
+.bc-v16 .v18-plant-art .bc-technical-head>span{font-size:9px;line-height:1.4;letter-spacing:.18em;color:#9bc6db;white-space:nowrap}
+.bc-v16 .v18-plant-art .bc-technical-head>span:nth-child(2){display:none}
+.bc-v16 .v18-head-controls{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.bc-v16 .v18-head-controls button{appearance:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:7px 11px;border:1px solid #32617a;border-radius:4px;background:#071e30;color:#b7d7e7;font-family:inherit;font-size:11px;font-weight:690;transition:background .2s,border-color .2s,box-shadow .2s}
+.bc-v16 .v18-head-controls button[aria-pressed="true"]{color:#fff;background:#12658f;border-color:#78dbff;box-shadow:inset 0 0 14px #52d4fd20,0 0 15px #04b9ff20}
+.bc-v16 .v18-head-controls button:hover{border-color:#83daf4;background:#174361}
+.bc-v16 .v18-head-controls .v18-reset{border-color:#55768a;background:transparent;color:#bdd5df}
+.bc-v16 .v18-plant-art .bc-plant-svg{display:block;position:relative;z-index:1;width:100%;height:auto;max-height:none;aspect-ratio:820/570;overflow:hidden;margin:0;filter:drop-shadow(0 15px 30px #001826aa)}
+.bc-v16 .v18-plant-art .bc-plant-node{position:static!important;top:auto!important;right:auto!important;bottom:auto!important;left:auto!important;transform:none!important;min-width:0;min-height:74px;flex:1 1 0;display:flex;align-items:flex-start;justify-content:center;border:1px solid #284c60;border-top:2px solid #274a5b;background:#061b2c;color:#e4f5ff;padding:12px 10px 10px;gap:7px;border-radius:0;box-shadow:none;transition:background .24s,border-color .24s,box-shadow .24s}
+.bc-v16 .v18-plant-art .bc-plant-node small{font:720 10px/1.1 monospace;letter-spacing:.09em;color:#5ac5e8}
+.bc-v16 .v18-plant-art .bc-plant-node strong{max-width:none;font-size:11px;line-height:1.35;font-weight:720;text-wrap:balance}
+.bc-v16 .v18-plant-art .bc-plant-node[aria-pressed="true"]{background:linear-gradient(180deg,#134664,#0b2a43);border-top-color:#84e1ff;box-shadow:inset 0 8px 17px #24b4ed17}
+.bc-v16 .v18-plant-art .bc-plant-node:hover{background:#113850;border-color:#63b5d5}
+.bc-v16 .v18-stage-rail{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;margin:0 12px 8px;position:relative;z-index:3}
+.bc-v16 .v18-caption-bar{padding:10px 22px;text-align:center;background:#081f31;border-top:1px solid #2c5468;color:#9fbfd1;font:650 9px/1.4 monospace;letter-spacing:.12em;text-transform:uppercase}
+.bc-v16 .v18-plant-art .bc-plant-art-bottom{padding:11px 22px 13px;background:#061b2b;color:#7cb6ce;font-size:9px;position:relative;z-index:2}
+.bc-v16 .v18-industrial-svg .v18-focusable{transition:filter .5s ease,opacity .5s ease;cursor:zoom-in}
+.bc-v16 .v18-industrial-svg .v18-focusable:hover{filter:drop-shadow(0 0 10px #53d8ff77)}
+.bc-v16 .v18-industrial-svg .v18-cutaway-lip{opacity:1;transition:opacity .35s}
+.bc-v16 .v18-industrial-svg .v18-shell-cover,.bc-v16 .v18-industrial-svg .v18-generator-cover,.bc-v16 .v18-industrial-svg .v18-hrsg-cover{opacity:.09;transition:opacity .6s cubic-bezier(.2,.7,.2,1),filter .6s}
+.bc-v16 .v18-plant-art:not(.is-cutaway) .v18-shell-cover,.bc-v16 .v18-plant-art:not(.is-cutaway) .v18-generator-cover,.bc-v16 .v18-plant-art:not(.is-cutaway) .v18-hrsg-cover{opacity:1}
+.bc-v16 .v18-plant-art:not(.is-cutaway) .v18-cutaway-lip{opacity:0}
+.bc-v16 .v18-industrial-svg .bc-process-route{stroke-width:5;opacity:.12;stroke-dasharray:4 15;stroke-linecap:round;fill:none;transition:opacity .25s}
+.bc-v16 .v18-industrial-svg .bc-process-route.is-focused{stroke-width:5;opacity:.8;filter:drop-shadow(0 0 6px currentColor)}
+.bc-v16 .v18-industrial-svg .v18-turbine-rotor{transform-box:view-box;transform-origin:248px 368px;animation:v18-rotor-spin 9s linear infinite}
+@keyframes v18-rotor-spin{to{transform:rotate(360deg)}}
+.bc-v16 .v18-industrial-svg .v18-internals{filter:drop-shadow(0 0 4px #b1eaff13)}
+.bc-v16 .v18-plant-art[data-v18-focus="turbine"] .bc-turbine-machine,.bc-v16 .v18-plant-art[data-v18-focus="generator"] .bc-generator-machine,.bc-v16 .v18-plant-art[data-v18-focus="heat"] .bc-heat-recovery{filter:drop-shadow(0 0 13px #42d5ff78)}
+.bc-v16 .v18-industrial-svg .bc-energy-routes{pointer-events:none}
+.bc-v16 .v18-plant-art[data-v18-focus="gas"] .bc-gas-system{filter:drop-shadow(0 0 10px #55e4ff)}
+.bc-v16 .v18-plant-art[data-v18-focus="steam"] .v18-process-pipes{filter:drop-shadow(0 0 8px #6dccea66)}
+.bc-v16 .v18-head-controls button:focus-visible,.bc-v16 .v18-stage-rail button:focus-visible{outline:2px solid #c2f4ff;outline-offset:3px}
+.bc-v16 .v18-industrial-svg .v18-annotation{pointer-events:none}
+@media (max-width:1100px){.bc-v16 .bc-plant-scene{grid-template-columns:1fr}.bc-v16 .bc-plant-intro{padding:47px 26px 39px}.bc-v16 .v18-plant-art .bc-plant-svg{max-height:630px;margin:0}}
+@media (max-width:720px){
+ .bc-v16 .v18-plant-art .bc-technical-head{padding:10px 15px;gap:7px;min-height:60px}
+ .bc-v16 .v18-plant-art .bc-technical-head>span{font-size:8px}
+ .bc-v16 .v18-head-controls{gap:4px}
+ .bc-v16 .v18-head-controls button{font-size:9px;padding:6px 7px;min-height:30px}
+ .bc-v16 .v18-plant-art .bc-plant-svg{margin:0;width:100%;height:auto;max-height:none}
+ .bc-v16 .v18-stage-rail{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;overscroll-behavior-x:contain;gap:5px;padding:0 6px 9px;margin:0 5px 1px}
+ .bc-v16 .v18-plant-art .bc-plant-node{flex:0 0 124px;min-height:64px;scroll-snap-align:start;padding:9px 8px;gap:4px}
+ .bc-v16 .v18-plant-art .bc-plant-node small{font-size:9px}
+ .bc-v16 .v18-plant-art .bc-plant-node strong{font-size:10px}
+ .bc-v16 .v18-caption-bar{font-size:8px;letter-spacing:.07em;padding:10px 12px}
+ .bc-v16 .v18-plant-art .bc-plant-art-bottom{font-size:8px;padding:12px}
+ .bc-v16 .v18-plant-art .bc-plant-art-bottom span:first-child{letter-spacing:.03em}
+}
+@media (max-width:380px){.bc-v16 .v18-plant-art .bc-technical-head>span{display:none}.bc-v16 .v18-head-controls{width:100%;justify-content:space-between}}
+@media (prefers-reduced-motion:reduce){.bc-v16 .v18-industrial-svg .v18-turbine-rotor{animation:none!important}.bc-v16 .v18-industrial-svg .v18-focusable,.bc-v16 .v18-head-controls button{transition:none!important}}
+.bc-v16.bc-motion-off .v18-industrial-svg .v18-turbine-rotor{animation:none!important}
+/* Final QA correction: V16 inherited negative margins from its full-width chapter layout.
+   In the new V17 tabbed layout those margins cut off the right-hand controls and HRSG. */
+.bc-v16 .bc-plant-scene{margin:0;width:100%;max-width:100%;min-width:0;box-sizing:border-box}
+.bc-v16 .v18-plant-art{width:100%;max-width:100%;box-sizing:border-box}
+@media(max-width:720px){
+ .bc-v16 .bc-plant-intro{padding:36px 18px 26px}
+ .bc-v16 .bc-plant-intro .bc-overline{font-size:9px;margin-bottom:15px}
+ .bc-v16 .bc-plant-intro h2{font-size:clamp(29px,8vw,39px);line-height:1.07}
+ .bc-v16 .bc-plant-intro .bc-plant-lead{font-size:17px;margin:19px 0 13px}
+ .bc-v16 .bc-plant-intro>p:not(.bc-plant-lead){font-size:12px;line-height:1.55}
+ .bc-v16 .bc-plant-proof{margin:16px 0}
+ .bc-v16 .bc-plant-guide{margin-top:21px;padding-top:18px}
+ .bc-v16 .bc-plant-intro .bc-guide-buttons{margin-top:14px}
+}
+/* Mechanical cutaway: shell layers slide away rather than merely blinking out. */
+.bc-v16 .v18-industrial-svg .v18-shell-cover,.bc-v16 .v18-industrial-svg .v18-generator-cover,.bc-v16 .v18-industrial-svg .v18-hrsg-cover{transform-box:fill-box;transform-origin:center;transition:opacity .65s cubic-bezier(.18,.7,.2,1),transform .8s cubic-bezier(.16,1,.3,1)}
+.bc-v16 .v18-plant-art.is-cutaway .v18-shell-cover{transform:translate(-8px,-12px)}
+.bc-v16 .v18-plant-art.is-cutaway .v18-generator-cover{transform:translate(0,-14px)}
+.bc-v16 .v18-plant-art.is-cutaway .v18-hrsg-cover{transform:translate(12px,-4px)}
+.bc-v16 .v18-industrial-svg .bc-process-route.is-focused{animation:v18-route-advance 3.6s linear infinite}
+@keyframes v18-route-advance{to{stroke-dashoffset:-232}}
+@media (prefers-reduced-motion:reduce){.bc-v16 .v18-industrial-svg .bc-process-route.is-focused{animation:none!important}}
+.bc-v16.bc-motion-off .v18-industrial-svg .bc-process-route.is-focused{animation:none!important}
+
+
+/* V17.3 SIGNATURE / consolidated art direction replacing the V17.2 scene stylesheet.
+   Scope: presentation only. Numbers, availability states, and source data are not modified. */
+.bc-v16{--v173-ink:#04131e;--v173-surface:#082238;--v173-glacier:#87d9f5;--v173-light:#e9f8ff;--v173-muted:#a4c8d8;--v173-rule:rgba(126,202,239,.2)}
+.bc-v16 :is(.v17-panel,.v17-nav,.bc-plant-scene){isolation:isolate}
+.bc-v16 .v17-nav{min-height:74px;background:linear-gradient(180deg,rgba(5,22,35,.985),rgba(5,22,35,.96));border-block-color:rgba(118,198,232,.2);box-shadow:0 14px 45px rgba(0,8,18,.3)}
+.bc-v16 .v17-tab{min-height:74px;letter-spacing:.02em;border-bottom-width:2px}
+.bc-v16 .v17-tab[aria-selected="true"]{color:#f3fcff;background:linear-gradient(180deg,rgba(21,69,96,.08),rgba(25,106,145,.3));border-bottom-color:#83e1ff;text-shadow:0 0 20px rgba(83,207,250,.25)}
+.bc-v16 .v17-tab[aria-selected="true"] .v17-tab-no{color:#87e6ff}
+.bc-v16 .v17-tab:hover{background:#0d354c}
+.bc-v16 .v17-nav:after{content:"";position:absolute;left:0;bottom:-1px;width:100%;height:1px;background:linear-gradient(90deg,transparent,#60bfe74d 45%,transparent);pointer-events:none}
+.bc-v16 .v17-film-hero{background:#061520}
+.bc-v16 .v17-film-shading{background:linear-gradient(91deg,#02111df7 0%,#021421d9 27%,#061c32ac 48%,#0615241d 81%),linear-gradient(0deg,#041624ed 0%,transparent 35%,transparent 70%,#03121c61)}
+.bc-v16 .v17-film-hero:after{content:"";pointer-events:none;position:absolute;z-index:-1;inset:0;background:radial-gradient(ellipse at 74% 50%,rgba(18,125,190,.11),transparent 54%),linear-gradient(180deg,transparent 87%,#061724 100%)}
+.bc-v16 .v17-film-content h1{font-weight:760;letter-spacing:-.058em;line-height:1.02;text-shadow:0 10px 42px #000c17}
+.bc-v16 .v17-index{color:#b9dce8}
+.bc-v16 :is(.bc-chapter-heading h2,.bc-plant-intro h2,.bc-hero h1){letter-spacing:-.055em}
+.bc-v16 :is(.intel-workspace,.bc-chapter,.bc-plant-intro){color:#edf9ff}
+.bc-v16 :is(.bc-network-scene,.bc-network-detail,.intel-panel,.source-card,.bc-hero-stage){border-color:rgba(116,202,237,.21)}
+.bc-v16 :is(.intel-panel,.bc-network-detail,.bc-network-scene){background-image:linear-gradient(147deg,rgba(20,82,113,.1),transparent 55%)}
+.bc-v16 .bc-chapter-heading:before{content:"";position:absolute;left:0;top:-24px;height:2px;width:52px;background:linear-gradient(90deg,#6fddff,transparent)}
+.bc-v16 .bc-chapter-heading{position:relative}
+.bc-v16 :is(.v17-action,.bc-switch button,.bc-lab-tabs button,.v18-head-controls button){transition:background .24s ease,border-color .24s ease,color .24s ease,box-shadow .24s ease,transform .24s ease}
+.bc-v16 :is(.v17-action,.v18-head-controls button):hover{box-shadow:0 8px 28px #0095ca1b}
+/* Industrial theatre: calm editorial composition and metallic optical layers. */
+.bc-v16 .bc-plant-scene{grid-template-columns:minmax(310px,.64fr) minmax(0,1.36fr);border:1px solid #31566b;background:#041622;box-shadow:0 32px 65px #000e19a3;min-height:min(840px,calc(100svh - 168px))}
+.bc-v16 .bc-plant-intro{position:relative;padding:clamp(43px,4.5vw,88px) clamp(30px,4.15vw,76px);background:radial-gradient(ellipse at -19% 65%,rgba(28,101,146,.28),transparent 58%),linear-gradient(148deg,#0a273b,#04141f 82%);border-right:1px solid rgba(112,199,233,.2);overflow:hidden}
+.bc-v16 .bc-plant-intro:before{content:"";position:absolute;top:18px;right:21px;width:46px;height:46px;border-top:1px solid #5fc8ee61;border-right:1px solid #5fc8ee61;pointer-events:none}
+.bc-v16 .bc-plant-intro:after{content:"";position:absolute;left:0;right:0;bottom:0;height:130px;background:linear-gradient(0deg,#0b3b511c,transparent);pointer-events:none}
+.bc-v16 .bc-plant-intro h2{font-size:clamp(38px,3.8vw,69px);line-height:1.01;max-width:540px;margin-top:21px}
+.bc-v16 .bc-plant-intro .bc-overline{letter-spacing:.21em;color:#77dafb}
+.bc-v16 .bc-plant-lead{max-width:420px}
+.bc-v16 .bc-plant-intro>p:not(.bc-plant-lead){max-width:450px;color:#9dbdcc}
+.bc-v16 .bc-plant-proof{border-color:#eaa36c;background:linear-gradient(90deg,rgba(223,143,71,.06),transparent);padding:11px 0 11px 17px;letter-spacing:.075em}
+.bc-v16 .bc-plant-guide{position:relative;z-index:2;border-top:1px solid #3c68803d;margin-top:32px;padding-top:23px}
+.bc-v16 .bc-step-count{letter-spacing:.2em}
+.bc-v16 .bc-plant-guide h3{font-size:clamp(24px,2vw,32px);letter-spacing:-.04em}
+.bc-v16 .v18-plant-art{position:relative;min-width:0;background:radial-gradient(ellipse at 36% 45%,#15445d,#071f31 58%,#051521 98%)}
+.bc-v16 .v18-plant-art:before{background:linear-gradient(106deg,transparent 30%,#d9faff08 49%,transparent 61%);background-size:220% 100%;animation:v173-grazing 17s ease-in-out infinite}
+.bc-v16 .v18-plant-art:after{content:"";position:absolute;z-index:2;pointer-events:none;inset:70px 0 78px;background:radial-gradient(ellipse at 56% 44%,transparent 37%,#03162566 92%);box-shadow:inset 0 0 90px rgba(0,8,19,.24)}
+@keyframes v173-grazing{0%,100%{background-position:10% 0}50%{background-position:95% 0}}
+.bc-v16 .v18-plant-art .bc-technical-head{background:linear-gradient(180deg,rgba(2,18,29,.98),rgba(9,40,57,.93));min-height:70px;border-bottom:1px solid rgba(94,194,235,.25)}
+.bc-v16 .v18-head-controls button{border-radius:3px;min-height:36px}
+.bc-v16 .v18-plant-art .bc-plant-svg{filter:drop-shadow(0 17px 25px #00101d)}
+.bc-v16 .v18-industrial-svg .v173-surface-hatches{opacity:.4;pointer-events:none}
+.bc-v16 .v18-industrial-svg .v173-beam{opacity:.46;transition:opacity .5s;pointer-events:none}
+.bc-v16 .v18-plant-art[data-v18-focus="turbine"] .v173-beam--turbine,.bc-v16 .v18-plant-art[data-v18-focus="generator"] .v173-beam--generator,.bc-v16 .v18-plant-art[data-v18-focus="heat"] .v173-beam--heat{opacity:.95}
+.bc-v16 .v18-plant-art:not(.is-cutaway) .v173-cutaway-detail{opacity:0;transition:opacity .2s}
+.bc-v16 .v18-plant-art.is-cutaway .v173-cutaway-detail{opacity:1;transition:opacity .65s}
+.bc-v16 .v173-machinery-glint{opacity:.73;pointer-events:none;animation:v173-glint 7.5s ease-in-out infinite}
+@keyframes v173-glint{0%,100%{opacity:.25}46%{opacity:.94}65%{opacity:.55}}
+.bc-v16 .v18-head-controls .v18-reset{border-color:#42687a}
+.bc-v16 .v173-readout{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:53px;padding:10px 22px 10px 25px;border-block:1px solid #416e823b;background:linear-gradient(90deg,rgba(9,47,67,.86),rgba(7,28,44,.87));position:relative;z-index:4}
+.bc-v16 .v173-readout>div{display:flex;align-items:center;gap:13px;min-width:0}
+.bc-v16 .v173-readout-index{font:750 10px/1.3 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.21em;color:#65d3f6;white-space:nowrap}
+.bc-v16 .v173-readout strong{font:750 12px/1.3 'Segoe UI',Arial,sans-serif;letter-spacing:.055em;color:#e7f9ff;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}
+.bc-v16 .v173-readout-detail{font:680 9px/1.4 ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;color:#83b3c9;text-align:right}
+.bc-v16 .v173-status-dot{width:6px;height:6px;border-radius:100%;background:#68ccea;box-shadow:0 0 11px #26bbeb;flex:none}
+.bc-v16 .v18-stage-rail{gap:1px;margin:0 0 0;border-top:1px solid #2c536843;border-bottom:1px solid #2c536843}
+.bc-v16 .v18-plant-art .bc-plant-node{position:relative!important;min-height:89px;padding:15px 13px 14px;justify-content:flex-start;border:0;border-right:1px solid #2b536850;border-top:2px solid transparent;background:rgba(4,23,37,.95)}
+.bc-v16 .v18-plant-art .bc-plant-node:before{content:"";position:absolute;top:-2px;left:0;width:100%;height:2px;transform:scaleX(0);transform-origin:left;background:#8be2ff;transition:transform .34s}
+.bc-v16 .v18-plant-art .bc-plant-node[aria-pressed="true"]:before{transform:scaleX(1)}
+.bc-v16 .v18-plant-art .bc-plant-node[aria-pressed="true"]{background:linear-gradient(180deg,#103d56,#0b2638);box-shadow:inset 0 18px 45px #26799f13}
+.bc-v16 .v18-plant-art .bc-plant-node small{font-size:10px;color:#7fe3ff}
+.bc-v16 .v18-plant-art .bc-plant-node strong{font-size:12px;font-weight:650}
+.bc-v16 .v18-caption-bar{background:#061c2b;color:#a7bfca;border-top:0}
+.bc-v16 .bc-plant-art-bottom{border-top:1px solid #2a576d55}
+.bc-v16 .v173-visual-credit{position:absolute;bottom:139px;right:20px;z-index:3;pointer-events:none;font:650 9px/1.3 ui-monospace,Consolas,monospace;letter-spacing:.12em;color:#abc7d796;text-transform:uppercase}
+.bc-v16 .v173-progress{width:100%;height:2px;background:#153950;overflow:hidden}
+.bc-v16 .v173-progress>span{display:block;height:100%;width:20%;background:linear-gradient(90deg,#208eb6,#a2ecff);transition:width .6s cubic-bezier(.2,.72,.21,1)}
+.bc-v16 .v18-head-controls button:focus-visible,.bc-v16 .v18-stage-rail button:focus-visible,.bc-v16 .v17-tab:focus-visible{outline:2px solid #dcf8ff;outline-offset:-2px}
+@media(max-width:1100px){.bc-v16 .bc-plant-scene{grid-template-columns:1fr;min-height:auto}.bc-v16 .bc-plant-intro{padding:46px 35px 34px;border-right:0;border-bottom:1px solid #2d5268}.bc-v16 .bc-plant-intro h2{max-width:780px}.bc-v16 .v18-plant-art:after{inset:70px 0 98px}}
+@media(max-width:720px){.bc-v16 .v17-nav,.bc-v16 .v17-tab{min-height:57px}.bc-v16 .bc-plant-intro{padding:35px 19px 24px}.bc-v16 .bc-plant-intro h2{font-size:clamp(33px,8.3vw,45px)}.bc-v16 .v18-plant-art .bc-technical-head{padding:9px 10px;min-height:62px}.bc-v16 .v173-readout{padding:9px 12px;gap:7px;min-height:48px}.bc-v16 .v173-readout>div{gap:8px}.bc-v16 .v173-readout-index{font-size:9px}.bc-v16 .v173-readout strong{font-size:10px}.bc-v16 .v173-readout-detail{font-size:7px;max-width:103px}.bc-v16 .v18-stage-rail{padding:0 5px 9px}.bc-v16 .v18-plant-art .bc-plant-node{min-height:66px;padding:8px 10px;flex:0 0 123px}.bc-v16 .v18-plant-art .bc-plant-node strong{font-size:10px}.bc-v16 .v173-visual-credit{display:none}.bc-v16 .v18-plant-art:after{inset:62px 0 83px}.bc-v16 .bc-chapter-heading h2{max-width:100%}}
+@media(prefers-reduced-motion:reduce){.bc-v16 .v18-plant-art:before,.bc-v16 .v173-machinery-glint{animation:none!important}.bc-v16 .v173-progress>span{transition:none}}
+.bc-v16.bc-motion-off .v18-plant-art:before,.bc-v16.bc-motion-off .v173-machinery-glint{animation:none!important}
+
+/* V17.3 QA ergonomics: phase rail is now ABOVE the viewport, not beneath the zoomed machine. */
+.bc-v16 .v173-progress{position:relative;z-index:4}
+.bc-v16 .v18-stage-rail{position:relative;z-index:4}
+.bc-v16 .v173-visual-credit{bottom:20px}
+@media(max-width:720px){.bc-v16 .v18-stage-rail{padding:0 4px 2px;margin:0}}
+
+.bc-v16 .v173-visual-credit{display:none}

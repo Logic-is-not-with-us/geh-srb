@@ -1,0 +1,43 @@
+/* GEH Serbia / V17 INDUSTRIAL FILM. Deliberately isolated from energy-v16.css. */
+.bc-v16 [data-v17-panel][hidden]{display:none!important}
+.bc-v16 .v17-nav{position:sticky;top:0;z-index:28;display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:68px;padding:0 clamp(16px,3.5vw,70px);background:rgba(5,22,37,.97);border-block:1px solid #21435c;box-shadow:0 8px 32px #020e1b55;backdrop-filter:blur(16px)}
+.bc-v16 .v17-tabs{display:flex;align-items:stretch;gap:4px;min-width:0;max-width:100%;overflow-x:auto;scrollbar-width:thin;scrollbar-color:#345c77 transparent}
+.bc-v16 .v17-tab{position:relative;flex:0 0 auto;display:flex;align-items:center;gap:10px;min-height:68px;padding:15px clamp(10px,1.35vw,23px);background:transparent;border:0;border-bottom:2px solid transparent;color:#a9c4d7;font:700 clamp(11px,.75vw,13px)/1.3 'Segoe UI',Arial,sans-serif;letter-spacing:.015em;cursor:pointer;transition:color .2s,background .2s,border-color .2s}
+.bc-v16 .v17-tab-no{color:#5487a6;font-size:10px;font-weight:800;letter-spacing:.13em}
+.bc-v16 .v17-tab:hover,.bc-v16 .v17-tab[aria-selected=true]{color:#fff;background:#092d48}
+.bc-v16 .v17-tab[aria-selected=true]{border-bottom-color:#54caff}
+.bc-v16 .v17-tab:focus-visible,.bc-v16 .v17-motion:focus-visible,.bc-v16 .v17-action:focus-visible,.bc-v16 .v17-film-bottom button:focus-visible{outline:3px solid #8ce4ff;outline-offset:-3px}
+.bc-v16 .v17-nav-tools{flex:0 0 auto}
+.bc-v16 .v17-motion{border:1px solid #345c75;background:#082840;color:#c3e5f6;padding:8px 13px;font:700 11px 'Segoe UI',Arial,sans-serif;cursor:pointer}
+.bc-v16 .v17-panel{min-width:0;min-height:50vh;background:#061a2a}
+.bc-v16 .v17-panel--intro{min-height:calc(100svh - 160px)}
+.bc-v16 .v17-film-hero{isolation:isolate;position:relative;min-height:max(610px,calc(100svh - 158px));overflow:hidden;background:#061725;color:#f0faff;display:flex;flex-direction:column;justify-content:center}
+.bc-v16 .v17-film-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% center;z-index:-3;background:#071b2a}
+.bc-v16 .v17-film-shading{position:absolute;inset:0;z-index:-2;pointer-events:none;background:linear-gradient(90deg,rgba(2,13,24,.95) 0%,rgba(2,15,29,.9) 22%,rgba(2,17,32,.55) 49%,rgba(2,17,32,.12) 80%),linear-gradient(0deg,rgba(3,17,31,.96) 0%,transparent 22%,transparent 72%,rgba(3,17,30,.28) 100%)}
+.bc-v16 .v17-film-frame{position:absolute;z-index:1;left:clamp(25px,4.5vw,92px);right:clamp(25px,4.5vw,92px);top:32px;display:flex;justify-content:space-between;align-items:center;gap:16px;color:#c0d9e9;font:800 10px 'Segoe UI',Arial,sans-serif;letter-spacing:.24em;text-shadow:0 1px 4px #001b2f}
+.bc-v16 .v17-film-frame:before{content:'';height:23px;width:2px;background:#48c3ff;position:absolute;top:34px;left:0}
+.bc-v16 .v17-film-content{position:relative;z-index:2;width:min(890px,86vw);padding:145px 0 150px clamp(25px,7.1vw,146px)}
+.bc-v16 .v17-eyebrow{font:800 11px 'Segoe UI',Arial,sans-serif;color:#6ce0ff;letter-spacing:.24em;text-transform:uppercase}
+.bc-v16 .v17-index{font:800 11px 'Segoe UI',Arial,sans-serif;letter-spacing:.25em;color:#a9d1e6;display:flex;align-items:center;gap:17px;margin:60px 0 23px}
+.bc-v16 .v17-index i{display:inline-block;width:37px;height:1px;background:#63b7d9}
+.bc-v16 .v17-film-kicker{margin:0 0 10px;font-size:16px;color:#acd8e9;font-weight:650;letter-spacing:.12em;text-transform:uppercase}
+.bc-v16 .v17-film-content h1{font:800 clamp(53px,6vw,110px)/.96 'Segoe UI',Arial,sans-serif;margin:0 0 30px;letter-spacing:-.063em;text-wrap:balance;max-width:800px;text-shadow:0 10px 30px #001b2c8c}
+.bc-v16 .v17-film-description{font:400 clamp(15px,1.1vw,20px)/1.65 'Segoe UI',Arial,sans-serif;max-width:535px;color:#d5e8f3;margin:0 0 30px;text-shadow:0 2px 4px #002638}
+.bc-v16 .v17-film-actions{display:flex;gap:13px;flex-wrap:wrap}
+.bc-v16 .v17-action{display:inline-flex;justify-content:center;align-items:center;gap:15px;min-height:50px;padding:14px 20px;border:1px solid #559dbb;color:#fff;background:rgba(14,59,81,.65);font:800 12px 'Segoe UI',Arial,sans-serif;letter-spacing:.035em;cursor:pointer;transition:background .2s,transform .2s}
+.bc-v16 .v17-action:hover{background:#125478;transform:translateY(-2px)}
+.bc-v16 .v17-action-primary{background:#169ad0;border-color:#66d9ff;color:#fff;box-shadow:0 12px 30px #003c5d55}
+.bc-v16 .v17-action-primary:hover{background:#18b0eb}
+.bc-v16 .v17-film-disclaimer{max-width:550px;margin:30px 0 0;color:#a4c0ce;font:400 11px/1.6 'Segoe UI',Arial,sans-serif}
+.bc-v16 .v17-film-bottom{position:absolute;bottom:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:65px;padding:9px clamp(23px,4.5vw,92px);background:#041726a1;border-top:1px solid #41607e70;color:#c5dbe8;font:750 10px 'Segoe UI',Arial,sans-serif;letter-spacing:.13em;text-transform:uppercase}
+.bc-v16 .v17-film-bottom button{font:750 11px 'Segoe UI',Arial,sans-serif;border:1px solid #476b82;color:#ecfaff;background:#082f48;padding:9px 13px;cursor:pointer;text-transform:none;letter-spacing:normal}
+.bc-v16 .v17-panel--grid .bc-chapter,.bc-v16 .v17-panel--analysis .bc-chapter{min-height:calc(100vh - 210px)}
+.bc-v16 .v17-panel--sources .intel-section{padding-top:65px;padding-bottom:90px}
+.bc-v16 .v17-panel--flow .bc-hero{min-height:min(880px,calc(100svh - 120px))}
+.bc-v16 .v17-panel--flow .bc-hero-copy>.bc-overline{margin-top:25px}
+.bc-v16 .v17-panel--flow .bc-hero h1{font-size:clamp(42px,4.5vw,88px)}
+@media(min-width:1200px){.bc-v16 .v17-film-video{object-position:center center}}
+@media(max-width:1100px){.bc-v16 .v17-nav{top:0;display:block;padding:0 15px}.bc-v16 .v17-nav-tools{position:absolute;top:0;right:0;display:none}.bc-v16 .v17-tab{min-height:61px;padding:12px 14px}.bc-v16 .v17-film-content{padding-left:5vw}.bc-v16 .v17-film-hero{min-height:680px}}
+@media(max-width:700px){.bc-v16 .v17-nav{padding:0 6px}.bc-v16 .v17-tab{min-height:56px;padding:9px 12px;gap:5px;font-size:11px}.bc-v16 .v17-tab-no{font-size:9px}.bc-v16 .v17-film-hero{min-height:calc(100svh - 128px);min-height:max(580px,calc(100svh - 128px))}.bc-v16 .v17-film-video{object-position:58% center}.bc-v16 .v17-film-shading{background:linear-gradient(0deg,#031423 0%,rgba(3,17,31,.98) 11%,rgba(3,17,31,.75) 38%,rgba(3,17,31,.15) 75%),linear-gradient(90deg,rgba(3,17,31,.25),transparent)}.bc-v16 .v17-film-frame{left:20px;right:20px;top:20px;font-size:9px}.bc-v16 .v17-film-content{width:100%;padding:95px 23px 115px;align-self:end}.bc-v16 .v17-index{margin:20px 0 15px}.bc-v16 .v17-eyebrow{font-size:10px}.bc-v16 .v17-film-kicker{font-size:12px}.bc-v16 .v17-film-content h1{font-size:clamp(44px,11vw,71px);max-width:100%;margin-bottom:19px}.bc-v16 .v17-film-description{max-width:560px;font-size:14px;line-height:1.5}.bc-v16 .v17-film-bottom{padding:10px 21px;min-height:60px;gap:10px;letter-spacing:.04em}.bc-v16 .v17-film-bottom span:nth-child(2){display:none}.bc-v16 .v17-film-disclaimer{font-size:10px}.bc-v16 .v17-action{font-size:11px;min-height:44px;padding:11px 13px}}
+@media(max-width:390px){.bc-v16 .v17-film-content{padding-inline:17px}.bc-v16 .v17-film-content h1{font-size:43px}.bc-v16 .v17-film-actions{gap:7px}.bc-v16 .v17-action{padding-inline:10px}.bc-v16 .v17-film-bottom{padding-inline:14px}}
+@media(prefers-reduced-motion:reduce){.bc-v16 .v17-action{transition:none}.bc-v16 .v17-action:hover{transform:none}}

@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   prepare:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -28,11 +28,21 @@ jobs:
       - name: Configure GitHub Pages
         id: pages
         uses: actions/configure-pages@v5
+      - name: V15.2 data-transform regressions
+        run: node scripts/test-v152.mjs
+      - name: V16 structural and semantic guardrails
+        run: node scripts/test-v16.mjs
+      - name: V17.1 motion regression
+        run: node scripts/test-v171.mjs
+      - name: V17.2 industrial explorer validation
+        run: node scripts/test-v172.mjs
       - name: Fetch public energy data
         env:
           PAGES_BASE_URL: ${{ steps.pages.outputs.base_url }}
+          ENTSOE_API_TOKEN: ${{ secrets.ENTSOE_API_TOKEN }}
+          ENTSOE_PUBLIC_REUSE_APPROVED: ${{ vars.ENTSOE_PUBLIC_REUSE_APPROVED }}
         run: node scripts/fetch-energy.mjs
-      - name: Build public V15 static artifact
+      - name: Build public V17.2 static artifact
         run: node scripts/build-pages.mjs
       - name: Upload static website and JSON
         uses: actions/upload-pages-artifact@v4
@@ -41,7 +51,7 @@ jobs:
 
   deploy:
     needs: prepare
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

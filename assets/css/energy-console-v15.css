@@ -20,3 +20,18 @@
 
 /* Low-motion corporate interaction, no continuously animated indicators. */
 .intel-kpi{transition:background-color .22s ease}.intel-kpi:hover{background:#123953}.intel-panel{transition:border-color .22s ease}.intel-panel:hover{border-color:#477994}.intel-hero-content{animation:fade-in-console .48s ease-out both}@keyframes fade-in-console{from{opacity:.72;transform:translateY(10px)}to{opacity:1;transform:none}}@media(prefers-reduced-motion:reduce){.intel-hero-content{animation:none}}
+
+/* V15.2 add-on only: verified-source derived KPI strip; isolated from site globals. */
+.derived-section{margin-bottom:30px;border-top:1px solid #31536b;padding-top:28px}
+.derived-title{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:9px 30px;margin-bottom:14px}
+.derived-title h3{font-size:12px;letter-spacing:.2em;color:#70d3fb;margin:0}
+.derived-title p{font-size:12px;color:#a5c6d7;margin:0}
+.derived-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.derived-card{min-width:0;padding:18px 17px 13px;background:linear-gradient(155deg,#0a344e,#09263a);border:1px solid #316079;display:flex;flex-direction:column;gap:10px}
+.derived-card>span{font-size:12px;color:#b9d5e4;line-height:1.35;min-height:32px}
+.derived-card strong{font-size:clamp(23px,2vw,40px);letter-spacing:-.03em;line-height:1.1;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.derived-card strong small{font-weight:600;font-size:12px;letter-spacing:0;color:#88cbe6;white-space:nowrap}
+.derived-card p{font-size:11px;color:#95b7c8;margin:0}
+@media(max-width:1120px){.derived-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){.derived-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:380px){.derived-grid{grid-template-columns:1fr 1fr}.derived-card{padding:13px 10px}.derived-card strong{font-size:24px}}

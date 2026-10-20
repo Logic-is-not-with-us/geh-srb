@@ -1,0 +1,37 @@
+/* GEH / V17.1 CINEMATIC MOTION — solely presentation, never simulated telemetry. */
+.bc-v16 .v17-motion-particles{filter:drop-shadow(0 0 5px #5bcbff);isolation:isolate}
+.bc-v16 .v17-particle-core{fill:#b5f2ff;filter:drop-shadow(0 0 3px #36bdf8)}
+.bc-v16 .v17-particle-halo{fill:#39bfea;opacity:.15}
+.bc-v16 .bc-current-path.is-selected{filter:drop-shadow(0 0 9px #50d8ff)}
+.bc-v16 .bc-border-path.is-selected.is-moving{filter:drop-shadow(0 0 7px #42ccff)}
+.bc-v16 .bc-plant-svg .bc-turbine-machine,.bc-v16 .bc-plant-svg .bc-generator-machine,.bc-v16 .bc-plant-svg .bc-heat-recovery{transition:opacity .65s cubic-bezier(.2,.8,.2,1),filter .65s cubic-bezier(.2,.8,.2,1)}
+.bc-v16 .v17-rotor-wheel{transform-box:view-box;transform-origin:285px 354px;animation:v17-rotor-spin 11s linear infinite;filter:drop-shadow(0 0 4px #43caff66)}
+@keyframes v17-rotor-spin{to{transform:rotate(360deg)}}
+.bc-v16 .v17-rotor-carrier{filter:drop-shadow(0 0 5px #2eaed455)}
+.bc-v16 .v17-generator-coils{animation:v17-electric-field 4s ease-in-out infinite}
+@keyframes v17-electric-field{50%{filter:drop-shadow(0 0 6px #6fddff);opacity:.75}}
+.bc-v16 .v17-hrsg-detail{animation:v17-heatrecovery 5s ease-in-out infinite}
+@keyframes v17-heatrecovery{50%{filter:drop-shadow(0 0 5px #f5ae6999)}}
+.bc-v16 .bc-plant-art[data-v17-focus="turbine"] .bc-turbine-machine,
+.bc-v16 .bc-plant-art[data-v17-focus="generator"] .bc-generator-machine,
+.bc-v16 .bc-plant-art[data-v17-focus="heat"] .bc-heat-recovery{filter:drop-shadow(0 0 21px #50cfff99)}
+.bc-v16 .bc-plant-art[data-v17-focus="turbine"] :is(.bc-generator-machine,.bc-heat-recovery),
+.bc-v16 .bc-plant-art[data-v17-focus="generator"] :is(.bc-turbine-machine,.bc-heat-recovery),
+.bc-v16 .bc-plant-art[data-v17-focus="heat"] :is(.bc-turbine-machine,.bc-generator-machine){opacity:.48}
+.bc-v16 .bc-plant-node[aria-pressed="true"]{box-shadow:0 0 0 1px #80dcff55,0 0 26px #36c5ed4b;transition:box-shadow .4s,transform .4s;transform:translateY(-3px)}
+.bc-v16 .v17-panel .bc-guide-buttons button,.bc-v16 .v17-panel .bc-cta{transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s ease}
+.bc-v16 .v17-panel .bc-guide-buttons button:hover,.bc-v16 .v17-panel .bc-cta:hover{transform:translateY(-2px)}
+.bc-v16 .v17-film-frame{pointer-events:none}
+@media(prefers-reduced-motion:reduce){.bc-v16 .v17-rotor-wheel,.bc-v16 .v17-generator-coils,.bc-v16 .v17-hrsg-detail{animation:none!important}}
+.bc-v16.bc-motion-off .v17-rotor-wheel,.bc-v16.bc-motion-off .v17-generator-coils,.bc-v16.bc-motion-off .v17-hrsg-detail{animation:none!important}
+@media(max-width:720px){.bc-v16 .v17-motion-particles{filter:none}.bc-v16 .bc-plant-art[data-v17-focus] .bc-plant-svg{overflow:visible}}
+
+/* Motion preference control must remain reachable on mobile; it was hidden in V17. */
+@media(max-width:1100px){
+ .bc-v16 .v17-nav{display:flex;align-items:center;padding:0 9px;gap:5px}
+ .bc-v16 .v17-tabs{flex:1 1 auto;min-width:0}
+ .bc-v16 .v17-nav-tools{position:static;flex:0 0 46px;display:flex;justify-content:center}
+ .bc-v16 .v17-motion{min-height:39px;min-width:39px;padding:8px 3px;font-size:0;border-radius:5px}
+ .bc-v16 .v17-motion:before{content:'◉';font-size:20px;line-height:1;color:#8de1ff}
+ .bc-v16 .v17-motion[aria-pressed="false"]:before{content:'◯';color:#b1c5d2}
+}

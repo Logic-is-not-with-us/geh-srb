@@ -4,5 +4,5 @@
   "server_time": null,
   "datasets": {},
   "status": "not_fetched_yet",
-  "legal": "Public preview. No licensed price data published."
+  "legal": "Live published data populated by GitHub Actions; no fabricated measurements."
 }

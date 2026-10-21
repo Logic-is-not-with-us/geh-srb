@@ -1,58 +1,48 @@
-name: GEH Serbia | V22 Industrial Intelligence
-
-on:
-  push:
-    branches: [main]
-  schedule:
-    - cron: '7,22,37,52 * * * *'
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: geh-pages
-  cancel-in-progress: false
-
-jobs:
-  prepare:
-    runs-on: ubuntu-24.04
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - name: Configure Pages
-        id: pages
-        uses: actions/configure-pages@v5
-      - name: Regenerate V22 monitor and compiled design system
         run: python3 scripts/build-v19-site.py
-      - name: V15.2 data-transform historical regression
-        run: node scripts/test-v152.mjs
-      - name: V19/V22 contract and presentation tests
+      - name: Run all generation and regression tests
         run: |
+          set -euo pipefail
+          node scripts/test-v152.mjs
           node scripts/test-v19.mjs
+          node scripts/test-v20.mjs
           node scripts/test-v22.mjs
-      - name: V20 industrial scene and language integration
-        run: node scripts/test-v20.mjs
-      - name: Validate JavaScript modules
-        run: |
+          node scripts/test-v23-gt01.mjs
+          node scripts/validate-v18-snapshots.mjs
           node --check assets/js/energy-model-v18.mjs
           node --check assets/js/energy-app-v19.mjs
-          node --check scripts/fetch-energy.mjs
-      - name: Refresh public energy data
-        env:
-          PAGES_BASE_URL: ${{ steps.pages.outputs.base_url }}
-          ENTSOE_API_TOKEN: ${{ secrets.ENTSOE_API_TOKEN }}
-          ENTSOE_PUBLIC_REUSE_APPROVED: ${{ vars.ENTSOE_PUBLIC_REUSE_APPROVED }}
-        run: node scripts/fetch-energy.mjs
-      - name: Validate snapshots and metadata
-        run: node scripts/validate-v18-snapshots.mjs
-      - name: Build public static website
+          node --check assets/js/te-to-gt01-pilot.mjs
+      - name: Generate static Pages distribution
         run: node scripts/build-pages.mjs
-      - name: Upload website
+      - name: Assert V23 is included in static distribution
+        shell: bash
+        run: |
+          set -euo pipefail
+          for mode in shell exposed inner; do
+            test -s "dist/assets/img/gt01-pilot/gt01-${mode}.webp"
+          done
+          for lang in sr-lat sr-cyr en ru; do
+            grep -q 'v23-gt01-pilot' "dist/$lang/energetski-monitor.html"
+          done
+      - name: Commit validated V23 to main without force push
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- V23_GT01_PILOT_README.md \
+            assets/css/te-to-gt01-pilot.css assets/img/gt01-pilot/ \
+            assets/js/te-to-gt01-pilot.mjs scripts/build-v19-pages.py \
+            scripts/create-gt01-pilot-assets.py scripts/qa-v23-browser.py \
+            scripts/test-v23-gt01.mjs \
+            sr-lat/energetski-monitor.html sr-cyr/energetski-monitor.html \
+            en/energetski-monitor.html ru/energetski-monitor.html
+          git rm -- V23_GT01_MOBILE_PAYLOAD.zip
+          git diff --cached --check
+          git diff --cached --quiet && { echo 'No V23 changes staged'; exit 1; }
+          git commit -m 'feat: integrate V23 GT-01 industrial explorer pilot'
+          git push origin HEAD:main
+          echo "Committed V23 HEAD: $(git rev-parse HEAD)"
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
           path: dist
@@ -63,6 +53,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy Pages
-        id: deployment
+      - name: Deploy website
         uses: actions/deploy-pages@v4
+        id: deployment

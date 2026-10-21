@@ -1,0 +1,54 @@
+/* V23 GT-01 registered-image interaction pilot. No external frameworks, no fake SCADA. */
+#v23-gt01-pilot{--v23-border:rgba(139,183,204,.23);--v23-ink:#e4f2fa;--v23-mute:#91b1c2;--v23-route:#d9a76e;display:block;max-width:1760px;margin:16px auto 28px;color:var(--v23-ink);font-family:inherit}
+#v23-gt01-pilot *{box-sizing:border-box}
+#v23-gt01-pilot button{font:inherit;cursor:pointer}
+.v23-head{display:flex;align-items:end;justify-content:space-between;gap:28px;margin:0 0 18px}
+.v23-overline{display:block;color:#79a9c2;font-size:10px;font-weight:730;letter-spacing:.15em;margin-bottom:10px}
+.v23-head h3{font-size:clamp(24px,2.6vw,36px);line-height:1.12;letter-spacing:-.036em;margin:0;color:#edf8fc}
+.v23-head p{color:#a3bfce;max-width:74ch;font-size:13px;line-height:1.6;margin:11px 0 0}
+.v23-head-mark{border:1px solid #294b5d;border-radius:4px;padding:11px 14px;color:#aac9d8;font-size:11px;letter-spacing:.08em;white-space:nowrap;background:rgba(9,30,46,.5)}
+.v23-main{display:grid;grid-template-columns:minmax(0,1.95fr) minmax(300px,.75fr);gap:14px;align-items:stretch}
+.v23-art-col,.v23-panel{background:#081b2b;border:1px solid var(--v23-border);border-radius:8px;overflow:hidden}
+.v23-toolbar{display:flex;justify-content:space-between;gap:10px;padding:12px;border-bottom:1px solid var(--v23-border);flex-wrap:wrap}
+.v23-modes{display:flex;gap:4px;background:#0c293b;padding:4px;border:1px solid #294b60;border-radius:5px}
+.v23-modes button,.v23-motion{background:transparent;border:1px solid transparent;border-radius:4px;color:#a7c5d4;padding:9px 14px;font-size:12px;font-weight:700;min-height:38px}
+.v23-modes button[aria-pressed="true"]{background:#d3e9f4;color:#082439}
+.v23-motion{border-color:#284c5f;font-weight:500}
+.v23-frame{position:relative;width:100%;aspect-ratio:985/510;overflow:hidden;background:#061727;isolation:isolate}
+.v23-photo,.v23-overlay,.v23-pins{position:absolute;inset:0;width:100%;height:100%}
+.v23-photo{display:block;object-fit:contain;opacity:0;transition:opacity .42s cubic-bezier(.22,.67,.25,1)}
+.v23-photo.active{opacity:1}
+.v23-overlay{pointer-events:none;z-index:2;overflow:visible}
+.v23-path-base{stroke:#071a2b;stroke-width:8;opacity:.72}
+.v23-path-pulse{stroke-width:3.5;stroke-dasharray:12 13;filter:drop-shadow(0 0 3px rgba(3,12,20,.35));animation:v23-dash 3.5s linear infinite}
+@keyframes v23-dash{to{stroke-dashoffset:-125}}
+.v23-pins{z-index:3;pointer-events:none}
+.v23-pin{position:absolute;transform:translate(-50%,-50%);pointer-events:auto;display:grid;place-items:center;border:1px solid rgba(222,245,251,.74);background:rgba(4,22,36,.9);color:#e4f7ff;border-radius:50%;height:34px;width:34px;font-size:11px;font-weight:760;box-shadow:0 4px 14px rgba(0,0,0,.45)}
+.v23-pin[aria-pressed="true"]{background:#d3e9f4;color:#0a2940;border-color:white;box-shadow:0 0 0 4px rgba(112,188,215,.22)}
+.v23-scene-note{position:absolute;left:16px;bottom:14px;padding:6px 8px;border-radius:3px;z-index:4;font:600 9px/1.2 ui-monospace,monospace;letter-spacing:.08em;background:rgba(3,17,30,.83);color:#d5edf8}
+.v23-routes{display:flex;flex-wrap:wrap;gap:7px;padding:13px;border-top:1px solid #24475c;background:#0b2335}
+.v23-routes button{color:#a6c5d4;background:#0e2b40;padding:10px 12px 10px 26px;border:1px solid #2b4b61;border-radius:5px;font-size:12px;font-weight:700;position:relative;min-height:39px}
+.v23-routes button:before{content:'';position:absolute;left:11px;top:14px;width:8px;height:8px;background:var(--route-color);border-radius:50%}
+.v23-routes button[aria-pressed="true"]{background:#17384d;color:#f0faff;border-color:#8db5c5}
+.v23-caveat{font-size:11px;line-height:1.55;color:#9db5c1;margin:0;padding:0 14px 15px;background:#0b2335}
+.v23-panel{padding:22px;display:flex;flex-direction:column;gap:0}
+.v23-panel-top{display:flex;justify-content:space-between;color:#8caec1;font-size:10px;letter-spacing:.13em;text-transform:uppercase;font-weight:770;margin-bottom:22px}
+.v23-panel h4{font-size:clamp(26px,2.5vw,40px);line-height:1.06;letter-spacing:-.04em;margin:0 0 15px;color:#f1faff}
+.v23-panel>p[data-part-desc]{font-size:14px;line-height:1.7;color:#abc7d7;min-height:90px;margin:0 0 22px}
+.v23-io{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.v23-io>div{padding:14px 12px;background:#0e2a3e;border:1px solid #29495c;border-radius:5px;min-width:0}
+.v23-io small{font-size:10px;font-weight:730;letter-spacing:.13em;color:#90b4c7;display:block;margin-bottom:10px}
+.v23-io strong{font-size:13px;color:#e5f5fc;line-height:1.4}
+.v23-cluster-note{padding:18px 0 0;margin:23px 0;border-top:1px solid #27455a;font-size:12px;line-height:1.65;color:#8eb0c1}
+.v23-nav{display:flex;gap:7px;align-items:center;margin-top:auto}
+.v23-nav button{background:#12324a;border:1px solid #325a6d;color:#d6edf7;padding:11px 14px;border-radius:5px;min-height:42px;font-size:12px}
+.v23-nav button:last-child{margin-left:auto}
+#v23-gt01-pilot [aria-pressed]:focus-visible{outline:2px solid #d4f1ff;outline-offset:3px}
+#v23-gt01-pilot[data-motion="false"] .v23-path-pulse,.v23-paused .v23-path-pulse{animation:none;stroke-dasharray:8 18}
+#v23-gt01-pilot[data-motion="false"] .v23-photo,#v23-gt01-pilot.v23-paused .v23-photo{transition:none}
+@media(max-width:1220px){.v23-main{grid-template-columns:minmax(0,1fr)}.v23-panel{min-height:250px}.v23-panel>p[data-part-desc]{min-height:0}.v23-nav{margin-top:8px}}
+@media(max-width:600px){.v23-head{align-items:start;flex-direction:column;gap:10px}.v23-head-mark{white-space:normal}.v23-main{gap:10px}.v23-frame{aspect-ratio:985/510}.v23-toolbar{flex-direction:column}.v23-modes{width:100%}.v23-modes button{flex:1;padding:9px 5px;font-size:11px}.v23-motion{align-self:flex-start}.v23-pin{height:27px;width:27px;font-size:9px}.v23-scene-note{font-size:7px;bottom:7px;left:7px;padding:4px}.v23-routes{gap:6px}.v23-routes button{flex:1 1 40%;min-width:0;text-align:left;font-size:11px;padding:9px 8px 9px 22px}.v23-routes button:before{left:7px;top:13px}.v23-panel{padding:19px}}
+@media(prefers-reduced-motion:reduce){.v23-path-pulse{animation:none!important}.v23-photo{transition:none!important}}
+
+body.ei-motion-off #v23-gt01-pilot .v23-path-pulse{animation:none!important;stroke-dasharray:8 18}
+#v23-gt01-pilot{scroll-margin-top:120px}

@@ -1,0 +1,78 @@
+{
+  "source": "V20 conceptual industrial illustration crop x0..985 y305..815",
+  "mask": [
+    [
+      179,
+      184
+    ],
+    [
+      295,
+      170
+    ],
+    [
+      443,
+      169
+    ],
+    [
+      569,
+      190
+    ],
+    [
+      655,
+      259
+    ],
+    [
+      667,
+      365
+    ],
+    [
+      170,
+      379
+    ],
+    [
+      145,
+      321
+    ]
+  ],
+  "source_width": 1536,
+  "target_size": [
+    985,
+    510
+  ],
+  "status": "PROTOTYPE_ONLY_NO_TE_TO_GEOMETRY_CLAIM",
+  "modes": {
+    "shell": {
+      "file": "assets/img/gt01-pilot/gt01-shell.webp",
+      "changed_pixels": 101512,
+      "unchanged_region_pixel_diffs": 0,
+      "dimensions": [
+        985,
+        510
+      ],
+      "bytes": 483582,
+      "sha256": "24dba8e422c71ca684226a6e5ad2b5cf5a20b487b45bf3b1a59d78128e42ae75"
+    },
+    "exposed": {
+      "file": "assets/img/gt01-pilot/gt01-exposed.webp",
+      "changed_pixels": 0,
+      "unchanged_region_pixel_diffs": 0,
+      "dimensions": [
+        985,
+        510
+      ],
+      "bytes": 556834,
+      "sha256": "158cc230f29d8895d756a6ed9361fb52419e4b29c417ff1e92b40e7fb65eccab"
+    },
+    "inner": {
+      "file": "assets/img/gt01-pilot/gt01-inner.webp",
+      "changed_pixels": 74268,
+      "unchanged_region_pixel_diffs": 0,
+      "dimensions": [
+        985,
+        510
+      ],
+      "bytes": 554656,
+      "sha256": "9f858010a4f7831a83552a22dde7f7f9c8039dd7d0cd7ffac9d1efec119f79a7"
+    }
+  }
+}

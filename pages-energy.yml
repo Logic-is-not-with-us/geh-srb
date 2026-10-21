@@ -1,0 +1,88 @@
+name: GEH Serbia | V22 Industrial Intelligence
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: geh-pages
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate current project files
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in \
+            scripts/build-v19-site.py \
+            scripts/test-v152.mjs \
+            scripts/test-v19.mjs \
+            scripts/test-v20.mjs \
+            scripts/test-v22.mjs \
+            scripts/fetch-energy.mjs \
+            scripts/validate-v18-snapshots.mjs \
+            scripts/build-pages.mjs \
+            assets/js/energy-app-v19.mjs \
+            assets/css/energy-v22-polish.css; do
+            if [[ ! -f "$file" ]]; then
+              echo "::error file=$file::Missing V22 file. Upload the FULL V22 project before running this workflow."
+              exit 1
+            fi
+          done
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Regenerate monitor and compiled CSS
+        run: python3 scripts/build-v19-site.py
+      - name: V15.2 data-transform regression
+        run: node scripts/test-v152.mjs
+      - name: V19 / V22 contract and presentation tests
+        run: |
+          node scripts/test-v19.mjs
+          node scripts/test-v22.mjs
+      - name: V20 plant-scene regression
+        run: node scripts/test-v20.mjs
+      - name: Validate JavaScript syntax
+        run: |
+          node --check assets/js/energy-model-v18.mjs
+          node --check assets/js/energy-app-v19.mjs
+          node --check scripts/fetch-energy.mjs
+      - name: Refresh public energy data
+        env:
+          PAGES_BASE_URL: ${{ steps.pages.outputs.base_url }}
+          ENTSOE_API_TOKEN: ${{ secrets.ENTSOE_API_TOKEN }}
+          ENTSOE_PUBLIC_REUSE_APPROVED: ${{ vars.ENTSOE_PUBLIC_REUSE_APPROVED }}
+        run: node scripts/fetch-energy.mjs
+      - name: Validate snapshots and metadata
+        run: node scripts/validate-v18-snapshots.mjs
+      - name: Build public static website
+        run: node scripts/build-pages.mjs
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+  deploy:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

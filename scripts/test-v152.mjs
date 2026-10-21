@@ -20,6 +20,8 @@ assert.equal(parseEntsoeLoad(xml,'actual_load',generated).data[0].values.actual_
 assert.equal(parseEntsoeLoad(xml,'actual_load',generated).data[1].values.actual_load,0);
 assert.equal(parseEntsoeLoad(xml,'load_forecast',generated).series[0].id,'day_ahead_load_forecast');
 // Mock API allows deterministic GitHub builder to run without network or token.
+const restoreRanges=['24h','7d','30d'];
+const beforeSnapshots=await Promise.all(restoreRanges.map(r=>fs.readFile(new URL(`../data/energy/${r}.json`,import.meta.url))));
 const prior=globalThis.fetch,requests=[];
 process.env.FORCE_ALL='1';process.env.GEH_TEST_NOW='2026-10-20T12:00:00Z';
 delete process.env.PAGES_BASE_URL;delete process.env.ENTSOE_API_TOKEN;
@@ -42,7 +44,5 @@ try{
  console.log('PASS V15.2: observed zero, correct derived sums, 3 feeds, token privacy, ENTSO-E XML, empty source handling');
 } finally {
  globalThis.fetch=prior;delete process.env.FORCE_ALL;delete process.env.GEH_TEST_NOW;
- for(const r of ['24h','7d','30d']){
-  await fs.writeFile(new URL(`../data/energy/${r}.json`,import.meta.url),JSON.stringify({mode:'github-pages',period:r,server_time:null,datasets:{},status:'not_fetched_yet',legal:'Live published data populated by GitHub Actions; no fabricated measurements.'},null,2)+'\n');
- }
+ for(let i=0;i<restoreRanges.length;i++) await fs.writeFile(new URL(`../data/energy/${restoreRanges[i]}.json`,import.meta.url),beforeSnapshots[i]);
 }

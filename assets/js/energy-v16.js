@@ -20,11 +20,11 @@ function classifiedReadings(ds,row){const val={},counts={};const m=spec(ds);for(
 const borderCodes=['HU','RO','BG','MK','XK','ME','BA','HR'];
 function borderFor(id,name=''){const s=(' '+id+' '+name+' ').replace(/[_/\-:–—>]+/g,' ').toLowerCase();const terms={HU:['hu','hungary','mađarska','magyar'],RO:['ro','romania','rumunija'],BG:['bg','bulgaria','bugarska'],MK:['mk','north macedonia','macedonia','makedonija'],XK:['xk','ks','kosovo'],ME:['me','montenegro','crna gora'],BA:['ba','bih','bosnia','herzegovina','bosna'],HR:['hr','croatia','hrvatska']};for(const [code,words] of Object.entries(terms))if(words.some(word=>s.includes(' '+word+' ')))return code;return null}
 function borderMetrics(ds,row){const out={},m=spec(ds);for(const [id,raw] of Object.entries(row?.values||{})){if(!Number.isFinite(raw))continue;const code=borderFor(id,m.get(id)?.name||'');if(!code)continue;const reading=asMW(raw,m.get(id)?.unit||ds?.unit);if(Number.isFinite(reading))out[code]=reading}return out}
-const state={payload:null,period:'24h',demo:false,energy:null,border:'HU',flow:'physical',index:null,selectedTime:null,step:0,playing:false,tourPlaying:false,motion:!matchMedia('(prefers-reduced-motion: reduce)').matches,historyTimer:null,tourTimer:null};
+const state={payload:null,period:'24h',demo:false,energy:null,border:'HU',flow:'physical',index:null,selectedTime:null,productionTime:null,step:0,playing:false,tourPlaying:false,motion:!matchMedia('(prefers-reduced-motion: reduce)').matches,historyTimer:null,tourTimer:null};
 function toggleMotion(enabled){state.motion=Boolean(enabled);body.classList.toggle('bc-motion-off',!state.motion);let btn=$('bc-motion-toggle');if(btn){btn.setAttribute('aria-pressed',String(state.motion));btn.textContent='◉ '+tr.motion+' · '+(state.motion?tr.on:tr.off)}if(!state.motion){stopPlayback();stopTour()}}
 function setEnergy(kind){state.energy=kind===state.energy?null:kind;all('[data-energy]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.energy===state.energy)));renderSystem();}
 function lastTime(){return state.selectedTime}
-function renderSystem(){const ds=state.payload?.datasets?.production,reading=rowAt(ds,lastTime()),mix=classifiedReadings(ds,reading),sum=Object.values(mix).reduce((a,b)=>a+b,0),has=Object.keys(mix).length>0;
+function renderSystem(){const ds=state.payload?.datasets?.production,reading=rowAt(ds,state.productionTime),mix=classifiedReadings(ds,reading),sum=Object.values(mix).reduce((a,b)=>a+b,0),has=Object.keys(mix).length>0;
  text('bc-core-val',has?fmt(sum):'—');const buttons=all('[data-energy]');for(const b of buttons){const kind=b.dataset.energy,n=mix[kind];b.classList.toggle('is-missing',!Number.isFinite(n));const val=b.querySelector('[data-reading]');if(val)val.textContent=Number.isFinite(n)?fmt(n)+' MW':'—';}
  all('[data-path]').forEach(p=>{let kind=p.dataset.path;p.classList.toggle('is-observed',Number.isFinite(mix[kind]) && mix[kind]>0 && (state.selectedTime!==null||state.demo||(ds?.status!=='cached'&&ds?.status!=='stale'&&Date.now()-reading?.time<10800000)));p.classList.toggle('is-selected',state.energy===kind&&Number.isFinite(mix[kind]));p.classList.toggle('is-muted',Boolean(state.energy&&state.energy!==kind));p.style.strokeWidth=Number.isFinite(mix[kind])?String(Math.min(5.2,1.6+Math.log1p(mix[kind])/3.3)):'';});
  const chosen=buttons.find(b=>b.dataset.energy===state.energy);text('bc-selection-title',chosen?chosen.querySelector('.bc-node-label')?.textContent:tr.reported);
@@ -33,6 +33,7 @@ function renderSystem(){const ds=state.payload?.datasets?.production,reading=row
  text('bc-data-time',tr.measured+': '+stamp(reading?.timestamp));const pub=state.payload?.datasets||{};
  const feedCount=['production','physical_flows','commercial_exchange'].filter(k=>rowAt(pub[k])).length;
  text('bc-data-status',state.demo?tr.demo:tr.status+' · '+feedCount+'/3');
+ document.dispatchEvent(new CustomEvent('geh:v174-system-view',{detail:{timestamp:reading?.timestamp||null,selection:state.energy,mix,total:has?sum:null}}));
 }
 function flowDataset(){return state.payload?.datasets?.[state.flow==='physical'?'physical_flows':'commercial_exchange']}
 function timeline(){return rowList(flowDataset())}
@@ -56,6 +57,7 @@ function renderNetwork(){const ds=flowDataset(),values=timeline(),curr=rowAt(ds,
  // A mini-chart includes gaps; never infer values for absent country data.
  let points=values.map(row=>({time:row.time,v:borderMetrics(ds,row)[state.border]}));spark(points);
  updateTimeline();
+ document.dispatchEvent(new CustomEvent('geh:v174-border-view',{detail:{borders,selected:state.border,flow:state.flow,time:curr?.timestamp||null,sourceStatus:ds?.status||'unavailable'}}));
 }
 function updateAll(){renderSystem();renderNetwork()}
 function setFlow(kind){if(state.flow===kind)return;pauseHistory();state.flow=kind;state.index=null;state.selectedTime=null;all('[data-flow-mode]').forEach(b=>{const on=b.dataset.flowMode===kind;b.classList.toggle('is-active',on);b.setAttribute('aria-selected',String(on))});updateAll()}
@@ -75,6 +77,7 @@ function handleData(detail){if(!detail||typeof detail.payload?.datasets!=='objec
 // Event comes from the stable V15 data adapter (and may have fired synchronously in explicit DEMO mode).
 document.addEventListener('geh:energy-data',event=>handleData(event.detail));
 if(window.GEH_V16_last)handleData(window.GEH_V16_last);
+document.addEventListener('geh:v174-production-time',ev=>{state.productionTime=ev.detail?.timestamp??null;renderSystem()});
 all('[data-energy]').forEach(b=>b.addEventListener('click',()=>setEnergy(b.dataset.energy)));
 $('bc-clear')?.addEventListener('click',()=>setEnergy(null));
 all('[data-border]').forEach(b=>b.addEventListener('click',()=>pickBorder(b.dataset.border)));

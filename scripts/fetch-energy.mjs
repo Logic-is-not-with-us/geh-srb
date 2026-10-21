@@ -7,6 +7,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {cleanEnergy, derivedFromProduction, parseEntsoeLoad, MAX_BYTES} from './energy-transform.mjs';
+import {normalizeSnapshot} from '../assets/js/energy-model-v18.mjs';
 const SITE=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const OUT=path.join(SITE,'data','energy');
 const URL_BASE='https://api.energy-charts.info/v2/';
@@ -16,11 +17,22 @@ const ENDPOINTS={production:'public_power',physical_flows:'cbpf',commercial_exch
 const NOW=process.env.GEH_TEST_NOW?new Date(process.env.GEH_TEST_NOW):new Date();
 const iso=d=>d.toISOString();
 const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+// Per-endpoint request pacing; avoids bursts across 24h/7d/30d calls.
+const endpointNext=new Map();
+async function pace(url){
+ if(process.env.GEH_TEST_NOW)return;
+ const endpoint=new URL(url).pathname;
+ if(!endpoint.startsWith('/v2/'))return;
+ const earliest=endpointNext.get(endpoint)||0;
+ if(Date.now()<earliest)await sleep(earliest-Date.now());
+ endpointNext.set(endpoint,Date.now()+25000);
+}
 const safeError=e=>String(e?.message||e).replace(/securityToken=[^&\s]+/gi,'securityToken=[REDACTED]').slice(0,160);
 function empty(error,source='Fraunhofer ISE Energy-Charts',url='https://api.energy-charts.info/'){
  return {status:'unavailable',data:[],series:[],timestamp:null,source,url,error};
 }
 async function getResponse(url,{timeoutMs=20000,maxBytes=MAX_BYTES}={}){
+  await pace(url);
   for(let attempt=0;attempt<3;attempt++){
     const controller=new AbortController();
     const timer=setTimeout(()=>controller.abort(),timeoutMs);
@@ -28,8 +40,10 @@ async function getResponse(url,{timeoutMs=20000,maxBytes=MAX_BYTES}={}){
       const r=await fetch(url,{headers:{Accept:'application/json, text/xml, application/xml','User-Agent':'GEH-Serbia-Energy-Preview/15.2'},signal:controller.signal});
       if(r.status===429 || r.status===502 || r.status===503 || r.status===504){
         if(attempt===2)throw Error('HTTP '+r.status+' after 3 attempts');
-        const sec=Number(r.headers.get('retry-after'));
-        const wait=Number.isFinite(sec)&&sec>0?Math.min(sec*1000,35000):Math.min(2000*2**attempt,8000);
+        const header=r.headers.get('retry-after');
+        const sec=header&&/^\d+(?:\.\d+)?$/.test(header)?Number(header):null;
+        const until=header&&!Number.isFinite(sec)?Date.parse(header):NaN;
+        const wait=sec!==null?Math.min(sec*1000,60000):Number.isFinite(until)?Math.min(Math.max(1000,until-Date.now()),60000):Math.min(2000*2**attempt,8000);
         console.warn(`Upstream HTTP ${r.status}; retry in ${Math.round(wait/1000)}s`);
         await sleep(wait);continue;
       }
@@ -116,7 +130,8 @@ async function collect(range,days){
     }
     datasets.day_ahead_price=placeholder('day_ahead_price');
     console.log(`${range}: reuse deployed observations (within refresh interval)`);
-    return {...previous, datasets, published_at:iso(NOW),status:'partial'};
+    const candidate={...previous, datasets, published_at:iso(NOW),status:'partial',period:range};
+    return {...candidate,v18:normalizeSnapshot(candidate,{now:iso(NOW)})};
   }
   const tasks=Object.entries(ENDPOINTS).map(async ([name,route])=>{
     const params=new URLSearchParams({country:'rs',start:iso(new Date(NOW.getTime()-days*86400_000)),end:iso(NOW)});
@@ -137,13 +152,14 @@ async function collect(range,days){
   const observed=inputs.filter(key=>datasets[key]?.data?.length).length;
   const status=observed===inputs.length?'observed':observed?'partial':'unavailable';
   // never imply current observations from server_time if only old data was retained
-  return {mode:'github-pages',period:range,server_time:iso(NOW),published_at:iso(NOW),
+  const candidate={mode:'github-pages',period:range,server_time:iso(NOW),published_at:iso(NOW),
     refresh_interval_seconds:900,status,datasets,
     source_counts:{public_feed_available:observed,public_feed_configured:inputs.length,
       entsoe_available:['actual_load','load_forecast'].filter(x=>datasets[x]?.data?.length).length,
       derived_available:Object.keys(datasets).filter(k=>k.startsWith('reported_')&&datasets[k].data?.length).length},
     attribution:'Energy-Charts (Fraunhofer ISE), ENTSO-E where available. Not TE-TO Pančevo telemetry.',
     legal:'No day-ahead price series publicly redistributed; derived series describe only observed production technologies.'};
+  return {...candidate,v18:normalizeSnapshot(candidate,{now:iso(NOW)})};
 }
 await fs.mkdir(OUT,{recursive:true});
 for(const [range,days] of Object.entries(DAYS)){

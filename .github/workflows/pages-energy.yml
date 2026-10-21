@@ -21,43 +21,23 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-      - name: Validate current project files
-        shell: bash
-        run: |
-          set -euo pipefail
-          for file in \
-            scripts/build-v19-site.py \
-            scripts/test-v152.mjs \
-            scripts/test-v19.mjs \
-            scripts/test-v20.mjs \
-            scripts/test-v22.mjs \
-            scripts/fetch-energy.mjs \
-            scripts/validate-v18-snapshots.mjs \
-            scripts/build-pages.mjs \
-            assets/js/energy-app-v19.mjs \
-            assets/css/energy-v22-polish.css; do
-            if [[ ! -f "$file" ]]; then
-              echo "::error file=$file::Missing V22 file. Upload the FULL V22 project before running this workflow."
-              exit 1
-            fi
-          done
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
       - name: Configure Pages
         id: pages
         uses: actions/configure-pages@v5
-      - name: Regenerate monitor and compiled CSS
+      - name: Regenerate V22 monitor and compiled design system
         run: python3 scripts/build-v19-site.py
-      - name: V15.2 data-transform regression
+      - name: V15.2 data-transform historical regression
         run: node scripts/test-v152.mjs
-      - name: V19 / V22 contract and presentation tests
+      - name: V19/V22 contract and presentation tests
         run: |
           node scripts/test-v19.mjs
           node scripts/test-v22.mjs
-      - name: V20 plant-scene regression
+      - name: V20 industrial scene and language integration
         run: node scripts/test-v20.mjs
-      - name: Validate JavaScript syntax
+      - name: Validate JavaScript modules
         run: |
           node --check assets/js/energy-model-v18.mjs
           node --check assets/js/energy-app-v19.mjs

@@ -94,6 +94,7 @@ export function parseEntsoeLoad(xml, kind, now=new Date()){
         const position=Number(val(point[1],'position')),q=Number(val(point[1],'quantity'));
         if(!Number.isInteger(position)||position<1||position>2000 || !Number.isFinite(q)||q<0||q>1e8)continue;
         const time=new Date(Date.parse(start)+(position-1)*step).toISOString();
+        if(seen.has(time)&&seen.get(time)!==q)throw Error('ENTSO-E overlapping contradictory TimeSeries at '+time);
         seen.set(time,q);
       }
     }

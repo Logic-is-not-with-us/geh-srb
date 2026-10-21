@@ -2,7 +2,214 @@
   "mode": "github-pages",
   "period": "7d",
   "server_time": null,
-  "datasets": {},
-  "status": "not_fetched_yet",
-  "legal": "Live published data populated by GitHub Actions; no fabricated measurements."
+  "published_at": null,
+  "datasets": {
+    "production": {
+      "status": "unavailable",
+      "source": "Fraunhofer ISE Energy-Charts",
+      "url": "https://api.energy-charts.info/",
+      "data": [],
+      "series": []
+    },
+    "physical_flows": {
+      "status": "unavailable",
+      "source": "Fraunhofer ISE Energy-Charts",
+      "url": "https://api.energy-charts.info/",
+      "data": [],
+      "series": []
+    },
+    "commercial_exchange": {
+      "status": "unavailable",
+      "source": "Fraunhofer ISE Energy-Charts",
+      "url": "https://api.energy-charts.info/",
+      "data": [],
+      "series": []
+    },
+    "actual_load": {
+      "status": "not_configured",
+      "source": "ENTSO-E Transparency Platform",
+      "url": "https://transparency.entsoe.eu/",
+      "data": [],
+      "series": []
+    },
+    "load_forecast": {
+      "status": "not_configured",
+      "source": "ENTSO-E Transparency Platform",
+      "url": "https://transparency.entsoe.eu/",
+      "data": [],
+      "series": []
+    },
+    "day_ahead_price": {
+      "status": "license_required",
+      "source": "SEEPEX",
+      "url": "https://www.seepex-spot.rs/",
+      "data": [],
+      "series": []
+    }
+  },
+  "v18": {
+    "schema_version": "18.0.0",
+    "mode": "github-pages",
+    "period": "7d",
+    "evaluated_at": "2026-10-20T00:00:00.000Z",
+    "published_at": null,
+    "sources": {
+      "production": {
+        "schema_version": "18.0.0",
+        "id": "production",
+        "feed_id": "production",
+        "quality": "unavailable",
+        "source": "Fraunhofer ISE Energy-Charts",
+        "url": "https://api.energy-charts.info/",
+        "unit": null,
+        "observed_at": null,
+        "retrieved_at": null,
+        "published_at": null,
+        "age_ms": null,
+        "stale_after_ms": 21600000,
+        "records": 0,
+        "source_state": "unavailable",
+        "reason": null,
+        "license": null,
+        "license_status": "verify_upstream_conditions",
+        "is_derived": false
+      },
+      "physical_flows": {
+        "schema_version": "18.0.0",
+        "id": "physical_flows",
+        "feed_id": "physical_flows",
+        "quality": "unavailable",
+        "source": "Fraunhofer ISE Energy-Charts",
+        "url": "https://api.energy-charts.info/",
+        "unit": null,
+        "observed_at": null,
+        "retrieved_at": null,
+        "published_at": null,
+        "age_ms": null,
+        "stale_after_ms": 28800000,
+        "records": 0,
+        "source_state": "unavailable",
+        "reason": null,
+        "license": null,
+        "license_status": "verify_upstream_conditions",
+        "is_derived": false
+      },
+      "commercial_exchange": {
+        "schema_version": "18.0.0",
+        "id": "commercial_exchange",
+        "feed_id": "commercial_exchange",
+        "quality": "unavailable",
+        "source": "Fraunhofer ISE Energy-Charts",
+        "url": "https://api.energy-charts.info/",
+        "unit": null,
+        "observed_at": null,
+        "retrieved_at": null,
+        "published_at": null,
+        "age_ms": null,
+        "stale_after_ms": 28800000,
+        "records": 0,
+        "source_state": "unavailable",
+        "reason": null,
+        "license": null,
+        "license_status": "verify_upstream_conditions",
+        "is_derived": false
+      },
+      "actual_load": {
+        "schema_version": "18.0.0",
+        "id": "actual_load",
+        "feed_id": "actual_load",
+        "quality": "not_configured",
+        "source": "ENTSO-E Transparency Platform",
+        "url": "https://transparency.entsoe.eu/",
+        "unit": null,
+        "observed_at": null,
+        "retrieved_at": null,
+        "published_at": null,
+        "age_ms": null,
+        "stale_after_ms": 28800000,
+        "records": 0,
+        "source_state": "not_configured",
+        "reason": null,
+        "license": null,
+        "license_status": "verify_upstream_conditions",
+        "is_derived": false
+      },
+      "load_forecast": {
+        "schema_version": "18.0.0",
+        "id": "load_forecast",
+        "feed_id": "load_forecast",
+        "quality": "not_configured",
+        "source": "ENTSO-E Transparency Platform",
+        "url": "https://transparency.entsoe.eu/",
+        "unit": null,
+        "observed_at": null,
+        "retrieved_at": null,
+        "published_at": null,
+        "age_ms": null,
+        "stale_after_ms": 129600000,
+        "records": 0,
+        "source_state": "not_configured",
+        "reason": null,
+        "license": null,
+        "license_status": "verify_upstream_conditions",
+        "is_derived": false
+      },
+      "day_ahead_price": {
+        "schema_version": "18.0.0",
+        "id": "day_ahead_price",
+        "feed_id": "day_ahead_price",
+        "quality": "license_required",
+        "source": "SEEPEX",
+        "url": "https://www.seepex-spot.rs/",
+        "unit": null,
+        "observed_at": null,
+        "retrieved_at": null,
+        "published_at": null,
+        "age_ms": null,
+        "stale_after_ms": 129600000,
+        "records": 0,
+        "source_state": "license_required",
+        "reason": null,
+        "license": null,
+        "license_status": "unverified_for_public_redistribution",
+        "is_derived": false
+      }
+    },
+    "data": {
+      "production": {
+        "points": [],
+        "unknown_ids": [],
+        "invalid_units": [],
+        "caveat": "Calculated only from reported technology series, not independently verified national generation."
+      },
+      "physical_flows": {
+        "points": [],
+        "unmapped_ids": [],
+        "conflicts": [],
+        "invalid_units": [],
+        "direction": "positive = import to Serbia, negative = export from Serbia; based on Energy-Charts published cbpf/cbet sign convention",
+        "caveat": "Physical and commercial series represent different phenomena; no inference of plant-level movement."
+      },
+      "commercial_exchange": {
+        "points": [],
+        "unmapped_ids": [],
+        "conflicts": [],
+        "invalid_units": [],
+        "direction": "positive = import to Serbia, negative = export from Serbia; based on Energy-Charts published cbpf/cbet sign convention",
+        "caveat": "Physical and commercial series represent different phenomena; no inference of plant-level movement."
+      },
+      "actual_load": {
+        "points": []
+      },
+      "load_forecast": {
+        "points": []
+      },
+      "day_ahead_price": {
+        "points": []
+      }
+    },
+    "warnings": [],
+    "methodological_note": "Source-specific observed intervals; no aligned national supply-demand balance is calculated. Missing readings are not zero.",
+    "licensing": "Day-ahead price unavailable for public distribution until an appropriate license is confirmed."
+  }
 }

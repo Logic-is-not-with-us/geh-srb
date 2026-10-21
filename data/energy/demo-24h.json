@@ -1,0 +1,5801 @@
+{
+ "mode": "explicit-demo",
+ "period": "24h",
+ "server_time": "2026-10-20T12:00:00.000Z",
+ "published_at": "2026-10-20T12:00:00.000Z",
+ "datasets": {
+  "production": {
+   "status": "demo",
+   "source": "DEMO / SYNTHETIC QA DATA",
+   "unit": "MW",
+   "series": [
+    {
+     "id": "fossil_brown_coal_lignite",
+     "name": "fossil_brown_coal_lignite",
+     "unit": "MW"
+    },
+    {
+     "id": "fossil_gas",
+     "name": "fossil_gas",
+     "unit": "MW"
+    },
+    {
+     "id": "hydro_run_of_river",
+     "name": "hydro_run_of_river",
+     "unit": "MW"
+    },
+    {
+     "id": "wind_onshore",
+     "name": "wind_onshore",
+     "unit": "MW"
+    },
+    {
+     "id": "solar",
+     "name": "solar",
+     "unit": "MW"
+    },
+    {
+     "id": "biomass",
+     "name": "biomass",
+     "unit": "MW"
+    }
+   ],
+   "data": [
+    {
+     "timestamp": "2026-10-19T12:30:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1460,
+      "fossil_gas": 470,
+      "hydro_run_of_river": 590,
+      "wind_onshore": 185,
+      "solar": 0,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-19T13:00:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1458.7050367931674,
+      "fossil_gas": 478.34411189339255,
+      "hydro_run_of_river": 589.2869282312631,
+      "wind_onshore": 199.9793473789636,
+      "solar": 0,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-19T13:30:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1454.836117931784,
+      "fossil_gas": 486.3555703769633,
+      "hydro_run_of_river": 587.1622406778342,
+      "wind_onshore": 214.83498373424482,
+      "solar": 0,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-19T14:00:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1448.440958726095,
+      "fossil_gas": 493.71498388259147,
+      "hydro_run_of_river": 583.6692246171916,
+      "wind_onshore": 229.44421974337376,
+      "solar": 0,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-19T14:30:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1439.5984305653687,
+      "fossil_gas": 500.12895581777997,
+      "hydro_run_of_river": 578.8790449390665,
+      "wind_onshore": 243.6864010483078,
+      "solar": 0,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-19T15:00:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1428.4175881984008,
+      "fossil_gas": 505.3417813619317,
+      "hydro_run_of_river": 572.8892942690487,
+      "wind_onshore": 257.4439047123375,
+      "solar": 0,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-19T15:30:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1415.036324763159,
+      "fossil_gas": 509.1456416106235,
+      "hydro_run_of_river": 565.8220046672687,
+      "wind_onshore": 270.6031106411735,
+      "solar": 0,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-19T16:00:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1399.6196711530679,
+      "fossil_gas": 511.3888886595153,
+      "hydro_run_of_river": 557.8211614107698,
+      "wind_onshore": 283.0553399454678,
+      "solar": 77.77759089345626,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-19T16:30:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1382.3577606938184,
+      "fossil_gas": 511.9820913277432,
+      "hydro_run_of_river": 549.0497695124748,
+      "wind_onshore": 294.6977524950471,
+      "solar": 151.03503091422476,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-19T17:00:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1363.4634842323094,
+      "fossil_gas": 510.9016004968842,
+      "hydro_run_of_river": 539.6865327419608,
+      "wind_onshore": 305.4341962521622,
+      "solar": 215.51486392825845,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-19T17:30:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1343.169864557468,
+      "fossil_gas": 508.19049192667865,
+      "hydro_run_of_river": 529.9222128079439,
+      "wind_onshore": 315.17600136930247,
+      "solar": 267.4697564154383,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-19T18:00:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1321.7271825341743,
+      "fossil_gas": 503.9568489604228,
+      "hydro_run_of_river": 519.9557428785913,
+      "wind_onshore": 323.8427124933029,
+      "solar": 303.88027887275985,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-19T18:30:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1299.3998903936279,
+      "fossil_gas": 498.36945358314836,
+      "hydro_run_of_river": 509.99017462077705,
+      "wind_onshore": 331.3627532278103,
+      "solar": 322.63038408186753,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-19T19:00:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1276.4633502484974,
+      "fossil_gas": 491.6510576165015,
+      "hydro_run_of_river": 500.22854133118886,
+      "wind_onshore": 337.67401726646403,
+      "solar": 322.63038408186753,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-19T19:30:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1253.2004380566875,
+      "fossil_gas": 484.06950230654803,
+      "hydro_run_of_river": 490.86972144170005,
+      "wind_onshore": 342.72438131475735,
+      "solar": 303.88027887275985,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-19T20:00:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1229.8980549169812,
+      "fossil_gas": 475.9270403385144,
+      "hydro_run_of_river": 482.1043866737931,
+      "wind_onshore": 346.472135564474,
+      "solar": 267.4697564154383,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-19T20:30:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1206.843588722687,
+      "fossil_gas": 467.54828597604165,
+      "hydro_run_of_river": 474.11111739222594,
+      "wind_onshore": 348.886328165509,
+      "solar": 215.51486392825845,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-19T21:00:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1184.32136981166,
+      "fossil_gas": 459.2672737148731,
+      "hydro_run_of_river": 467.05276430170125,
+      "wind_onshore": 349.9470208501606,
+      "solar": 151.03503091422493,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-19T21:30:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1162.6091643251002,
+      "fossil_gas": 451.4141413816162,
+      "hydro_run_of_river": 461.073130611437,
+      "wind_onshore": 349.6454535987489,
+      "solar": 77.77759089345625,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-19T22:00:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1141.974748522477,
+      "fossil_gas": 444.3019685804058,
+      "hydro_run_of_river": 456.29404226348805,
+      "wind_onshore": 347.9841169866266,
+      "solar": 0,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-19T22:30:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1122.6726063014946,
+      "fossil_gas": 438.21429519706703,
+      "hydro_run_of_river": 452.8128659144607,
+      "wind_onshore": 344.9767316150834,
+      "solar": 0,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-19T23:00:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1104.940790652526,
+      "fossil_gas": 433.3938175586293,
+      "hydro_run_of_river": 450.7005252379688,
+      "wind_onshore": 340.64813479602003,
+      "solar": 0,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-19T23:30:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1088.99798775515,
+      "fossil_gas": 430.0327128966403,
+      "hydro_run_of_river": 450.0000559626513,
+      "wind_onshore": 335.03407542623745,
+      "solar": 0,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-20T00:00:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1075.0408199252322,
+      "fossil_gas": 428.2649778473945,
+      "hydro_run_of_river": 450.7257290846537,
+      "wind_onshore": 328.1809187454272,
+      "solar": 0,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-20T00:30:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1063.2414206752612,
+      "fossil_gas": 428.1610864288947,
+      "hydro_run_of_river": 452.8627601177867,
+      "wind_onshore": 320.1452634162006,
+      "solar": 0,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-20T01:00:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1053.7453117946798,
+      "fossil_gas": 429.7251804641482,
+      "hydro_run_of_river": 456.3676103049462,
+      "wind_onshore": 310.9934740886045,
+      "solar": 0,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-20T01:30:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1046.6696086321394,
+      "fossil_gas": 432.89490445975355,
+      "hydro_run_of_river": 461.16887365407166,
+      "wind_onshore": 300.80113330956846,
+      "solar": 0,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-20T02:00:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1042.1015757139064,
+      "fossil_gas": 437.54389152264855,
+      "hydro_run_of_river": 467.1687317266336,
+      "wind_onshore": 289.65241730383684,
+      "solar": 0,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-20T02:30:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1040.0975505119495,
+      "fossil_gas": 443.4868012093625,
+      "hydro_run_of_river": 474.2449465395472,
+      "wind_onshore": 277.63940078167025,
+      "solar": 0,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-20T03:00:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1040.68224863486,
+      "fossil_gas": 450.4867084646222,
+      "hydro_run_of_river": 482.2533509781664,
+      "wind_onshore": 264.8612965147519,
+      "solar": 0,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-20T03:30:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1043.8484590106734,
+      "fossil_gas": 458.2645490756451,
+      "hydro_run_of_river": 491.0307859819825,
+      "wind_onshore": 251.42363596046692,
+      "solar": 0,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-20T04:00:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1049.5571328208966,
+      "fossil_gas": 466.5102450816652,
+      "hydro_run_of_river": 500.39842466233426,
+      "wind_onshore": 237.43739770159397,
+      "solar": 77.77759089345626,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-20T04:30:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1057.73786508892,
+      "fossil_gas": 474.89506660372075,
+      "hydro_run_of_river": 510.1654156282877,
+      "wind_onshore": 223.01809089942688,
+      "solar": 151.03503091422476,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-20T05:00:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1068.2897629833906,
+      "fossil_gas": 483.0847372675619,
+      "hydro_run_of_river": 520.132771293462,
+      "wind_onshore": 208.2848013298781,
+      "solar": 215.51486392825845,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-20T05:30:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1081.0826901277785,
+      "fossil_gas": 490.7527607478215,
+      "hydro_run_of_river": 530.097421945463,
+      "wind_onshore": 193.35920788113586,
+      "solar": 267.4697564154383,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-20T06:00:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1095.9588715700875,
+      "fossil_gas": 497.59343714618916,
+      "hydro_run_of_river": 539.8563529824258,
+      "wind_onshore": 178.3645776353966,
+      "solar": 303.88027887275985,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-20T06:30:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1112.7348396186414,
+      "fossil_gas": 503.3340502816644,
+      "hydro_run_of_river": 549.2107410267646,
+      "wind_onshore": 163.42474783406405,
+      "solar": 322.63038408186753,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-20T07:00:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1131.203696545994,
+      "fossil_gas": 507.7457400240883,
+      "hydro_run_of_river": 557.9700046491013,
+      "wind_onshore": 148.6631031341334,
+      "solar": 322.63038408186753,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-20T07:30:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1151.1376662550672,
+      "fossil_gas": 510.6526262253224,
+      "hydro_run_of_river": 565.9556871750356,
+      "wind_onshore": 134.20155660236668,
+      "solar": 303.88027887275985,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-20T08:00:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1172.290903437867,
+      "fossil_gas": 511.9388205057334,
+      "hydro_run_of_river": 573.005092468472,
+      "wind_onshore": 120.1595428629978,
+      "solar": 267.4697564154383,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-20T08:30:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1194.4025255814686,
+      "fossil_gas": 511.55304635818203,
+      "hydro_run_of_river": 578.9745996179496,
+      "wind_onshore": 106.65303171433048,
+      "solar": 215.51486392825845,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-20T09:00:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1217.1998304275921,
+      "fossil_gas": 509.51068338055046,
+      "hydro_run_of_river": 583.7425889942808,
+      "wind_onshore": 93.79357036054574,
+      "solar": 151.03503091422493,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-20T09:30:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1240.4016592048981,
+      "fossil_gas": 505.8931541397078,
+      "hydro_run_of_river": 587.2119200655256,
+      "wind_onshore": 81.68736216870843,
+      "solar": 77.77759089345625,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-20T10:00:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1263.7218641553116,
+      "fossil_gas": 500.8446781107128,
+      "hydro_run_of_river": 589.3119104875896,
+      "wind_onshore": 70.4343895593097,
+      "solar": 0,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-20T10:30:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1286.8728375894366,
+      "fossil_gas": 494.566522101454,
+      "hydro_run_of_river": 589.9997761494843,
+      "wind_onshore": 60.12758827419185,
+      "solar": 0,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-20T11:00:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1309.5690589472774,
+      "fossil_gas": 487.30897638015375,
+      "hydro_run_of_river": 589.261502834519,
+      "wind_onshore": 50.852079841390434,
+      "solar": 0,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-20T11:30:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1331.5306161184292,
+      "fossil_gas": 479.3613763922104,
+      "hydro_run_of_river": 587.112131738651,
+      "wind_onshore": 42.68446857579099,
+      "solar": 0,
+      "biomass": 26
+     }
+    },
+    {
+     "timestamp": "2026-10-20T12:00:00.000Z",
+     "values": {
+      "fossil_brown_coal_lignite": 1352.4866575933545,
+      "fossil_gas": 471.040567869041,
+      "hydro_run_of_river": 583.5954530289949,
+      "wind_onshore": 35.69220892151202,
+      "solar": 0,
+      "biomass": 26
+     }
+    }
+   ],
+   "retrieved_at": "2026-10-20T12:00:00.000Z"
+  },
+  "physical_flows": {
+   "status": "demo",
+   "source": "DEMO / SYNTHETIC QA DATA",
+   "unit": "MW",
+   "series": [
+    {
+     "id": "hu",
+     "name": "hu",
+     "unit": "MW"
+    },
+    {
+     "id": "ro",
+     "name": "ro",
+     "unit": "MW"
+    },
+    {
+     "id": "bg",
+     "name": "bg",
+     "unit": "MW"
+    },
+    {
+     "id": "mk",
+     "name": "mk",
+     "unit": "MW"
+    },
+    {
+     "id": "xk",
+     "name": "xk",
+     "unit": "MW"
+    },
+    {
+     "id": "me",
+     "name": "me",
+     "unit": "MW"
+    },
+    {
+     "id": "ba",
+     "name": "ba",
+     "unit": "MW"
+    },
+    {
+     "id": "hr",
+     "name": "hr",
+     "unit": "MW"
+    },
+    {
+     "id": "sum",
+     "name": "sum",
+     "unit": "MW"
+    }
+   ],
+   "data": [
+    {
+     "timestamp": "2026-10-19T12:30:00.000Z",
+     "values": {
+      "hu": 0,
+      "ro": 143,
+      "bg": 155,
+      "mk": 24,
+      "xk": -129,
+      "me": -163,
+      "ba": -48,
+      "hr": 112,
+      "sum": 94
+     }
+    },
+    {
+     "timestamp": "2026-10-19T13:00:00.000Z",
+     "values": {
+      "hu": 21,
+      "ro": 153,
+      "bg": 145,
+      "mk": 3,
+      "xk": -142,
+      "me": -156,
+      "ba": -27,
+      "hr": 127,
+      "sum": 124
+     }
+    },
+    {
+     "timestamp": "2026-10-19T13:30:00.000Z",
+     "values": {
+      "hu": 42,
+      "ro": 161,
+      "bg": 132,
+      "mk": -18,
+      "xk": -152,
+      "me": -146,
+      "ba": -6,
+      "hr": 140,
+      "sum": 153
+     }
+    },
+    {
+     "timestamp": "2026-10-19T14:00:00.000Z",
+     "values": {
+      "hu": 62,
+      "ro": 167,
+      "bg": 118,
+      "mk": -39,
+      "xk": -160,
+      "me": -134,
+      "ba": 16,
+      "hr": 151,
+      "sum": 181
+     }
+    },
+    {
+     "timestamp": "2026-10-19T14:30:00.000Z",
+     "values": {
+      "hu": 82,
+      "ro": 170,
+      "bg": 102,
+      "mk": -60,
+      "xk": -166,
+      "me": -120,
+      "ba": 37,
+      "hr": 159,
+      "sum": 204
+     }
+    },
+    {
+     "timestamp": "2026-10-19T15:00:00.000Z",
+     "values": {
+      "hu": 99,
+      "ro": 170,
+      "bg": 84,
+      "mk": -79,
+      "xk": -169,
+      "me": -104,
+      "ba": 57,
+      "hr": 166,
+      "sum": 224
+     }
+    },
+    {
+     "timestamp": "2026-10-19T15:30:00.000Z",
+     "values": {
+      "hu": 116,
+      "ro": 167,
+      "bg": 65,
+      "mk": -97,
+      "xk": -170,
+      "me": -86,
+      "ba": 77,
+      "hr": 169,
+      "sum": 241
+     }
+    },
+    {
+     "timestamp": "2026-10-19T16:00:00.000Z",
+     "values": {
+      "hu": 130,
+      "ro": 162,
+      "bg": 45,
+      "mk": -114,
+      "xk": -168,
+      "me": -67,
+      "ba": 95,
+      "hr": 170,
+      "sum": 253
+     }
+    },
+    {
+     "timestamp": "2026-10-19T16:30:00.000Z",
+     "values": {
+      "hu": 143,
+      "ro": 155,
+      "bg": 24,
+      "mk": -129,
+      "xk": -163,
+      "me": -48,
+      "ba": 112,
+      "hr": 168,
+      "sum": 262
+     }
+    },
+    {
+     "timestamp": "2026-10-19T17:00:00.000Z",
+     "values": {
+      "hu": 153,
+      "ro": 145,
+      "bg": 3,
+      "mk": -142,
+      "xk": -156,
+      "me": -27,
+      "ba": 127,
+      "hr": 164,
+      "sum": 267
+     }
+    },
+    {
+     "timestamp": "2026-10-19T17:30:00.000Z",
+     "values": {
+      "hu": 161,
+      "ro": 132,
+      "bg": -18,
+      "mk": -152,
+      "xk": -146,
+      "me": -6,
+      "ba": 140,
+      "hr": 157,
+      "sum": 268
+     }
+    },
+    {
+     "timestamp": "2026-10-19T18:00:00.000Z",
+     "values": {
+      "hu": 167,
+      "ro": 118,
+      "bg": -39,
+      "mk": -160,
+      "xk": -134,
+      "me": 16,
+      "ba": 151,
+      "hr": 147,
+      "sum": 266
+     }
+    },
+    {
+     "timestamp": "2026-10-19T18:30:00.000Z",
+     "values": {
+      "hu": 170,
+      "ro": 102,
+      "bg": -60,
+      "mk": -166,
+      "xk": -120,
+      "me": 37,
+      "ba": 159,
+      "hr": 136,
+      "sum": 258
+     }
+    },
+    {
+     "timestamp": "2026-10-19T19:00:00.000Z",
+     "values": {
+      "hu": 170,
+      "ro": 84,
+      "bg": -79,
+      "mk": -169,
+      "xk": -104,
+      "me": 57,
+      "ba": 166,
+      "hr": 122,
+      "sum": 247
+     }
+    },
+    {
+     "timestamp": "2026-10-19T19:30:00.000Z",
+     "values": {
+      "hu": 167,
+      "ro": 65,
+      "bg": -97,
+      "mk": -170,
+      "xk": -86,
+      "me": 77,
+      "ba": 169,
+      "hr": 106,
+      "sum": 231
+     }
+    },
+    {
+     "timestamp": "2026-10-19T20:00:00.000Z",
+     "values": {
+      "hu": 162,
+      "ro": 45,
+      "bg": -114,
+      "mk": -168,
+      "xk": -67,
+      "me": 95,
+      "ba": 170,
+      "hr": 89,
+      "sum": 212
+     }
+    },
+    {
+     "timestamp": "2026-10-19T20:30:00.000Z",
+     "values": {
+      "hu": 155,
+      "ro": 24,
+      "bg": -129,
+      "mk": -163,
+      "xk": -48,
+      "me": 112,
+      "ba": 168,
+      "hr": 70,
+      "sum": 189
+     }
+    },
+    {
+     "timestamp": "2026-10-19T21:00:00.000Z",
+     "values": {
+      "hu": 145,
+      "ro": 3,
+      "bg": -142,
+      "mk": -156,
+      "xk": -27,
+      "me": 127,
+      "ba": 164,
+      "hr": 50,
+      "sum": 164
+     }
+    },
+    {
+     "timestamp": "2026-10-19T21:30:00.000Z",
+     "values": {
+      "hu": 132,
+      "ro": -18,
+      "bg": -152,
+      "mk": -146,
+      "xk": -6,
+      "me": 140,
+      "ba": 157,
+      "hr": 30,
+      "sum": 137
+     }
+    },
+    {
+     "timestamp": "2026-10-19T22:00:00.000Z",
+     "values": {
+      "hu": 118,
+      "ro": -39,
+      "bg": -160,
+      "mk": -134,
+      "xk": 16,
+      "me": 151,
+      "ba": 147,
+      "hr": 8,
+      "sum": 107
+     }
+    },
+    {
+     "timestamp": "2026-10-19T22:30:00.000Z",
+     "values": {
+      "hu": 102,
+      "ro": -60,
+      "bg": -166,
+      "mk": -120,
+      "xk": 37,
+      "me": 159,
+      "ba": 136,
+      "hr": -13,
+      "sum": 75
+     }
+    },
+    {
+     "timestamp": "2026-10-19T23:00:00.000Z",
+     "values": {
+      "hu": 84,
+      "ro": -79,
+      "bg": -169,
+      "mk": -104,
+      "xk": 57,
+      "me": 166,
+      "ba": 122,
+      "hr": -34,
+      "sum": 43
+     }
+    },
+    {
+     "timestamp": "2026-10-19T23:30:00.000Z",
+     "values": {
+      "hu": 65,
+      "ro": -97,
+      "bg": -170,
+      "mk": -86,
+      "xk": 77,
+      "me": 169,
+      "ba": 106,
+      "hr": -54,
+      "sum": 10
+     }
+    },
+    {
+     "timestamp": "2026-10-20T00:00:00.000Z",
+     "values": {
+      "hu": 45,
+      "ro": -114,
+      "bg": -168,
+      "mk": -67,
+      "xk": 95,
+      "me": 170,
+      "ba": 89,
+      "hr": -74,
+      "sum": -24
+     }
+    },
+    {
+     "timestamp": "2026-10-20T00:30:00.000Z",
+     "values": {
+      "hu": 24,
+      "ro": -129,
+      "bg": -163,
+      "mk": -48,
+      "xk": 112,
+      "me": 168,
+      "ba": 70,
+      "hr": -92,
+      "sum": -58
+     }
+    },
+    {
+     "timestamp": "2026-10-20T01:00:00.000Z",
+     "values": {
+      "hu": 3,
+      "ro": -142,
+      "bg": -156,
+      "mk": -27,
+      "xk": 127,
+      "me": 164,
+      "ba": 50,
+      "hr": -110,
+      "sum": -91
+     }
+    },
+    {
+     "timestamp": "2026-10-20T01:30:00.000Z",
+     "values": {
+      "hu": -18,
+      "ro": -152,
+      "bg": -146,
+      "mk": -6,
+      "xk": 140,
+      "me": 157,
+      "ba": 30,
+      "hr": -125,
+      "sum": -120
+     }
+    },
+    {
+     "timestamp": "2026-10-20T02:00:00.000Z",
+     "values": {
+      "hu": -39,
+      "ro": -160,
+      "bg": -134,
+      "mk": 16,
+      "xk": 151,
+      "me": 147,
+      "ba": 8,
+      "hr": -138,
+      "sum": -149
+     }
+    },
+    {
+     "timestamp": "2026-10-20T02:30:00.000Z",
+     "values": {
+      "hu": -60,
+      "ro": -166,
+      "bg": -120,
+      "mk": 37,
+      "xk": 159,
+      "me": 136,
+      "ba": -13,
+      "hr": -150,
+      "sum": -177
+     }
+    },
+    {
+     "timestamp": "2026-10-20T03:00:00.000Z",
+     "values": {
+      "hu": -79,
+      "ro": -169,
+      "bg": -104,
+      "mk": 57,
+      "xk": 166,
+      "me": 122,
+      "ba": -34,
+      "hr": -158,
+      "sum": -199
+     }
+    },
+    {
+     "timestamp": "2026-10-20T03:30:00.000Z",
+     "values": {
+      "hu": -97,
+      "ro": -170,
+      "bg": -86,
+      "mk": 77,
+      "xk": 169,
+      "me": 106,
+      "ba": -54,
+      "hr": -165,
+      "sum": -220
+     }
+    },
+    {
+     "timestamp": "2026-10-20T04:00:00.000Z",
+     "values": {
+      "hu": -114,
+      "ro": -168,
+      "bg": -67,
+      "mk": 95,
+      "xk": 170,
+      "me": 89,
+      "ba": -74,
+      "hr": -169,
+      "sum": -238
+     }
+    },
+    {
+     "timestamp": "2026-10-20T04:30:00.000Z",
+     "values": {
+      "hu": -129,
+      "ro": -163,
+      "bg": -48,
+      "mk": 112,
+      "xk": 168,
+      "me": 70,
+      "ba": -92,
+      "hr": -170,
+      "sum": -252
+     }
+    },
+    {
+     "timestamp": "2026-10-20T05:00:00.000Z",
+     "values": {
+      "hu": -142,
+      "ro": -156,
+      "bg": -27,
+      "mk": 127,
+      "xk": 164,
+      "me": 50,
+      "ba": -110,
+      "hr": -169,
+      "sum": -263
+     }
+    },
+    {
+     "timestamp": "2026-10-20T05:30:00.000Z",
+     "values": {
+      "hu": -152,
+      "ro": -146,
+      "bg": -6,
+      "mk": 140,
+      "xk": 157,
+      "me": 30,
+      "ba": -125,
+      "hr": -165,
+      "sum": -267
+     }
+    },
+    {
+     "timestamp": "2026-10-20T06:00:00.000Z",
+     "values": {
+      "hu": -160,
+      "ro": -134,
+      "bg": 16,
+      "mk": 151,
+      "xk": 147,
+      "me": 8,
+      "ba": -138,
+      "hr": -158,
+      "sum": -268
+     }
+    },
+    {
+     "timestamp": "2026-10-20T06:30:00.000Z",
+     "values": {
+      "hu": -166,
+      "ro": -120,
+      "bg": 37,
+      "mk": 159,
+      "xk": 136,
+      "me": -13,
+      "ba": -150,
+      "hr": -149,
+      "sum": -266
+     }
+    },
+    {
+     "timestamp": "2026-10-20T07:00:00.000Z",
+     "values": {
+      "hu": -169,
+      "ro": -104,
+      "bg": 57,
+      "mk": 166,
+      "xk": 122,
+      "me": -34,
+      "ba": -158,
+      "hr": -137,
+      "sum": -257
+     }
+    },
+    {
+     "timestamp": "2026-10-20T07:30:00.000Z",
+     "values": {
+      "hu": -170,
+      "ro": -86,
+      "bg": 77,
+      "mk": 169,
+      "xk": 106,
+      "me": -54,
+      "ba": -165,
+      "hr": -124,
+      "sum": -247
+     }
+    },
+    {
+     "timestamp": "2026-10-20T08:00:00.000Z",
+     "values": {
+      "hu": -168,
+      "ro": -67,
+      "bg": 95,
+      "mk": 170,
+      "xk": 89,
+      "me": -74,
+      "ba": -169,
+      "hr": -108,
+      "sum": -232
+     }
+    },
+    {
+     "timestamp": "2026-10-20T08:30:00.000Z",
+     "values": {
+      "hu": -163,
+      "ro": -48,
+      "bg": 112,
+      "mk": 168,
+      "xk": 70,
+      "me": -92,
+      "ba": -170,
+      "hr": -91,
+      "sum": -214
+     }
+    },
+    {
+     "timestamp": "2026-10-20T09:00:00.000Z",
+     "values": {
+      "hu": -156,
+      "ro": -27,
+      "bg": 127,
+      "mk": 164,
+      "xk": 50,
+      "me": -110,
+      "ba": -169,
+      "hr": -73,
+      "sum": -194
+     }
+    },
+    {
+     "timestamp": "2026-10-20T09:30:00.000Z",
+     "values": {
+      "hu": -146,
+      "ro": -6,
+      "bg": 140,
+      "mk": 157,
+      "xk": 30,
+      "me": -125,
+      "ba": -165,
+      "hr": -53,
+      "sum": -168
+     }
+    },
+    {
+     "timestamp": "2026-10-20T10:00:00.000Z",
+     "values": {
+      "hu": -134,
+      "ro": 16,
+      "bg": 151,
+      "mk": 147,
+      "xk": 8,
+      "me": -138,
+      "ba": -158,
+      "hr": -32,
+      "sum": -140
+     }
+    },
+    {
+     "timestamp": "2026-10-20T10:30:00.000Z",
+     "values": {
+      "hu": -120,
+      "ro": 37,
+      "bg": 159,
+      "mk": 136,
+      "xk": -13,
+      "me": -150,
+      "ba": -149,
+      "hr": -11,
+      "sum": -111
+     }
+    },
+    {
+     "timestamp": "2026-10-20T11:00:00.000Z",
+     "values": {
+      "hu": -104,
+      "ro": 57,
+      "bg": 166,
+      "mk": 122,
+      "xk": -34,
+      "me": -158,
+      "ba": -137,
+      "hr": 10,
+      "sum": -78
+     }
+    },
+    {
+     "timestamp": "2026-10-20T11:30:00.000Z",
+     "values": {
+      "hu": -86,
+      "ro": 77,
+      "bg": 169,
+      "mk": 106,
+      "xk": -54,
+      "me": -165,
+      "ba": -124,
+      "hr": 31,
+      "sum": -46
+     }
+    },
+    {
+     "timestamp": "2026-10-20T12:00:00.000Z",
+     "values": {
+      "hu": -67,
+      "ro": 95,
+      "bg": 170,
+      "mk": 89,
+      "xk": -74,
+      "me": -169,
+      "ba": -108,
+      "hr": 52,
+      "sum": -12
+     }
+    }
+   ],
+   "retrieved_at": "2026-10-20T12:00:00.000Z"
+  },
+  "commercial_exchange": {
+   "status": "demo",
+   "source": "DEMO / SYNTHETIC QA DATA",
+   "unit": "MW",
+   "series": [
+    {
+     "id": "hu",
+     "name": "hu",
+     "unit": "MW"
+    },
+    {
+     "id": "ro",
+     "name": "ro",
+     "unit": "MW"
+    },
+    {
+     "id": "bg",
+     "name": "bg",
+     "unit": "MW"
+    },
+    {
+     "id": "mk",
+     "name": "mk",
+     "unit": "MW"
+    },
+    {
+     "id": "xk",
+     "name": "xk",
+     "unit": "MW"
+    },
+    {
+     "id": "me",
+     "name": "me",
+     "unit": "MW"
+    },
+    {
+     "id": "ba",
+     "name": "ba",
+     "unit": "MW"
+    },
+    {
+     "id": "hr",
+     "name": "hr",
+     "unit": "MW"
+    },
+    {
+     "id": "sum",
+     "name": "sum",
+     "unit": "MW"
+    }
+   ],
+   "data": [
+    {
+     "timestamp": "2026-10-19T12:30:00.000Z",
+     "values": {
+      "hu": 70,
+      "ro": 213,
+      "bg": 225,
+      "mk": 94,
+      "xk": -59,
+      "me": -93,
+      "ba": 22,
+      "hr": 182,
+      "sum": 654
+     }
+    },
+    {
+     "timestamp": "2026-10-19T13:00:00.000Z",
+     "values": {
+      "hu": 91,
+      "ro": 223,
+      "bg": 215,
+      "mk": 73,
+      "xk": -72,
+      "me": -86,
+      "ba": 43,
+      "hr": 197,
+      "sum": 684
+     }
+    },
+    {
+     "timestamp": "2026-10-19T13:30:00.000Z",
+     "values": {
+      "hu": 112,
+      "ro": 231,
+      "bg": 202,
+      "mk": 52,
+      "xk": -82,
+      "me": -76,
+      "ba": 64,
+      "hr": 210,
+      "sum": 713
+     }
+    },
+    {
+     "timestamp": "2026-10-19T14:00:00.000Z",
+     "values": {
+      "hu": 132,
+      "ro": 237,
+      "bg": 188,
+      "mk": 31,
+      "xk": -90,
+      "me": -64,
+      "ba": 86,
+      "hr": 221,
+      "sum": 741
+     }
+    },
+    {
+     "timestamp": "2026-10-19T14:30:00.000Z",
+     "values": {
+      "hu": 152,
+      "ro": 240,
+      "bg": 172,
+      "mk": 10,
+      "xk": -96,
+      "me": -50,
+      "ba": 107,
+      "hr": 229,
+      "sum": 764
+     }
+    },
+    {
+     "timestamp": "2026-10-19T15:00:00.000Z",
+     "values": {
+      "hu": 169,
+      "ro": 240,
+      "bg": 154,
+      "mk": -9,
+      "xk": -99,
+      "me": -34,
+      "ba": 127,
+      "hr": 236,
+      "sum": 784
+     }
+    },
+    {
+     "timestamp": "2026-10-19T15:30:00.000Z",
+     "values": {
+      "hu": 186,
+      "ro": 237,
+      "bg": 135,
+      "mk": -27,
+      "xk": -100,
+      "me": -16,
+      "ba": 147,
+      "hr": 239,
+      "sum": 801
+     }
+    },
+    {
+     "timestamp": "2026-10-19T16:00:00.000Z",
+     "values": {
+      "hu": 200,
+      "ro": 232,
+      "bg": 115,
+      "mk": -44,
+      "xk": -98,
+      "me": 3,
+      "ba": 165,
+      "hr": 240,
+      "sum": 813
+     }
+    },
+    {
+     "timestamp": "2026-10-19T16:30:00.000Z",
+     "values": {
+      "hu": 213,
+      "ro": 225,
+      "bg": 94,
+      "mk": -59,
+      "xk": -93,
+      "me": 22,
+      "ba": 182,
+      "hr": 238,
+      "sum": 822
+     }
+    },
+    {
+     "timestamp": "2026-10-19T17:00:00.000Z",
+     "values": {
+      "hu": 223,
+      "ro": 215,
+      "bg": 73,
+      "mk": -72,
+      "xk": -86,
+      "me": 43,
+      "ba": 197,
+      "hr": 234,
+      "sum": 827
+     }
+    },
+    {
+     "timestamp": "2026-10-19T17:30:00.000Z",
+     "values": {
+      "hu": 231,
+      "ro": 202,
+      "bg": 52,
+      "mk": -82,
+      "xk": -76,
+      "me": 64,
+      "ba": 210,
+      "hr": 227,
+      "sum": 828
+     }
+    },
+    {
+     "timestamp": "2026-10-19T18:00:00.000Z",
+     "values": {
+      "hu": 237,
+      "ro": 188,
+      "bg": 31,
+      "mk": -90,
+      "xk": -64,
+      "me": 86,
+      "ba": 221,
+      "hr": 217,
+      "sum": 826
+     }
+    },
+    {
+     "timestamp": "2026-10-19T18:30:00.000Z",
+     "values": {
+      "hu": 240,
+      "ro": 172,
+      "bg": 10,
+      "mk": -96,
+      "xk": -50,
+      "me": 107,
+      "ba": 229,
+      "hr": 206,
+      "sum": 818
+     }
+    },
+    {
+     "timestamp": "2026-10-19T19:00:00.000Z",
+     "values": {
+      "hu": 240,
+      "ro": 154,
+      "bg": -9,
+      "mk": -99,
+      "xk": -34,
+      "me": 127,
+      "ba": 236,
+      "hr": 192,
+      "sum": 807
+     }
+    },
+    {
+     "timestamp": "2026-10-19T19:30:00.000Z",
+     "values": {
+      "hu": 237,
+      "ro": 135,
+      "bg": -27,
+      "mk": -100,
+      "xk": -16,
+      "me": 147,
+      "ba": 239,
+      "hr": 176,
+      "sum": 791
+     }
+    },
+    {
+     "timestamp": "2026-10-19T20:00:00.000Z",
+     "values": {
+      "hu": 232,
+      "ro": 115,
+      "bg": -44,
+      "mk": -98,
+      "xk": 3,
+      "me": 165,
+      "ba": 240,
+      "hr": 159,
+      "sum": 772
+     }
+    },
+    {
+     "timestamp": "2026-10-19T20:30:00.000Z",
+     "values": {
+      "hu": 225,
+      "ro": 94,
+      "bg": -59,
+      "mk": -93,
+      "xk": 22,
+      "me": 182,
+      "ba": 238,
+      "hr": 140,
+      "sum": 749
+     }
+    },
+    {
+     "timestamp": "2026-10-19T21:00:00.000Z",
+     "values": {
+      "hu": 215,
+      "ro": 73,
+      "bg": -72,
+      "mk": -86,
+      "xk": 43,
+      "me": 197,
+      "ba": 234,
+      "hr": 120,
+      "sum": 724
+     }
+    },
+    {
+     "timestamp": "2026-10-19T21:30:00.000Z",
+     "values": {
+      "hu": 202,
+      "ro": 52,
+      "bg": -82,
+      "mk": -76,
+      "xk": 64,
+      "me": 210,
+      "ba": 227,
+      "hr": 100,
+      "sum": 697
+     }
+    },
+    {
+     "timestamp": "2026-10-19T22:00:00.000Z",
+     "values": {
+      "hu": 188,
+      "ro": 31,
+      "bg": -90,
+      "mk": -64,
+      "xk": 86,
+      "me": 221,
+      "ba": 217,
+      "hr": 78,
+      "sum": 667
+     }
+    },
+    {
+     "timestamp": "2026-10-19T22:30:00.000Z",
+     "values": {
+      "hu": 172,
+      "ro": 10,
+      "bg": -96,
+      "mk": -50,
+      "xk": 107,
+      "me": 229,
+      "ba": 206,
+      "hr": 57,
+      "sum": 635
+     }
+    },
+    {
+     "timestamp": "2026-10-19T23:00:00.000Z",
+     "values": {
+      "hu": 154,
+      "ro": -9,
+      "bg": -99,
+      "mk": -34,
+      "xk": 127,
+      "me": 236,
+      "ba": 192,
+      "hr": 36,
+      "sum": 603
+     }
+    },
+    {
+     "timestamp": "2026-10-19T23:30:00.000Z",
+     "values": {
+      "hu": 135,
+      "ro": -27,
+      "bg": -100,
+      "mk": -16,
+      "xk": 147,
+      "me": 239,
+      "ba": 176,
+      "hr": 16,
+      "sum": 570
+     }
+    },
+    {
+     "timestamp": "2026-10-20T00:00:00.000Z",
+     "values": {
+      "hu": 115,
+      "ro": -44,
+      "bg": -98,
+      "mk": 3,
+      "xk": 165,
+      "me": 240,
+      "ba": 159,
+      "hr": -4,
+      "sum": 536
+     }
+    },
+    {
+     "timestamp": "2026-10-20T00:30:00.000Z",
+     "values": {
+      "hu": 94,
+      "ro": -59,
+      "bg": -93,
+      "mk": 22,
+      "xk": 182,
+      "me": 238,
+      "ba": 140,
+      "hr": -22,
+      "sum": 502
+     }
+    },
+    {
+     "timestamp": "2026-10-20T01:00:00.000Z",
+     "values": {
+      "hu": 73,
+      "ro": -72,
+      "bg": -86,
+      "mk": 43,
+      "xk": 197,
+      "me": 234,
+      "ba": 120,
+      "hr": -40,
+      "sum": 469
+     }
+    },
+    {
+     "timestamp": "2026-10-20T01:30:00.000Z",
+     "values": {
+      "hu": 52,
+      "ro": -82,
+      "bg": -76,
+      "mk": 64,
+      "xk": 210,
+      "me": 227,
+      "ba": 100,
+      "hr": -55,
+      "sum": 440
+     }
+    },
+    {
+     "timestamp": "2026-10-20T02:00:00.000Z",
+     "values": {
+      "hu": 31,
+      "ro": -90,
+      "bg": -64,
+      "mk": 86,
+      "xk": 221,
+      "me": 217,
+      "ba": 78,
+      "hr": -68,
+      "sum": 411
+     }
+    },
+    {
+     "timestamp": "2026-10-20T02:30:00.000Z",
+     "values": {
+      "hu": 10,
+      "ro": -96,
+      "bg": -50,
+      "mk": 107,
+      "xk": 229,
+      "me": 206,
+      "ba": 57,
+      "hr": -80,
+      "sum": 383
+     }
+    },
+    {
+     "timestamp": "2026-10-20T03:00:00.000Z",
+     "values": {
+      "hu": -9,
+      "ro": -99,
+      "bg": -34,
+      "mk": 127,
+      "xk": 236,
+      "me": 192,
+      "ba": 36,
+      "hr": -88,
+      "sum": 361
+     }
+    },
+    {
+     "timestamp": "2026-10-20T03:30:00.000Z",
+     "values": {
+      "hu": -27,
+      "ro": -100,
+      "bg": -16,
+      "mk": 147,
+      "xk": 239,
+      "me": 176,
+      "ba": 16,
+      "hr": -95,
+      "sum": 340
+     }
+    },
+    {
+     "timestamp": "2026-10-20T04:00:00.000Z",
+     "values": {
+      "hu": -44,
+      "ro": -98,
+      "bg": 3,
+      "mk": 165,
+      "xk": 240,
+      "me": 159,
+      "ba": -4,
+      "hr": -99,
+      "sum": 322
+     }
+    },
+    {
+     "timestamp": "2026-10-20T04:30:00.000Z",
+     "values": {
+      "hu": -59,
+      "ro": -93,
+      "bg": 22,
+      "mk": 182,
+      "xk": 238,
+      "me": 140,
+      "ba": -22,
+      "hr": -100,
+      "sum": 308
+     }
+    },
+    {
+     "timestamp": "2026-10-20T05:00:00.000Z",
+     "values": {
+      "hu": -72,
+      "ro": -86,
+      "bg": 43,
+      "mk": 197,
+      "xk": 234,
+      "me": 120,
+      "ba": -40,
+      "hr": -99,
+      "sum": 297
+     }
+    },
+    {
+     "timestamp": "2026-10-20T05:30:00.000Z",
+     "values": {
+      "hu": -82,
+      "ro": -76,
+      "bg": 64,
+      "mk": 210,
+      "xk": 227,
+      "me": 100,
+      "ba": -55,
+      "hr": -95,
+      "sum": 293
+     }
+    },
+    {
+     "timestamp": "2026-10-20T06:00:00.000Z",
+     "values": {
+      "hu": -90,
+      "ro": -64,
+      "bg": 86,
+      "mk": 221,
+      "xk": 217,
+      "me": 78,
+      "ba": -68,
+      "hr": -88,
+      "sum": 292
+     }
+    },
+    {
+     "timestamp": "2026-10-20T06:30:00.000Z",
+     "values": {
+      "hu": -96,
+      "ro": -50,
+      "bg": 107,
+      "mk": 229,
+      "xk": 206,
+      "me": 57,
+      "ba": -80,
+      "hr": -79,
+      "sum": 294
+     }
+    },
+    {
+     "timestamp": "2026-10-20T07:00:00.000Z",
+     "values": {
+      "hu": -99,
+      "ro": -34,
+      "bg": 127,
+      "mk": 236,
+      "xk": 192,
+      "me": 36,
+      "ba": -88,
+      "hr": -67,
+      "sum": 303
+     }
+    },
+    {
+     "timestamp": "2026-10-20T07:30:00.000Z",
+     "values": {
+      "hu": -100,
+      "ro": -16,
+      "bg": 147,
+      "mk": 239,
+      "xk": 176,
+      "me": 16,
+      "ba": -95,
+      "hr": -54,
+      "sum": 313
+     }
+    },
+    {
+     "timestamp": "2026-10-20T08:00:00.000Z",
+     "values": {
+      "hu": -98,
+      "ro": 3,
+      "bg": 165,
+      "mk": 240,
+      "xk": 159,
+      "me": -4,
+      "ba": -99,
+      "hr": -38,
+      "sum": 328
+     }
+    },
+    {
+     "timestamp": "2026-10-20T08:30:00.000Z",
+     "values": {
+      "hu": -93,
+      "ro": 22,
+      "bg": 182,
+      "mk": 238,
+      "xk": 140,
+      "me": -22,
+      "ba": -100,
+      "hr": -21,
+      "sum": 346
+     }
+    },
+    {
+     "timestamp": "2026-10-20T09:00:00.000Z",
+     "values": {
+      "hu": -86,
+      "ro": 43,
+      "bg": 197,
+      "mk": 234,
+      "xk": 120,
+      "me": -40,
+      "ba": -99,
+      "hr": -3,
+      "sum": 366
+     }
+    },
+    {
+     "timestamp": "2026-10-20T09:30:00.000Z",
+     "values": {
+      "hu": -76,
+      "ro": 64,
+      "bg": 210,
+      "mk": 227,
+      "xk": 100,
+      "me": -55,
+      "ba": -95,
+      "hr": 17,
+      "sum": 392
+     }
+    },
+    {
+     "timestamp": "2026-10-20T10:00:00.000Z",
+     "values": {
+      "hu": -64,
+      "ro": 86,
+      "bg": 221,
+      "mk": 217,
+      "xk": 78,
+      "me": -68,
+      "ba": -88,
+      "hr": 38,
+      "sum": 420
+     }
+    },
+    {
+     "timestamp": "2026-10-20T10:30:00.000Z",
+     "values": {
+      "hu": -50,
+      "ro": 107,
+      "bg": 229,
+      "mk": 206,
+      "xk": 57,
+      "me": -80,
+      "ba": -79,
+      "hr": 59,
+      "sum": 449
+     }
+    },
+    {
+     "timestamp": "2026-10-20T11:00:00.000Z",
+     "values": {
+      "hu": -34,
+      "ro": 127,
+      "bg": 236,
+      "mk": 192,
+      "xk": 36,
+      "me": -88,
+      "ba": -67,
+      "hr": 80,
+      "sum": 482
+     }
+    },
+    {
+     "timestamp": "2026-10-20T11:30:00.000Z",
+     "values": {
+      "hu": -16,
+      "ro": 147,
+      "bg": 239,
+      "mk": 176,
+      "xk": 16,
+      "me": -95,
+      "ba": -54,
+      "hr": 101,
+      "sum": 514
+     }
+    },
+    {
+     "timestamp": "2026-10-20T12:00:00.000Z",
+     "values": {
+      "hu": 3,
+      "ro": 165,
+      "bg": 240,
+      "mk": 159,
+      "xk": -4,
+      "me": -99,
+      "ba": -38,
+      "hr": 122,
+      "sum": 548
+     }
+    }
+   ],
+   "retrieved_at": "2026-10-20T12:00:00.000Z"
+  },
+  "actual_load": {
+   "status": "demo",
+   "source": "DEMO / SYNTHETIC QA DATA",
+   "unit": "MW",
+   "series": [
+    {
+     "id": "actual_load",
+     "name": "actual_load",
+     "unit": "MW"
+    }
+   ],
+   "data": [
+    {
+     "timestamp": "2026-10-19T12:30:00.000Z",
+     "values": {
+      "actual_load": 3170
+     }
+    },
+    {
+     "timestamp": "2026-10-19T13:00:00.000Z",
+     "values": {
+      "actual_load": 3185.5235679913935
+     }
+    },
+    {
+     "timestamp": "2026-10-19T13:30:00.000Z",
+     "values": {
+      "actual_load": 3200.8556840838573
+     }
+    },
+    {
+     "timestamp": "2026-10-19T14:00:00.000Z",
+     "values": {
+      "actual_load": 3215.807257551461
+     }
+    },
+    {
+     "timestamp": "2026-10-19T14:30:00.000Z",
+     "values": {
+      "actual_load": 3230.1938908939696
+     }
+    },
+    {
+     "timestamp": "2026-10-19T15:00:00.000Z",
+     "values": {
+      "actual_load": 3243.8381540080613
+     }
+    },
+    {
+     "timestamp": "2026-10-19T15:30:00.000Z",
+     "values": {
+      "actual_load": 3256.5717724297633
+     }
+    },
+    {
+     "timestamp": "2026-10-19T16:00:00.000Z",
+     "values": {
+      "actual_load": 3268.2377026605427
+     }
+    },
+    {
+     "timestamp": "2026-10-19T16:30:00.000Z",
+     "values": {
+      "actual_load": 3278.6920689820927
+     }
+    },
+    {
+     "timestamp": "2026-10-19T17:00:00.000Z",
+     "values": {
+      "actual_load": 3287.8059378731054
+     }
+    },
+    {
+     "timestamp": "2026-10-19T17:30:00.000Z",
+     "values": {
+      "actual_load": 3295.466908144194
+     }
+    },
+    {
+     "timestamp": "2026-10-19T18:00:00.000Z",
+     "values": {
+      "actual_load": 3301.5804971798366
+     }
+    },
+    {
+     "timestamp": "2026-10-19T18:30:00.000Z",
+     "values": {
+      "actual_load": 3306.0713061908637
+     }
+    },
+    {
+     "timestamp": "2026-10-19T19:00:00.000Z",
+     "values": {
+      "actual_load": 3308.8839501064353
+     }
+    },
+    {
+     "timestamp": "2026-10-19T19:30:00.000Z",
+     "values": {
+      "actual_load": 3309.9837406371744
+     }
+    },
+    {
+     "timestamp": "2026-10-19T20:00:00.000Z",
+     "values": {
+      "actual_load": 3309.3571140852473
+     }
+    },
+    {
+     "timestamp": "2026-10-19T20:30:00.000Z",
+     "values": {
+      "actual_load": 3307.011798625217
+     }
+    },
+    {
+     "timestamp": "2026-10-19T21:00:00.000Z",
+     "values": {
+      "actual_load": 3302.9767189926006
+     }
+    },
+    {
+     "timestamp": "2026-10-19T21:30:00.000Z",
+     "values": {
+      "actual_load": 3297.3016397555953
+     }
+    },
+    {
+     "timestamp": "2026-10-19T22:00:00.000Z",
+     "values": {
+      "actual_load": 3290.056551569515
+     }
+    },
+    {
+     "timestamp": "2026-10-19T22:30:00.000Z",
+     "values": {
+      "actual_load": 3281.330807983227
+     }
+    },
+    {
+     "timestamp": "2026-10-19T23:00:00.000Z",
+     "values": {
+      "actual_load": 3271.2320234433655
+     }
+    },
+    {
+     "timestamp": "2026-10-19T23:30:00.000Z",
+     "values": {
+      "actual_load": 3259.8847460871957
+     }
+    },
+    {
+     "timestamp": "2026-10-20T00:00:00.000Z",
+     "values": {
+      "actual_load": 3247.4289216925645
+     }
+    },
+    {
+     "timestamp": "2026-10-20T00:30:00.000Z",
+     "values": {
+      "actual_load": 3234.018167729014
+     }
+    },
+    {
+     "timestamp": "2026-10-20T01:00:00.000Z",
+     "values": {
+      "actual_load": 3219.817878796149
+     }
+    },
+    {
+     "timestamp": "2026-10-20T01:30:00.000Z",
+     "values": {
+      "actual_load": 3205.003186814871
+     }
+    },
+    {
+     "timestamp": "2026-10-20T02:00:00.000Z",
+     "values": {
+      "actual_load": 3189.7568011283815
+     }
+    },
+    {
+     "timestamp": "2026-10-20T02:30:00.000Z",
+     "values": {
+      "actual_load": 3174.266755150978
+     }
+    },
+    {
+     "timestamp": "2026-10-20T03:00:00.000Z",
+     "values": {
+      "actual_load": 3158.7240873551646
+     }
+    },
+    {
+     "timestamp": "2026-10-20T03:30:00.000Z",
+     "values": {
+      "actual_load": 3143.320485197432
+     }
+    },
+    {
+     "timestamp": "2026-10-20T04:00:00.000Z",
+     "values": {
+      "actual_load": 3128.2459210401325
+     }
+    },
+    {
+     "timestamp": "2026-10-20T04:30:00.000Z",
+     "values": {
+      "actual_load": 3113.6863092255785
+     }
+    },
+    {
+     "timestamp": "2026-10-20T05:00:00.000Z",
+     "values": {
+      "actual_load": 3099.8212131976316
+     }
+    },
+    {
+     "timestamp": "2026-10-20T05:30:00.000Z",
+     "values": {
+      "actual_load": 3086.8216309488207
+     }
+    },
+    {
+     "timestamp": "2026-10-20T06:00:00.000Z",
+     "values": {
+      "actual_load": 3074.8478861050157
+     }
+    },
+    {
+     "timestamp": "2026-10-20T06:30:00.000Z",
+     "values": {
+      "actual_load": 3064.0476506568903
+     }
+    },
+    {
+     "timestamp": "2026-10-20T07:00:00.000Z",
+     "values": {
+      "actual_load": 3054.5541237237817
+     }
+    },
+    {
+     "timestamp": "2026-10-20T07:30:00.000Z",
+     "values": {
+      "actual_load": 3046.4843888112287
+     }
+    },
+    {
+     "timestamp": "2026-10-20T08:00:00.000Z",
+     "values": {
+      "actual_load": 3039.9379698220932
+     }
+    },
+    {
+     "timestamp": "2026-10-20T08:30:00.000Z",
+     "values": {
+      "actual_load": 3034.995603629971
+     }
+    },
+    {
+     "timestamp": "2026-10-20T09:00:00.000Z",
+     "values": {
+      "actual_load": 3031.7182443527045
+     }
+    },
+    {
+     "timestamp": "2026-10-20T09:30:00.000Z",
+     "values": {
+      "actual_load": 3030.14631160629
+     }
+    },
+    {
+     "timestamp": "2026-10-20T10:00:00.000Z",
+     "values": {
+      "actual_load": 3030.299192010444
+     }
+    },
+    {
+     "timestamp": "2026-10-20T10:30:00.000Z",
+     "values": {
+      "actual_load": 3032.175000093753
+     }
+    },
+    {
+     "timestamp": "2026-10-20T11:00:00.000Z",
+     "values": {
+      "actual_load": 3035.750601547161
+     }
+    },
+    {
+     "timestamp": "2026-10-20T11:30:00.000Z",
+     "values": {
+      "actual_load": 3040.9818985390048
+     }
+    },
+    {
+     "timestamp": "2026-10-20T12:00:00.000Z",
+     "values": {
+      "actual_load": 3047.804373572824
+     }
+    }
+   ],
+   "retrieved_at": "2026-10-20T12:00:00.000Z"
+  },
+  "load_forecast": {
+   "status": "demo",
+   "source": "DEMO / SYNTHETIC QA DATA",
+   "unit": "MW",
+   "series": [
+    {
+     "id": "day_ahead_load_forecast",
+     "name": "day_ahead_load_forecast",
+     "unit": "MW"
+    }
+   ],
+   "data": [
+    {
+     "timestamp": "2026-10-19T12:30:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3200
+     }
+    },
+    {
+     "timestamp": "2026-10-19T13:00:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3211.0882628509953
+     }
+    },
+    {
+     "timestamp": "2026-10-19T13:30:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3222.0397743456124
+     }
+    },
+    {
+     "timestamp": "2026-10-19T14:00:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3232.719469679615
+     }
+    },
+    {
+     "timestamp": "2026-10-19T14:30:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3242.9956363528354
+     }
+    },
+    {
+     "timestamp": "2026-10-19T15:00:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3252.7415385771865
+     }
+    },
+    {
+     "timestamp": "2026-10-19T15:30:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3261.8369803069736
+     }
+    },
+    {
+     "timestamp": "2026-10-19T16:00:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3270.1697876146736
+     }
+    },
+    {
+     "timestamp": "2026-10-19T16:30:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3277.637192130066
+     }
+    },
+    {
+     "timestamp": "2026-10-19T17:00:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3284.1470984807897
+     }
+    },
+    {
+     "timestamp": "2026-10-19T17:30:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3289.6192201029958
+     }
+    },
+    {
+     "timestamp": "2026-10-19T18:00:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3293.986069414169
+     }
+    },
+    {
+     "timestamp": "2026-10-19T18:30:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3297.1937901363312
+     }
+    },
+    {
+     "timestamp": "2026-10-19T19:00:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3299.2028215045966
+     }
+    },
+    {
+     "timestamp": "2026-10-19T19:30:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3299.98838616941
+     }
+    },
+    {
+     "timestamp": "2026-10-19T20:00:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3299.5407957751763
+     }
+    },
+    {
+     "timestamp": "2026-10-19T20:30:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3297.8655704465837
+     }
+    },
+    {
+     "timestamp": "2026-10-19T21:00:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3294.983370709
+     }
+    },
+    {
+     "timestamp": "2026-10-19T21:30:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3290.9297426825683
+     }
+    },
+    {
+     "timestamp": "2026-10-19T22:00:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3285.7546796925103
+     }
+    },
+    {
+     "timestamp": "2026-10-19T22:30:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3279.522005702305
+     }
+    },
+    {
+     "timestamp": "2026-10-19T23:00:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3272.3085881738325
+     }
+    },
+    {
+     "timestamp": "2026-10-19T23:30:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3264.203390062283
+     }
+    },
+    {
+     "timestamp": "2026-10-20T00:00:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3255.3063726375462
+     }
+    },
+    {
+     "timestamp": "2026-10-20T00:30:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3245.7272626635813
+     }
+    },
+    {
+     "timestamp": "2026-10-20T01:00:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3235.5841991401066
+     }
+    },
+    {
+     "timestamp": "2026-10-20T01:30:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3225.0022762963363
+     }
+    },
+    {
+     "timestamp": "2026-10-20T02:00:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3214.1120008059866
+     }
+    },
+    {
+     "timestamp": "2026-10-20T02:30:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3203.0476822506985
+     }
+    },
+    {
+     "timestamp": "2026-10-20T03:00:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3191.94577668226
+     }
+    },
+    {
+     "timestamp": "2026-10-20T03:30:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3180.9432037124516
+     }
+    },
+    {
+     "timestamp": "2026-10-20T04:00:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3170.175657885809
+     }
+    },
+    {
+     "timestamp": "2026-10-20T04:30:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3159.7759351611276
+     }
+    },
+    {
+     "timestamp": "2026-10-20T05:00:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3149.8722951411655
+     }
+    },
+    {
+     "timestamp": "2026-10-20T05:30:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3140.5868792491574
+     }
+    },
+    {
+     "timestamp": "2026-10-20T06:00:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3132.034204360725
+     }
+    },
+    {
+     "timestamp": "2026-10-20T06:30:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3124.319750469207
+     }
+    },
+    {
+     "timestamp": "2026-10-20T07:00:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3117.538659802701
+     }
+    },
+    {
+     "timestamp": "2026-10-20T07:30:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3111.774563436592
+     }
+    },
+    {
+     "timestamp": "2026-10-20T08:00:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3107.0985498729237
+     }
+    },
+    {
+     "timestamp": "2026-10-20T08:30:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3103.568288307122
+     }
+    },
+    {
+     "timestamp": "2026-10-20T09:00:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3101.2273173947888
+     }
+    },
+    {
+     "timestamp": "2026-10-20T09:30:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3100.1045082902074
+     }
+    },
+    {
+     "timestamp": "2026-10-20T10:00:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3100.2137085788886
+     }
+    },
+    {
+     "timestamp": "2026-10-20T10:30:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3101.553571495538
+     }
+    },
+    {
+     "timestamp": "2026-10-20T11:00:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3104.107572533686
+     }
+    },
+    {
+     "timestamp": "2026-10-20T11:30:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3107.844213242146
+     }
+    },
+    {
+     "timestamp": "2026-10-20T12:00:00.000Z",
+     "values": {
+      "day_ahead_load_forecast": 3112.7174096948743
+     }
+    }
+   ],
+   "retrieved_at": "2026-10-20T12:00:00.000Z"
+  },
+  "day_ahead_price": {
+   "status": "license_required",
+   "data": [],
+   "series": [],
+   "source": "SEEPEX",
+   "url": "https://www.seepex-spot.rs/"
+  }
+ },
+ "v18": {
+  "schema_version": "18.0.0",
+  "mode": "explicit-demo",
+  "period": "24h",
+  "evaluated_at": "2026-10-20T12:00:00.000Z",
+  "published_at": "2026-10-20T12:00:00.000Z",
+  "sources": {
+   "production": {
+    "id": "production",
+    "quality": "demo",
+    "source": "DEMO / SYNTHETIC QA DATA",
+    "url": null,
+    "unit": "MW",
+    "observed_at": "2026-10-20T12:00:00.000Z",
+    "retrieved_at": "2026-10-20T12:00:00.000Z",
+    "age_ms": 0,
+    "records": 48,
+    "source_state": "demo",
+    "reason": null,
+    "license": null
+   },
+   "physical_flows": {
+    "id": "physical_flows",
+    "quality": "demo",
+    "source": "DEMO / SYNTHETIC QA DATA",
+    "url": null,
+    "unit": "MW",
+    "observed_at": "2026-10-20T12:00:00.000Z",
+    "retrieved_at": "2026-10-20T12:00:00.000Z",
+    "age_ms": 0,
+    "records": 48,
+    "source_state": "demo",
+    "reason": null,
+    "license": null
+   },
+   "commercial_exchange": {
+    "id": "commercial_exchange",
+    "quality": "demo",
+    "source": "DEMO / SYNTHETIC QA DATA",
+    "url": null,
+    "unit": "MW",
+    "observed_at": "2026-10-20T12:00:00.000Z",
+    "retrieved_at": "2026-10-20T12:00:00.000Z",
+    "age_ms": 0,
+    "records": 48,
+    "source_state": "demo",
+    "reason": null,
+    "license": null
+   },
+   "actual_load": {
+    "id": "actual_load",
+    "quality": "demo",
+    "source": "DEMO / SYNTHETIC QA DATA",
+    "url": null,
+    "unit": "MW",
+    "observed_at": "2026-10-20T12:00:00.000Z",
+    "retrieved_at": "2026-10-20T12:00:00.000Z",
+    "age_ms": 0,
+    "records": 48,
+    "source_state": "demo",
+    "reason": null,
+    "license": null
+   },
+   "load_forecast": {
+    "id": "load_forecast",
+    "quality": "demo",
+    "source": "DEMO / SYNTHETIC QA DATA",
+    "url": null,
+    "unit": "MW",
+    "observed_at": "2026-10-20T12:00:00.000Z",
+    "retrieved_at": "2026-10-20T12:00:00.000Z",
+    "age_ms": 0,
+    "records": 48,
+    "source_state": "demo",
+    "reason": null,
+    "license": null
+   },
+   "day_ahead_price": {
+    "id": "day_ahead_price",
+    "quality": "license_required",
+    "source": "SEEPEX",
+    "url": "https://www.seepex-spot.rs/",
+    "unit": null,
+    "observed_at": null,
+    "retrieved_at": null,
+    "age_ms": null,
+    "records": 0,
+    "source_state": "license_required",
+    "reason": null,
+    "license": null
+   }
+  },
+  "data": {
+   "production": {
+    "points": [
+     {
+      "t": 1792413000000,
+      "iso": "2026-10-19T12:30:00.000Z",
+      "total": 2731,
+      "renewables": 801,
+      "renewable_share": 29.33,
+      "buckets": {
+       "coal": 1460,
+       "gas": 470,
+       "hydro": 590,
+       "wind": 185,
+       "solar": 0,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792414800000,
+      "iso": "2026-10-19T13:00:00.000Z",
+      "total": 2752.3154,
+      "renewables": 815.2662756102268,
+      "renewable_share": 29.621,
+      "buckets": {
+       "coal": 1458.7050367931674,
+       "gas": 478.34411189339255,
+       "hydro": 589.2869282312631,
+       "wind": 199.9793473789636,
+       "solar": 0,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792416600000,
+      "iso": "2026-10-19T13:30:00.000Z",
+      "total": 2769.1889,
+      "renewables": 827.997224412079,
+      "renewable_share": 29.9,
+      "buckets": {
+       "coal": 1454.836117931784,
+       "gas": 486.3555703769633,
+       "hydro": 587.1622406778342,
+       "wind": 214.83498373424482,
+       "solar": 0,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792418400000,
+      "iso": "2026-10-19T14:00:00.000Z",
+      "total": 2781.2694,
+      "renewables": 839.1134443605654,
+      "renewable_share": 30.17,
+      "buckets": {
+       "coal": 1448.440958726095,
+       "gas": 493.71498388259147,
+       "hydro": 583.6692246171916,
+       "wind": 229.44421974337376,
+       "solar": 0,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792420200000,
+      "iso": "2026-10-19T14:30:00.000Z",
+      "total": 2788.2928,
+      "renewables": 848.5654459873742,
+      "renewable_share": 30.433,
+      "buckets": {
+       "coal": 1439.5984305653687,
+       "gas": 500.12895581777997,
+       "hydro": 578.8790449390665,
+       "wind": 243.6864010483078,
+       "solar": 0,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792422000000,
+      "iso": "2026-10-19T15:00:00.000Z",
+      "total": 2790.0926,
+      "renewables": 856.3331989813862,
+      "renewable_share": 30.692,
+      "buckets": {
+       "coal": 1428.4175881984008,
+       "gas": 505.3417813619317,
+       "hydro": 572.8892942690487,
+       "wind": 257.4439047123375,
+       "solar": 0,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792423800000,
+      "iso": "2026-10-19T15:30:00.000Z",
+      "total": 2786.6071,
+      "renewables": 862.4251153084422,
+      "renewable_share": 30.949,
+      "buckets": {
+       "coal": 1415.036324763159,
+       "gas": 509.1456416106235,
+       "hydro": 565.8220046672687,
+       "wind": 270.6031106411735,
+       "solar": 0,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792425600000,
+      "iso": "2026-10-19T16:00:00.000Z",
+      "total": 2855.6627,
+      "renewables": 944.6540922496939,
+      "renewable_share": 33.08,
+      "buckets": {
+       "coal": 1399.6196711530679,
+       "gas": 511.3888886595153,
+       "hydro": 557.8211614107698,
+       "wind": 283.0553399454678,
+       "solar": 77.77759089345626,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792427400000,
+      "iso": "2026-10-19T16:30:00.000Z",
+      "total": 2915.1224,
+      "renewables": 1020.7825529217466,
+      "renewable_share": 35.017,
+      "buckets": {
+       "coal": 1382.3577606938184,
+       "gas": 511.9820913277432,
+       "hydro": 549.0497695124748,
+       "wind": 294.6977524950471,
+       "solar": 151.03503091422476,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792429200000,
+      "iso": "2026-10-19T17:00:00.000Z",
+      "total": 2961.0007,
+      "renewables": 1086.6355929223814,
+      "renewable_share": 36.698,
+      "buckets": {
+       "coal": 1363.4634842323094,
+       "gas": 510.9016004968842,
+       "hydro": 539.6865327419608,
+       "wind": 305.4341962521622,
+       "solar": 215.51486392825845,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792431000000,
+      "iso": "2026-10-19T17:30:00.000Z",
+      "total": 2989.9283,
+      "renewables": 1138.5679705926846,
+      "renewable_share": 38.08,
+      "buckets": {
+       "coal": 1343.169864557468,
+       "gas": 508.19049192667865,
+       "hydro": 529.9222128079439,
+       "wind": 315.17600136930247,
+       "solar": 267.4697564154383,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792432800000,
+      "iso": "2026-10-19T18:00:00.000Z",
+      "total": 2999.3628,
+      "renewables": 1173.6787342446542,
+      "renewable_share": 39.131,
+      "buckets": {
+       "coal": 1321.7271825341743,
+       "gas": 503.9568489604228,
+       "hydro": 519.9557428785913,
+       "wind": 323.8427124933029,
+       "solar": 303.88027887275985,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792434600000,
+      "iso": "2026-10-19T18:30:00.000Z",
+      "total": 2987.7527,
+      "renewables": 1189.9833119304549,
+      "renewable_share": 39.829,
+      "buckets": {
+       "coal": 1299.3998903936279,
+       "gas": 498.36945358314836,
+       "hydro": 509.99017462077705,
+       "wind": 331.3627532278103,
+       "solar": 322.63038408186753,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792436400000,
+      "iso": "2026-10-19T19:00:00.000Z",
+      "total": 2954.6474,
+      "renewables": 1186.5329426795204,
+      "renewable_share": 40.158,
+      "buckets": {
+       "coal": 1276.4633502484974,
+       "gas": 491.6510576165015,
+       "hydro": 500.22854133118886,
+       "wind": 337.67401726646403,
+       "solar": 322.63038408186753,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792438200000,
+      "iso": "2026-10-19T19:30:00.000Z",
+      "total": 2900.7443,
+      "renewables": 1163.4743816292173,
+      "renewable_share": 40.11,
+      "buckets": {
+       "coal": 1253.2004380566875,
+       "gas": 484.06950230654803,
+       "hydro": 490.86972144170005,
+       "wind": 342.72438131475735,
+       "solar": 303.88027887275985,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792440000000,
+      "iso": "2026-10-19T20:00:00.000Z",
+      "total": 2827.8714,
+      "renewables": 1122.0462786537055,
+      "renewable_share": 39.678,
+      "buckets": {
+       "coal": 1229.8980549169812,
+       "gas": 475.9270403385144,
+       "hydro": 482.1043866737931,
+       "wind": 346.472135564474,
+       "solar": 267.4697564154383,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792441800000,
+      "iso": "2026-10-19T20:30:00.000Z",
+      "total": 2738.9042,
+      "renewables": 1064.5123094859932,
+      "renewable_share": 38.866,
+      "buckets": {
+       "coal": 1206.843588722687,
+       "gas": 467.54828597604165,
+       "hydro": 474.11111739222594,
+       "wind": 348.886328165509,
+       "solar": 215.51486392825845,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792443600000,
+      "iso": "2026-10-19T21:00:00.000Z",
+      "total": 2637.6235,
+      "renewables": 994.0348160660867,
+      "renewable_share": 37.687,
+      "buckets": {
+       "coal": 1184.32136981166,
+       "gas": 459.2672737148731,
+       "hydro": 467.05276430170125,
+       "wind": 349.9470208501606,
+       "solar": 151.03503091422493,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792445400000,
+      "iso": "2026-10-19T21:30:00.000Z",
+      "total": 2528.5195,
+      "renewables": 914.4961751036421,
+      "renewable_share": 36.167,
+      "buckets": {
+       "coal": 1162.6091643251002,
+       "gas": 451.4141413816162,
+       "hydro": 461.073130611437,
+       "wind": 349.6454535987489,
+       "solar": 77.77759089345625,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792447200000,
+      "iso": "2026-10-19T22:00:00.000Z",
+      "total": 2416.5549,
+      "renewables": 830.2781592501146,
+      "renewable_share": 34.358,
+      "buckets": {
+       "coal": 1141.974748522477,
+       "gas": 444.3019685804058,
+       "hydro": 456.29404226348805,
+       "wind": 347.9841169866266,
+       "solar": 0,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792449000000,
+      "iso": "2026-10-19T22:30:00.000Z",
+      "total": 2384.6765,
+      "renewables": 823.7895975295442,
+      "renewable_share": 34.545,
+      "buckets": {
+       "coal": 1122.6726063014946,
+       "gas": 438.21429519706703,
+       "hydro": 452.8128659144607,
+       "wind": 344.9767316150834,
+       "solar": 0,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792450800000,
+      "iso": "2026-10-19T23:00:00.000Z",
+      "total": 2355.6833,
+      "renewables": 817.3486600339888,
+      "renewable_share": 34.697,
+      "buckets": {
+       "coal": 1104.940790652526,
+       "gas": 433.3938175586293,
+       "hydro": 450.7005252379688,
+       "wind": 340.64813479602003,
+       "solar": 0,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792452600000,
+      "iso": "2026-10-19T23:30:00.000Z",
+      "total": 2330.0648,
+      "renewables": 811.0341313888887,
+      "renewable_share": 34.807,
+      "buckets": {
+       "coal": 1088.99798775515,
+       "gas": 430.0327128966403,
+       "hydro": 450.0000559626513,
+       "wind": 335.03407542623745,
+       "solar": 0,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792454400000,
+      "iso": "2026-10-20T00:00:00.000Z",
+      "total": 2308.2124,
+      "renewables": 804.9066478300809,
+      "renewable_share": 34.871,
+      "buckets": {
+       "coal": 1075.0408199252322,
+       "gas": 428.2649778473945,
+       "hydro": 450.7257290846537,
+       "wind": 328.1809187454272,
+       "solar": 0,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792456200000,
+      "iso": "2026-10-20T00:30:00.000Z",
+      "total": 2290.4105,
+      "renewables": 799.0080235339873,
+      "renewable_share": 34.885,
+      "buckets": {
+       "coal": 1063.2414206752612,
+       "gas": 428.1610864288947,
+       "hydro": 452.8627601177867,
+       "wind": 320.1452634162006,
+       "solar": 0,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792458000000,
+      "iso": "2026-10-20T01:00:00.000Z",
+      "total": 2276.8316,
+      "renewables": 793.3610843935508,
+      "renewable_share": 34.845,
+      "buckets": {
+       "coal": 1053.7453117946798,
+       "gas": 429.7251804641482,
+       "hydro": 456.3676103049462,
+       "wind": 310.9934740886045,
+       "solar": 0,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792459800000,
+      "iso": "2026-10-20T01:30:00.000Z",
+      "total": 2267.5345,
+      "renewables": 787.9700069636401,
+      "renewable_share": 34.75,
+      "buckets": {
+       "coal": 1046.6696086321394,
+       "gas": 432.89490445975355,
+       "hydro": 461.16887365407166,
+       "wind": 300.80113330956846,
+       "solar": 0,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792461600000,
+      "iso": "2026-10-20T02:00:00.000Z",
+      "total": 2262.4666,
+      "renewables": 782.8211490304705,
+      "renewable_share": 34.6,
+      "buckets": {
+       "coal": 1042.1015757139064,
+       "gas": 437.54389152264855,
+       "hydro": 467.1687317266336,
+       "wind": 289.65241730383684,
+       "solar": 0,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792463400000,
+      "iso": "2026-10-20T02:30:00.000Z",
+      "total": 2261.4687,
+      "renewables": 777.8843473212174,
+      "renewable_share": 34.397,
+      "buckets": {
+       "coal": 1040.0975505119495,
+       "gas": 443.4868012093625,
+       "hydro": 474.2449465395472,
+       "wind": 277.63940078167025,
+       "solar": 0,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792465200000,
+      "iso": "2026-10-20T03:00:00.000Z",
+      "total": 2264.2836,
+      "renewables": 773.1146474929183,
+      "renewable_share": 34.144,
+      "buckets": {
+       "coal": 1040.68224863486,
+       "gas": 450.4867084646222,
+       "hydro": 482.2533509781664,
+       "wind": 264.8612965147519,
+       "solar": 0,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792467000000,
+      "iso": "2026-10-20T03:30:00.000Z",
+      "total": 2270.5674,
+      "renewables": 768.4544219424495,
+      "renewable_share": 33.844,
+      "buckets": {
+       "coal": 1043.8484590106734,
+       "gas": 458.2645490756451,
+       "hydro": 491.0307859819825,
+       "wind": 251.42363596046692,
+       "solar": 0,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792468800000,
+      "iso": "2026-10-20T04:00:00.000Z",
+      "total": 2357.6808,
+      "renewables": 841.6134132573844,
+      "renewable_share": 35.697,
+      "buckets": {
+       "coal": 1049.5571328208966,
+       "gas": 466.5102450816652,
+       "hydro": 500.39842466233426,
+       "wind": 237.43739770159397,
+       "solar": 77.77759089345626,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792470600000,
+      "iso": "2026-10-20T04:30:00.000Z",
+      "total": 2442.8515,
+      "renewables": 910.2185374419394,
+      "renewable_share": 37.26,
+      "buckets": {
+       "coal": 1057.73786508892,
+       "gas": 474.89506660372075,
+       "hydro": 510.1654156282877,
+       "wind": 223.01809089942688,
+       "solar": 151.03503091422476,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792472400000,
+      "iso": "2026-10-20T05:00:00.000Z",
+      "total": 2521.3069,
+      "renewables": 969.9324365515986,
+      "renewable_share": 38.469,
+      "buckets": {
+       "coal": 1068.2897629833906,
+       "gas": 483.0847372675619,
+       "hydro": 520.132771293462,
+       "wind": 208.2848013298781,
+       "solar": 215.51486392825845,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792474200000,
+      "iso": "2026-10-20T05:30:00.000Z",
+      "total": 2588.7618,
+      "renewables": 1016.9263862420371,
+      "renewable_share": 39.282,
+      "buckets": {
+       "coal": 1081.0826901277785,
+       "gas": 490.7527607478215,
+       "hydro": 530.097421945463,
+       "wind": 193.35920788113586,
+       "solar": 267.4697564154383,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792476000000,
+      "iso": "2026-10-20T06:00:00.000Z",
+      "total": 2641.6535,
+      "renewables": 1048.1012094905823,
+      "renewable_share": 39.676,
+      "buckets": {
+       "coal": 1095.9588715700875,
+       "gas": 497.59343714618916,
+       "hydro": 539.8563529824258,
+       "wind": 178.3645776353966,
+       "solar": 303.88027887275985,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792477800000,
+      "iso": "2026-10-20T06:30:00.000Z",
+      "total": 2677.3348,
+      "renewables": 1061.2658729426962,
+      "renewable_share": 39.639,
+      "buckets": {
+       "coal": 1112.7348396186414,
+       "gas": 503.3340502816644,
+       "hydro": 549.2107410267646,
+       "wind": 163.42474783406405,
+       "solar": 322.63038408186753,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792479600000,
+      "iso": "2026-10-20T07:00:00.000Z",
+      "total": 2694.2129,
+      "renewables": 1055.2634918651022,
+      "renewable_share": 39.168,
+      "buckets": {
+       "coal": 1131.203696545994,
+       "gas": 507.7457400240883,
+       "hydro": 557.9700046491013,
+       "wind": 148.6631031341334,
+       "solar": 322.63038408186753,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792481400000,
+      "iso": "2026-10-20T07:30:00.000Z",
+      "total": 2691.8278,
+      "renewables": 1030.0375226501621,
+      "renewable_share": 38.265,
+      "buckets": {
+       "coal": 1151.1376662550672,
+       "gas": 510.6526262253224,
+       "hydro": 565.9556871750356,
+       "wind": 134.20155660236668,
+       "solar": 303.88027887275985,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792483200000,
+      "iso": "2026-10-20T08:00:00.000Z",
+      "total": 2670.8641,
+      "renewables": 986.634391746908,
+      "renewable_share": 36.941,
+      "buckets": {
+       "coal": 1172.290903437867,
+       "gas": 511.9388205057334,
+       "hydro": 573.005092468472,
+       "wind": 120.1595428629978,
+       "solar": 267.4697564154383,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792485000000,
+      "iso": "2026-10-20T08:30:00.000Z",
+      "total": 2633.0981,
+      "renewables": 927.1424952605386,
+      "renewable_share": 35.211,
+      "buckets": {
+       "coal": 1194.4025255814686,
+       "gas": 511.55304635818203,
+       "hydro": 578.9745996179496,
+       "wind": 106.65303171433048,
+       "solar": 215.51486392825845,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792486800000,
+      "iso": "2026-10-20T09:00:00.000Z",
+      "total": 2581.2817,
+      "renewables": 854.5711902690516,
+      "renewable_share": 33.106,
+      "buckets": {
+       "coal": 1217.1998304275921,
+       "gas": 509.51068338055046,
+       "hydro": 583.7425889942808,
+       "wind": 93.79357036054574,
+       "solar": 151.03503091422493,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792488600000,
+      "iso": "2026-10-20T09:30:00.000Z",
+      "total": 2518.9717,
+      "renewables": 772.6768731276903,
+      "renewable_share": 30.674,
+      "buckets": {
+       "coal": 1240.4016592048981,
+       "gas": 505.8931541397078,
+       "hydro": 587.2119200655256,
+       "wind": 81.68736216870843,
+       "solar": 77.77759089345625,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792490400000,
+      "iso": "2026-10-20T10:00:00.000Z",
+      "total": 2450.3128,
+      "renewables": 685.7463000468993,
+      "renewable_share": 27.986,
+      "buckets": {
+       "coal": 1263.7218641553116,
+       "gas": 500.8446781107128,
+       "hydro": 589.3119104875896,
+       "wind": 70.4343895593097,
+       "solar": 0,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792492200000,
+      "iso": "2026-10-20T10:30:00.000Z",
+      "total": 2457.5667,
+      "renewables": 676.1273644236762,
+      "renewable_share": 27.512,
+      "buckets": {
+       "coal": 1286.8728375894366,
+       "gas": 494.566522101454,
+       "hydro": 589.9997761494843,
+       "wind": 60.12758827419185,
+       "solar": 0,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792494000000,
+      "iso": "2026-10-20T11:00:00.000Z",
+      "total": 2462.9916,
+      "renewables": 666.1135826759094,
+      "renewable_share": 27.045,
+      "buckets": {
+       "coal": 1309.5690589472774,
+       "gas": 487.30897638015375,
+       "hydro": 589.261502834519,
+       "wind": 50.852079841390434,
+       "solar": 0,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792495800000,
+      "iso": "2026-10-20T11:30:00.000Z",
+      "total": 2466.6886,
+      "renewables": 655.796600314442,
+      "renewable_share": 26.586,
+      "buckets": {
+       "coal": 1331.5306161184292,
+       "gas": 479.3613763922104,
+       "hydro": 587.112131738651,
+       "wind": 42.68446857579099,
+       "solar": 0,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     },
+     {
+      "t": 1792497600000,
+      "iso": "2026-10-20T12:00:00.000Z",
+      "total": 2468.8149,
+      "renewables": 645.287661950507,
+      "renewable_share": 26.138,
+      "buckets": {
+       "coal": 1352.4866575933545,
+       "gas": 471.040567869041,
+       "hydro": 583.5954530289949,
+       "wind": 35.69220892151202,
+       "solar": 0,
+       "bio": 26,
+       "other": null
+      },
+      "categories_covered": 6
+     }
+    ],
+    "unknown_ids": [],
+    "invalid_units": [],
+    "caveat": "Calculated only from reported technology series, not independently verified national generation."
+   },
+   "physical_flows": {
+    "points": [
+     {
+      "t": 1792413000000,
+      "iso": "2026-10-19T12:30:00.000Z",
+      "edges": {
+       "HU": 0,
+       "RO": 143,
+       "BG": 155,
+       "MK": 24,
+       "XK": -129,
+       "ME": -163,
+       "BA": -48,
+       "HR": 112
+      },
+      "net": 94,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792414800000,
+      "iso": "2026-10-19T13:00:00.000Z",
+      "edges": {
+       "HU": 21,
+       "RO": 153,
+       "BG": 145,
+       "MK": 3,
+       "XK": -142,
+       "ME": -156,
+       "BA": -27,
+       "HR": 127
+      },
+      "net": 124,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792416600000,
+      "iso": "2026-10-19T13:30:00.000Z",
+      "edges": {
+       "HU": 42,
+       "RO": 161,
+       "BG": 132,
+       "MK": -18,
+       "XK": -152,
+       "ME": -146,
+       "BA": -6,
+       "HR": 140
+      },
+      "net": 153,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792418400000,
+      "iso": "2026-10-19T14:00:00.000Z",
+      "edges": {
+       "HU": 62,
+       "RO": 167,
+       "BG": 118,
+       "MK": -39,
+       "XK": -160,
+       "ME": -134,
+       "BA": 16,
+       "HR": 151
+      },
+      "net": 181,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792420200000,
+      "iso": "2026-10-19T14:30:00.000Z",
+      "edges": {
+       "HU": 82,
+       "RO": 170,
+       "BG": 102,
+       "MK": -60,
+       "XK": -166,
+       "ME": -120,
+       "BA": 37,
+       "HR": 159
+      },
+      "net": 204,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792422000000,
+      "iso": "2026-10-19T15:00:00.000Z",
+      "edges": {
+       "HU": 99,
+       "RO": 170,
+       "BG": 84,
+       "MK": -79,
+       "XK": -169,
+       "ME": -104,
+       "BA": 57,
+       "HR": 166
+      },
+      "net": 224,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792423800000,
+      "iso": "2026-10-19T15:30:00.000Z",
+      "edges": {
+       "HU": 116,
+       "RO": 167,
+       "BG": 65,
+       "MK": -97,
+       "XK": -170,
+       "ME": -86,
+       "BA": 77,
+       "HR": 169
+      },
+      "net": 241,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792425600000,
+      "iso": "2026-10-19T16:00:00.000Z",
+      "edges": {
+       "HU": 130,
+       "RO": 162,
+       "BG": 45,
+       "MK": -114,
+       "XK": -168,
+       "ME": -67,
+       "BA": 95,
+       "HR": 170
+      },
+      "net": 253,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792427400000,
+      "iso": "2026-10-19T16:30:00.000Z",
+      "edges": {
+       "HU": 143,
+       "RO": 155,
+       "BG": 24,
+       "MK": -129,
+       "XK": -163,
+       "ME": -48,
+       "BA": 112,
+       "HR": 168
+      },
+      "net": 262,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792429200000,
+      "iso": "2026-10-19T17:00:00.000Z",
+      "edges": {
+       "HU": 153,
+       "RO": 145,
+       "BG": 3,
+       "MK": -142,
+       "XK": -156,
+       "ME": -27,
+       "BA": 127,
+       "HR": 164
+      },
+      "net": 267,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792431000000,
+      "iso": "2026-10-19T17:30:00.000Z",
+      "edges": {
+       "HU": 161,
+       "RO": 132,
+       "BG": -18,
+       "MK": -152,
+       "XK": -146,
+       "ME": -6,
+       "BA": 140,
+       "HR": 157
+      },
+      "net": 268,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792432800000,
+      "iso": "2026-10-19T18:00:00.000Z",
+      "edges": {
+       "HU": 167,
+       "RO": 118,
+       "BG": -39,
+       "MK": -160,
+       "XK": -134,
+       "ME": 16,
+       "BA": 151,
+       "HR": 147
+      },
+      "net": 266,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792434600000,
+      "iso": "2026-10-19T18:30:00.000Z",
+      "edges": {
+       "HU": 170,
+       "RO": 102,
+       "BG": -60,
+       "MK": -166,
+       "XK": -120,
+       "ME": 37,
+       "BA": 159,
+       "HR": 136
+      },
+      "net": 258,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792436400000,
+      "iso": "2026-10-19T19:00:00.000Z",
+      "edges": {
+       "HU": 170,
+       "RO": 84,
+       "BG": -79,
+       "MK": -169,
+       "XK": -104,
+       "ME": 57,
+       "BA": 166,
+       "HR": 122
+      },
+      "net": 247,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792438200000,
+      "iso": "2026-10-19T19:30:00.000Z",
+      "edges": {
+       "HU": 167,
+       "RO": 65,
+       "BG": -97,
+       "MK": -170,
+       "XK": -86,
+       "ME": 77,
+       "BA": 169,
+       "HR": 106
+      },
+      "net": 231,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792440000000,
+      "iso": "2026-10-19T20:00:00.000Z",
+      "edges": {
+       "HU": 162,
+       "RO": 45,
+       "BG": -114,
+       "MK": -168,
+       "XK": -67,
+       "ME": 95,
+       "BA": 170,
+       "HR": 89
+      },
+      "net": 212,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792441800000,
+      "iso": "2026-10-19T20:30:00.000Z",
+      "edges": {
+       "HU": 155,
+       "RO": 24,
+       "BG": -129,
+       "MK": -163,
+       "XK": -48,
+       "ME": 112,
+       "BA": 168,
+       "HR": 70
+      },
+      "net": 189,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792443600000,
+      "iso": "2026-10-19T21:00:00.000Z",
+      "edges": {
+       "HU": 145,
+       "RO": 3,
+       "BG": -142,
+       "MK": -156,
+       "XK": -27,
+       "ME": 127,
+       "BA": 164,
+       "HR": 50
+      },
+      "net": 164,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792445400000,
+      "iso": "2026-10-19T21:30:00.000Z",
+      "edges": {
+       "HU": 132,
+       "RO": -18,
+       "BG": -152,
+       "MK": -146,
+       "XK": -6,
+       "ME": 140,
+       "BA": 157,
+       "HR": 30
+      },
+      "net": 137,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792447200000,
+      "iso": "2026-10-19T22:00:00.000Z",
+      "edges": {
+       "HU": 118,
+       "RO": -39,
+       "BG": -160,
+       "MK": -134,
+       "XK": 16,
+       "ME": 151,
+       "BA": 147,
+       "HR": 8
+      },
+      "net": 107,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792449000000,
+      "iso": "2026-10-19T22:30:00.000Z",
+      "edges": {
+       "HU": 102,
+       "RO": -60,
+       "BG": -166,
+       "MK": -120,
+       "XK": 37,
+       "ME": 159,
+       "BA": 136,
+       "HR": -13
+      },
+      "net": 75,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792450800000,
+      "iso": "2026-10-19T23:00:00.000Z",
+      "edges": {
+       "HU": 84,
+       "RO": -79,
+       "BG": -169,
+       "MK": -104,
+       "XK": 57,
+       "ME": 166,
+       "BA": 122,
+       "HR": -34
+      },
+      "net": 43,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792452600000,
+      "iso": "2026-10-19T23:30:00.000Z",
+      "edges": {
+       "HU": 65,
+       "RO": -97,
+       "BG": -170,
+       "MK": -86,
+       "XK": 77,
+       "ME": 169,
+       "BA": 106,
+       "HR": -54
+      },
+      "net": 10,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792454400000,
+      "iso": "2026-10-20T00:00:00.000Z",
+      "edges": {
+       "HU": 45,
+       "RO": -114,
+       "BG": -168,
+       "MK": -67,
+       "XK": 95,
+       "ME": 170,
+       "BA": 89,
+       "HR": -74
+      },
+      "net": -24,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792456200000,
+      "iso": "2026-10-20T00:30:00.000Z",
+      "edges": {
+       "HU": 24,
+       "RO": -129,
+       "BG": -163,
+       "MK": -48,
+       "XK": 112,
+       "ME": 168,
+       "BA": 70,
+       "HR": -92
+      },
+      "net": -58,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792458000000,
+      "iso": "2026-10-20T01:00:00.000Z",
+      "edges": {
+       "HU": 3,
+       "RO": -142,
+       "BG": -156,
+       "MK": -27,
+       "XK": 127,
+       "ME": 164,
+       "BA": 50,
+       "HR": -110
+      },
+      "net": -91,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792459800000,
+      "iso": "2026-10-20T01:30:00.000Z",
+      "edges": {
+       "HU": -18,
+       "RO": -152,
+       "BG": -146,
+       "MK": -6,
+       "XK": 140,
+       "ME": 157,
+       "BA": 30,
+       "HR": -125
+      },
+      "net": -120,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792461600000,
+      "iso": "2026-10-20T02:00:00.000Z",
+      "edges": {
+       "HU": -39,
+       "RO": -160,
+       "BG": -134,
+       "MK": 16,
+       "XK": 151,
+       "ME": 147,
+       "BA": 8,
+       "HR": -138
+      },
+      "net": -149,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792463400000,
+      "iso": "2026-10-20T02:30:00.000Z",
+      "edges": {
+       "HU": -60,
+       "RO": -166,
+       "BG": -120,
+       "MK": 37,
+       "XK": 159,
+       "ME": 136,
+       "BA": -13,
+       "HR": -150
+      },
+      "net": -177,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792465200000,
+      "iso": "2026-10-20T03:00:00.000Z",
+      "edges": {
+       "HU": -79,
+       "RO": -169,
+       "BG": -104,
+       "MK": 57,
+       "XK": 166,
+       "ME": 122,
+       "BA": -34,
+       "HR": -158
+      },
+      "net": -199,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792467000000,
+      "iso": "2026-10-20T03:30:00.000Z",
+      "edges": {
+       "HU": -97,
+       "RO": -170,
+       "BG": -86,
+       "MK": 77,
+       "XK": 169,
+       "ME": 106,
+       "BA": -54,
+       "HR": -165
+      },
+      "net": -220,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792468800000,
+      "iso": "2026-10-20T04:00:00.000Z",
+      "edges": {
+       "HU": -114,
+       "RO": -168,
+       "BG": -67,
+       "MK": 95,
+       "XK": 170,
+       "ME": 89,
+       "BA": -74,
+       "HR": -169
+      },
+      "net": -238,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792470600000,
+      "iso": "2026-10-20T04:30:00.000Z",
+      "edges": {
+       "HU": -129,
+       "RO": -163,
+       "BG": -48,
+       "MK": 112,
+       "XK": 168,
+       "ME": 70,
+       "BA": -92,
+       "HR": -170
+      },
+      "net": -252,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792472400000,
+      "iso": "2026-10-20T05:00:00.000Z",
+      "edges": {
+       "HU": -142,
+       "RO": -156,
+       "BG": -27,
+       "MK": 127,
+       "XK": 164,
+       "ME": 50,
+       "BA": -110,
+       "HR": -169
+      },
+      "net": -263,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792474200000,
+      "iso": "2026-10-20T05:30:00.000Z",
+      "edges": {
+       "HU": -152,
+       "RO": -146,
+       "BG": -6,
+       "MK": 140,
+       "XK": 157,
+       "ME": 30,
+       "BA": -125,
+       "HR": -165
+      },
+      "net": -267,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792476000000,
+      "iso": "2026-10-20T06:00:00.000Z",
+      "edges": {
+       "HU": -160,
+       "RO": -134,
+       "BG": 16,
+       "MK": 151,
+       "XK": 147,
+       "ME": 8,
+       "BA": -138,
+       "HR": -158
+      },
+      "net": -268,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792477800000,
+      "iso": "2026-10-20T06:30:00.000Z",
+      "edges": {
+       "HU": -166,
+       "RO": -120,
+       "BG": 37,
+       "MK": 159,
+       "XK": 136,
+       "ME": -13,
+       "BA": -150,
+       "HR": -149
+      },
+      "net": -266,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792479600000,
+      "iso": "2026-10-20T07:00:00.000Z",
+      "edges": {
+       "HU": -169,
+       "RO": -104,
+       "BG": 57,
+       "MK": 166,
+       "XK": 122,
+       "ME": -34,
+       "BA": -158,
+       "HR": -137
+      },
+      "net": -257,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792481400000,
+      "iso": "2026-10-20T07:30:00.000Z",
+      "edges": {
+       "HU": -170,
+       "RO": -86,
+       "BG": 77,
+       "MK": 169,
+       "XK": 106,
+       "ME": -54,
+       "BA": -165,
+       "HR": -124
+      },
+      "net": -247,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792483200000,
+      "iso": "2026-10-20T08:00:00.000Z",
+      "edges": {
+       "HU": -168,
+       "RO": -67,
+       "BG": 95,
+       "MK": 170,
+       "XK": 89,
+       "ME": -74,
+       "BA": -169,
+       "HR": -108
+      },
+      "net": -232,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792485000000,
+      "iso": "2026-10-20T08:30:00.000Z",
+      "edges": {
+       "HU": -163,
+       "RO": -48,
+       "BG": 112,
+       "MK": 168,
+       "XK": 70,
+       "ME": -92,
+       "BA": -170,
+       "HR": -91
+      },
+      "net": -214,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792486800000,
+      "iso": "2026-10-20T09:00:00.000Z",
+      "edges": {
+       "HU": -156,
+       "RO": -27,
+       "BG": 127,
+       "MK": 164,
+       "XK": 50,
+       "ME": -110,
+       "BA": -169,
+       "HR": -73
+      },
+      "net": -194,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792488600000,
+      "iso": "2026-10-20T09:30:00.000Z",
+      "edges": {
+       "HU": -146,
+       "RO": -6,
+       "BG": 140,
+       "MK": 157,
+       "XK": 30,
+       "ME": -125,
+       "BA": -165,
+       "HR": -53
+      },
+      "net": -168,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792490400000,
+      "iso": "2026-10-20T10:00:00.000Z",
+      "edges": {
+       "HU": -134,
+       "RO": 16,
+       "BG": 151,
+       "MK": 147,
+       "XK": 8,
+       "ME": -138,
+       "BA": -158,
+       "HR": -32
+      },
+      "net": -140,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792492200000,
+      "iso": "2026-10-20T10:30:00.000Z",
+      "edges": {
+       "HU": -120,
+       "RO": 37,
+       "BG": 159,
+       "MK": 136,
+       "XK": -13,
+       "ME": -150,
+       "BA": -149,
+       "HR": -11
+      },
+      "net": -111,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792494000000,
+      "iso": "2026-10-20T11:00:00.000Z",
+      "edges": {
+       "HU": -104,
+       "RO": 57,
+       "BG": 166,
+       "MK": 122,
+       "XK": -34,
+       "ME": -158,
+       "BA": -137,
+       "HR": 10
+      },
+      "net": -78,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792495800000,
+      "iso": "2026-10-20T11:30:00.000Z",
+      "edges": {
+       "HU": -86,
+       "RO": 77,
+       "BG": 169,
+       "MK": 106,
+       "XK": -54,
+       "ME": -165,
+       "BA": -124,
+       "HR": 31
+      },
+      "net": -46,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792497600000,
+      "iso": "2026-10-20T12:00:00.000Z",
+      "edges": {
+       "HU": -67,
+       "RO": 95,
+       "BG": 170,
+       "MK": 89,
+       "XK": -74,
+       "ME": -169,
+       "BA": -108,
+       "HR": 52
+      },
+      "net": -12,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     }
+    ],
+    "unmapped_ids": [],
+    "conflicts": [],
+    "invalid_units": [],
+    "direction": "positive = import to Serbia, negative = export from Serbia; based on Energy-Charts published cbpf/cbet sign convention",
+    "caveat": "Physical and commercial series represent different phenomena; no inference of plant-level movement."
+   },
+   "commercial_exchange": {
+    "points": [
+     {
+      "t": 1792413000000,
+      "iso": "2026-10-19T12:30:00.000Z",
+      "edges": {
+       "HU": 70,
+       "RO": 213,
+       "BG": 225,
+       "MK": 94,
+       "XK": -59,
+       "ME": -93,
+       "BA": 22,
+       "HR": 182
+      },
+      "net": 654,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792414800000,
+      "iso": "2026-10-19T13:00:00.000Z",
+      "edges": {
+       "HU": 91,
+       "RO": 223,
+       "BG": 215,
+       "MK": 73,
+       "XK": -72,
+       "ME": -86,
+       "BA": 43,
+       "HR": 197
+      },
+      "net": 684,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792416600000,
+      "iso": "2026-10-19T13:30:00.000Z",
+      "edges": {
+       "HU": 112,
+       "RO": 231,
+       "BG": 202,
+       "MK": 52,
+       "XK": -82,
+       "ME": -76,
+       "BA": 64,
+       "HR": 210
+      },
+      "net": 713,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792418400000,
+      "iso": "2026-10-19T14:00:00.000Z",
+      "edges": {
+       "HU": 132,
+       "RO": 237,
+       "BG": 188,
+       "MK": 31,
+       "XK": -90,
+       "ME": -64,
+       "BA": 86,
+       "HR": 221
+      },
+      "net": 741,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792420200000,
+      "iso": "2026-10-19T14:30:00.000Z",
+      "edges": {
+       "HU": 152,
+       "RO": 240,
+       "BG": 172,
+       "MK": 10,
+       "XK": -96,
+       "ME": -50,
+       "BA": 107,
+       "HR": 229
+      },
+      "net": 764,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792422000000,
+      "iso": "2026-10-19T15:00:00.000Z",
+      "edges": {
+       "HU": 169,
+       "RO": 240,
+       "BG": 154,
+       "MK": -9,
+       "XK": -99,
+       "ME": -34,
+       "BA": 127,
+       "HR": 236
+      },
+      "net": 784,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792423800000,
+      "iso": "2026-10-19T15:30:00.000Z",
+      "edges": {
+       "HU": 186,
+       "RO": 237,
+       "BG": 135,
+       "MK": -27,
+       "XK": -100,
+       "ME": -16,
+       "BA": 147,
+       "HR": 239
+      },
+      "net": 801,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792425600000,
+      "iso": "2026-10-19T16:00:00.000Z",
+      "edges": {
+       "HU": 200,
+       "RO": 232,
+       "BG": 115,
+       "MK": -44,
+       "XK": -98,
+       "ME": 3,
+       "BA": 165,
+       "HR": 240
+      },
+      "net": 813,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792427400000,
+      "iso": "2026-10-19T16:30:00.000Z",
+      "edges": {
+       "HU": 213,
+       "RO": 225,
+       "BG": 94,
+       "MK": -59,
+       "XK": -93,
+       "ME": 22,
+       "BA": 182,
+       "HR": 238
+      },
+      "net": 822,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792429200000,
+      "iso": "2026-10-19T17:00:00.000Z",
+      "edges": {
+       "HU": 223,
+       "RO": 215,
+       "BG": 73,
+       "MK": -72,
+       "XK": -86,
+       "ME": 43,
+       "BA": 197,
+       "HR": 234
+      },
+      "net": 827,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792431000000,
+      "iso": "2026-10-19T17:30:00.000Z",
+      "edges": {
+       "HU": 231,
+       "RO": 202,
+       "BG": 52,
+       "MK": -82,
+       "XK": -76,
+       "ME": 64,
+       "BA": 210,
+       "HR": 227
+      },
+      "net": 828,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792432800000,
+      "iso": "2026-10-19T18:00:00.000Z",
+      "edges": {
+       "HU": 237,
+       "RO": 188,
+       "BG": 31,
+       "MK": -90,
+       "XK": -64,
+       "ME": 86,
+       "BA": 221,
+       "HR": 217
+      },
+      "net": 826,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792434600000,
+      "iso": "2026-10-19T18:30:00.000Z",
+      "edges": {
+       "HU": 240,
+       "RO": 172,
+       "BG": 10,
+       "MK": -96,
+       "XK": -50,
+       "ME": 107,
+       "BA": 229,
+       "HR": 206
+      },
+      "net": 818,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792436400000,
+      "iso": "2026-10-19T19:00:00.000Z",
+      "edges": {
+       "HU": 240,
+       "RO": 154,
+       "BG": -9,
+       "MK": -99,
+       "XK": -34,
+       "ME": 127,
+       "BA": 236,
+       "HR": 192
+      },
+      "net": 807,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792438200000,
+      "iso": "2026-10-19T19:30:00.000Z",
+      "edges": {
+       "HU": 237,
+       "RO": 135,
+       "BG": -27,
+       "MK": -100,
+       "XK": -16,
+       "ME": 147,
+       "BA": 239,
+       "HR": 176
+      },
+      "net": 791,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792440000000,
+      "iso": "2026-10-19T20:00:00.000Z",
+      "edges": {
+       "HU": 232,
+       "RO": 115,
+       "BG": -44,
+       "MK": -98,
+       "XK": 3,
+       "ME": 165,
+       "BA": 240,
+       "HR": 159
+      },
+      "net": 772,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792441800000,
+      "iso": "2026-10-19T20:30:00.000Z",
+      "edges": {
+       "HU": 225,
+       "RO": 94,
+       "BG": -59,
+       "MK": -93,
+       "XK": 22,
+       "ME": 182,
+       "BA": 238,
+       "HR": 140
+      },
+      "net": 749,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792443600000,
+      "iso": "2026-10-19T21:00:00.000Z",
+      "edges": {
+       "HU": 215,
+       "RO": 73,
+       "BG": -72,
+       "MK": -86,
+       "XK": 43,
+       "ME": 197,
+       "BA": 234,
+       "HR": 120
+      },
+      "net": 724,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792445400000,
+      "iso": "2026-10-19T21:30:00.000Z",
+      "edges": {
+       "HU": 202,
+       "RO": 52,
+       "BG": -82,
+       "MK": -76,
+       "XK": 64,
+       "ME": 210,
+       "BA": 227,
+       "HR": 100
+      },
+      "net": 697,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792447200000,
+      "iso": "2026-10-19T22:00:00.000Z",
+      "edges": {
+       "HU": 188,
+       "RO": 31,
+       "BG": -90,
+       "MK": -64,
+       "XK": 86,
+       "ME": 221,
+       "BA": 217,
+       "HR": 78
+      },
+      "net": 667,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792449000000,
+      "iso": "2026-10-19T22:30:00.000Z",
+      "edges": {
+       "HU": 172,
+       "RO": 10,
+       "BG": -96,
+       "MK": -50,
+       "XK": 107,
+       "ME": 229,
+       "BA": 206,
+       "HR": 57
+      },
+      "net": 635,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792450800000,
+      "iso": "2026-10-19T23:00:00.000Z",
+      "edges": {
+       "HU": 154,
+       "RO": -9,
+       "BG": -99,
+       "MK": -34,
+       "XK": 127,
+       "ME": 236,
+       "BA": 192,
+       "HR": 36
+      },
+      "net": 603,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792452600000,
+      "iso": "2026-10-19T23:30:00.000Z",
+      "edges": {
+       "HU": 135,
+       "RO": -27,
+       "BG": -100,
+       "MK": -16,
+       "XK": 147,
+       "ME": 239,
+       "BA": 176,
+       "HR": 16
+      },
+      "net": 570,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792454400000,
+      "iso": "2026-10-20T00:00:00.000Z",
+      "edges": {
+       "HU": 115,
+       "RO": -44,
+       "BG": -98,
+       "MK": 3,
+       "XK": 165,
+       "ME": 240,
+       "BA": 159,
+       "HR": -4
+      },
+      "net": 536,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792456200000,
+      "iso": "2026-10-20T00:30:00.000Z",
+      "edges": {
+       "HU": 94,
+       "RO": -59,
+       "BG": -93,
+       "MK": 22,
+       "XK": 182,
+       "ME": 238,
+       "BA": 140,
+       "HR": -22
+      },
+      "net": 502,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792458000000,
+      "iso": "2026-10-20T01:00:00.000Z",
+      "edges": {
+       "HU": 73,
+       "RO": -72,
+       "BG": -86,
+       "MK": 43,
+       "XK": 197,
+       "ME": 234,
+       "BA": 120,
+       "HR": -40
+      },
+      "net": 469,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792459800000,
+      "iso": "2026-10-20T01:30:00.000Z",
+      "edges": {
+       "HU": 52,
+       "RO": -82,
+       "BG": -76,
+       "MK": 64,
+       "XK": 210,
+       "ME": 227,
+       "BA": 100,
+       "HR": -55
+      },
+      "net": 440,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792461600000,
+      "iso": "2026-10-20T02:00:00.000Z",
+      "edges": {
+       "HU": 31,
+       "RO": -90,
+       "BG": -64,
+       "MK": 86,
+       "XK": 221,
+       "ME": 217,
+       "BA": 78,
+       "HR": -68
+      },
+      "net": 411,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792463400000,
+      "iso": "2026-10-20T02:30:00.000Z",
+      "edges": {
+       "HU": 10,
+       "RO": -96,
+       "BG": -50,
+       "MK": 107,
+       "XK": 229,
+       "ME": 206,
+       "BA": 57,
+       "HR": -80
+      },
+      "net": 383,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792465200000,
+      "iso": "2026-10-20T03:00:00.000Z",
+      "edges": {
+       "HU": -9,
+       "RO": -99,
+       "BG": -34,
+       "MK": 127,
+       "XK": 236,
+       "ME": 192,
+       "BA": 36,
+       "HR": -88
+      },
+      "net": 361,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792467000000,
+      "iso": "2026-10-20T03:30:00.000Z",
+      "edges": {
+       "HU": -27,
+       "RO": -100,
+       "BG": -16,
+       "MK": 147,
+       "XK": 239,
+       "ME": 176,
+       "BA": 16,
+       "HR": -95
+      },
+      "net": 340,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792468800000,
+      "iso": "2026-10-20T04:00:00.000Z",
+      "edges": {
+       "HU": -44,
+       "RO": -98,
+       "BG": 3,
+       "MK": 165,
+       "XK": 240,
+       "ME": 159,
+       "BA": -4,
+       "HR": -99
+      },
+      "net": 322,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792470600000,
+      "iso": "2026-10-20T04:30:00.000Z",
+      "edges": {
+       "HU": -59,
+       "RO": -93,
+       "BG": 22,
+       "MK": 182,
+       "XK": 238,
+       "ME": 140,
+       "BA": -22,
+       "HR": -100
+      },
+      "net": 308,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792472400000,
+      "iso": "2026-10-20T05:00:00.000Z",
+      "edges": {
+       "HU": -72,
+       "RO": -86,
+       "BG": 43,
+       "MK": 197,
+       "XK": 234,
+       "ME": 120,
+       "BA": -40,
+       "HR": -99
+      },
+      "net": 297,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792474200000,
+      "iso": "2026-10-20T05:30:00.000Z",
+      "edges": {
+       "HU": -82,
+       "RO": -76,
+       "BG": 64,
+       "MK": 210,
+       "XK": 227,
+       "ME": 100,
+       "BA": -55,
+       "HR": -95
+      },
+      "net": 293,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792476000000,
+      "iso": "2026-10-20T06:00:00.000Z",
+      "edges": {
+       "HU": -90,
+       "RO": -64,
+       "BG": 86,
+       "MK": 221,
+       "XK": 217,
+       "ME": 78,
+       "BA": -68,
+       "HR": -88
+      },
+      "net": 292,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792477800000,
+      "iso": "2026-10-20T06:30:00.000Z",
+      "edges": {
+       "HU": -96,
+       "RO": -50,
+       "BG": 107,
+       "MK": 229,
+       "XK": 206,
+       "ME": 57,
+       "BA": -80,
+       "HR": -79
+      },
+      "net": 294,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792479600000,
+      "iso": "2026-10-20T07:00:00.000Z",
+      "edges": {
+       "HU": -99,
+       "RO": -34,
+       "BG": 127,
+       "MK": 236,
+       "XK": 192,
+       "ME": 36,
+       "BA": -88,
+       "HR": -67
+      },
+      "net": 303,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792481400000,
+      "iso": "2026-10-20T07:30:00.000Z",
+      "edges": {
+       "HU": -100,
+       "RO": -16,
+       "BG": 147,
+       "MK": 239,
+       "XK": 176,
+       "ME": 16,
+       "BA": -95,
+       "HR": -54
+      },
+      "net": 313,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792483200000,
+      "iso": "2026-10-20T08:00:00.000Z",
+      "edges": {
+       "HU": -98,
+       "RO": 3,
+       "BG": 165,
+       "MK": 240,
+       "XK": 159,
+       "ME": -4,
+       "BA": -99,
+       "HR": -38
+      },
+      "net": 328,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792485000000,
+      "iso": "2026-10-20T08:30:00.000Z",
+      "edges": {
+       "HU": -93,
+       "RO": 22,
+       "BG": 182,
+       "MK": 238,
+       "XK": 140,
+       "ME": -22,
+       "BA": -100,
+       "HR": -21
+      },
+      "net": 346,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792486800000,
+      "iso": "2026-10-20T09:00:00.000Z",
+      "edges": {
+       "HU": -86,
+       "RO": 43,
+       "BG": 197,
+       "MK": 234,
+       "XK": 120,
+       "ME": -40,
+       "BA": -99,
+       "HR": -3
+      },
+      "net": 366,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792488600000,
+      "iso": "2026-10-20T09:30:00.000Z",
+      "edges": {
+       "HU": -76,
+       "RO": 64,
+       "BG": 210,
+       "MK": 227,
+       "XK": 100,
+       "ME": -55,
+       "BA": -95,
+       "HR": 17
+      },
+      "net": 392,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792490400000,
+      "iso": "2026-10-20T10:00:00.000Z",
+      "edges": {
+       "HU": -64,
+       "RO": 86,
+       "BG": 221,
+       "MK": 217,
+       "XK": 78,
+       "ME": -68,
+       "BA": -88,
+       "HR": 38
+      },
+      "net": 420,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792492200000,
+      "iso": "2026-10-20T10:30:00.000Z",
+      "edges": {
+       "HU": -50,
+       "RO": 107,
+       "BG": 229,
+       "MK": 206,
+       "XK": 57,
+       "ME": -80,
+       "BA": -79,
+       "HR": 59
+      },
+      "net": 449,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792494000000,
+      "iso": "2026-10-20T11:00:00.000Z",
+      "edges": {
+       "HU": -34,
+       "RO": 127,
+       "BG": 236,
+       "MK": 192,
+       "XK": 36,
+       "ME": -88,
+       "BA": -67,
+       "HR": 80
+      },
+      "net": 482,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792495800000,
+      "iso": "2026-10-20T11:30:00.000Z",
+      "edges": {
+       "HU": -16,
+       "RO": 147,
+       "BG": 239,
+       "MK": 176,
+       "XK": 16,
+       "ME": -95,
+       "BA": -54,
+       "HR": 101
+      },
+      "net": 514,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     },
+     {
+      "t": 1792497600000,
+      "iso": "2026-10-20T12:00:00.000Z",
+      "edges": {
+       "HU": 3,
+       "RO": 165,
+       "BG": 240,
+       "MK": 159,
+       "XK": -4,
+       "ME": -99,
+       "BA": -38,
+       "HR": 122
+      },
+      "net": 548,
+      "coverage": 8,
+      "total_borders": 8,
+      "ambiguous": []
+     }
+    ],
+    "unmapped_ids": [],
+    "conflicts": [],
+    "invalid_units": [],
+    "direction": "positive = import to Serbia, negative = export from Serbia; based on Energy-Charts published cbpf/cbet sign convention",
+    "caveat": "Physical and commercial series represent different phenomena; no inference of plant-level movement."
+   },
+   "actual_load": {
+    "points": [
+     {
+      "t": 1792413000000,
+      "iso": "2026-10-19T12:30:00.000Z",
+      "value": 3170
+     },
+     {
+      "t": 1792414800000,
+      "iso": "2026-10-19T13:00:00.000Z",
+      "value": 3185.5235679913935
+     },
+     {
+      "t": 1792416600000,
+      "iso": "2026-10-19T13:30:00.000Z",
+      "value": 3200.8556840838573
+     },
+     {
+      "t": 1792418400000,
+      "iso": "2026-10-19T14:00:00.000Z",
+      "value": 3215.807257551461
+     },
+     {
+      "t": 1792420200000,
+      "iso": "2026-10-19T14:30:00.000Z",
+      "value": 3230.1938908939696
+     },
+     {
+      "t": 1792422000000,
+      "iso": "2026-10-19T15:00:00.000Z",
+      "value": 3243.8381540080613
+     },
+     {
+      "t": 1792423800000,
+      "iso": "2026-10-19T15:30:00.000Z",
+      "value": 3256.5717724297633
+     },
+     {
+      "t": 1792425600000,
+      "iso": "2026-10-19T16:00:00.000Z",
+      "value": 3268.2377026605427
+     },
+     {
+      "t": 1792427400000,
+      "iso": "2026-10-19T16:30:00.000Z",
+      "value": 3278.6920689820927
+     },
+     {
+      "t": 1792429200000,
+      "iso": "2026-10-19T17:00:00.000Z",
+      "value": 3287.8059378731054
+     },
+     {
+      "t": 1792431000000,
+      "iso": "2026-10-19T17:30:00.000Z",
+      "value": 3295.466908144194
+     },
+     {
+      "t": 1792432800000,
+      "iso": "2026-10-19T18:00:00.000Z",
+      "value": 3301.5804971798366
+     },
+     {
+      "t": 1792434600000,
+      "iso": "2026-10-19T18:30:00.000Z",
+      "value": 3306.0713061908637
+     },
+     {
+      "t": 1792436400000,
+      "iso": "2026-10-19T19:00:00.000Z",
+      "value": 3308.8839501064353
+     },
+     {
+      "t": 1792438200000,
+      "iso": "2026-10-19T19:30:00.000Z",
+      "value": 3309.9837406371744
+     },
+     {
+      "t": 1792440000000,
+      "iso": "2026-10-19T20:00:00.000Z",
+      "value": 3309.3571140852473
+     },
+     {
+      "t": 1792441800000,
+      "iso": "2026-10-19T20:30:00.000Z",
+      "value": 3307.011798625217
+     },
+     {
+      "t": 1792443600000,
+      "iso": "2026-10-19T21:00:00.000Z",
+      "value": 3302.9767189926006
+     },
+     {
+      "t": 1792445400000,
+      "iso": "2026-10-19T21:30:00.000Z",
+      "value": 3297.3016397555953
+     },
+     {
+      "t": 1792447200000,
+      "iso": "2026-10-19T22:00:00.000Z",
+      "value": 3290.056551569515
+     },
+     {
+      "t": 1792449000000,
+      "iso": "2026-10-19T22:30:00.000Z",
+      "value": 3281.330807983227
+     },
+     {
+      "t": 1792450800000,
+      "iso": "2026-10-19T23:00:00.000Z",
+      "value": 3271.2320234433655
+     },
+     {
+      "t": 1792452600000,
+      "iso": "2026-10-19T23:30:00.000Z",
+      "value": 3259.8847460871957
+     },
+     {
+      "t": 1792454400000,
+      "iso": "2026-10-20T00:00:00.000Z",
+      "value": 3247.4289216925645
+     },
+     {
+      "t": 1792456200000,
+      "iso": "2026-10-20T00:30:00.000Z",
+      "value": 3234.018167729014
+     },
+     {
+      "t": 1792458000000,
+      "iso": "2026-10-20T01:00:00.000Z",
+      "value": 3219.817878796149
+     },
+     {
+      "t": 1792459800000,
+      "iso": "2026-10-20T01:30:00.000Z",
+      "value": 3205.003186814871
+     },
+     {
+      "t": 1792461600000,
+      "iso": "2026-10-20T02:00:00.000Z",
+      "value": 3189.7568011283815
+     },
+     {
+      "t": 1792463400000,
+      "iso": "2026-10-20T02:30:00.000Z",
+      "value": 3174.266755150978
+     },
+     {
+      "t": 1792465200000,
+      "iso": "2026-10-20T03:00:00.000Z",
+      "value": 3158.7240873551646
+     },
+     {
+      "t": 1792467000000,
+      "iso": "2026-10-20T03:30:00.000Z",
+      "value": 3143.320485197432
+     },
+     {
+      "t": 1792468800000,
+      "iso": "2026-10-20T04:00:00.000Z",
+      "value": 3128.2459210401325
+     },
+     {
+      "t": 1792470600000,
+      "iso": "2026-10-20T04:30:00.000Z",
+      "value": 3113.6863092255785
+     },
+     {
+      "t": 1792472400000,
+      "iso": "2026-10-20T05:00:00.000Z",
+      "value": 3099.8212131976316
+     },
+     {
+      "t": 1792474200000,
+      "iso": "2026-10-20T05:30:00.000Z",
+      "value": 3086.8216309488207
+     },
+     {
+      "t": 1792476000000,
+      "iso": "2026-10-20T06:00:00.000Z",
+      "value": 3074.8478861050157
+     },
+     {
+      "t": 1792477800000,
+      "iso": "2026-10-20T06:30:00.000Z",
+      "value": 3064.0476506568903
+     },
+     {
+      "t": 1792479600000,
+      "iso": "2026-10-20T07:00:00.000Z",
+      "value": 3054.5541237237817
+     },
+     {
+      "t": 1792481400000,
+      "iso": "2026-10-20T07:30:00.000Z",
+      "value": 3046.4843888112287
+     },
+     {
+      "t": 1792483200000,
+      "iso": "2026-10-20T08:00:00.000Z",
+      "value": 3039.9379698220932
+     },
+     {
+      "t": 1792485000000,
+      "iso": "2026-10-20T08:30:00.000Z",
+      "value": 3034.995603629971
+     },
+     {
+      "t": 1792486800000,
+      "iso": "2026-10-20T09:00:00.000Z",
+      "value": 3031.7182443527045
+     },
+     {
+      "t": 1792488600000,
+      "iso": "2026-10-20T09:30:00.000Z",
+      "value": 3030.14631160629
+     },
+     {
+      "t": 1792490400000,
+      "iso": "2026-10-20T10:00:00.000Z",
+      "value": 3030.299192010444
+     },
+     {
+      "t": 1792492200000,
+      "iso": "2026-10-20T10:30:00.000Z",
+      "value": 3032.175000093753
+     },
+     {
+      "t": 1792494000000,
+      "iso": "2026-10-20T11:00:00.000Z",
+      "value": 3035.750601547161
+     },
+     {
+      "t": 1792495800000,
+      "iso": "2026-10-20T11:30:00.000Z",
+      "value": 3040.9818985390048
+     },
+     {
+      "t": 1792497600000,
+      "iso": "2026-10-20T12:00:00.000Z",
+      "value": 3047.804373572824
+     }
+    ]
+   },
+   "load_forecast": {
+    "points": [
+     {
+      "t": 1792413000000,
+      "iso": "2026-10-19T12:30:00.000Z",
+      "value": 3200
+     },
+     {
+      "t": 1792414800000,
+      "iso": "2026-10-19T13:00:00.000Z",
+      "value": 3211.0882628509953
+     },
+     {
+      "t": 1792416600000,
+      "iso": "2026-10-19T13:30:00.000Z",
+      "value": 3222.0397743456124
+     },
+     {
+      "t": 1792418400000,
+      "iso": "2026-10-19T14:00:00.000Z",
+      "value": 3232.719469679615
+     },
+     {
+      "t": 1792420200000,
+      "iso": "2026-10-19T14:30:00.000Z",
+      "value": 3242.9956363528354
+     },
+     {
+      "t": 1792422000000,
+      "iso": "2026-10-19T15:00:00.000Z",
+      "value": 3252.7415385771865
+     },
+     {
+      "t": 1792423800000,
+      "iso": "2026-10-19T15:30:00.000Z",
+      "value": 3261.8369803069736
+     },
+     {
+      "t": 1792425600000,
+      "iso": "2026-10-19T16:00:00.000Z",
+      "value": 3270.1697876146736
+     },
+     {
+      "t": 1792427400000,
+      "iso": "2026-10-19T16:30:00.000Z",
+      "value": 3277.637192130066
+     },
+     {
+      "t": 1792429200000,
+      "iso": "2026-10-19T17:00:00.000Z",
+      "value": 3284.1470984807897
+     },
+     {
+      "t": 1792431000000,
+      "iso": "2026-10-19T17:30:00.000Z",
+      "value": 3289.6192201029958
+     },
+     {
+      "t": 1792432800000,
+      "iso": "2026-10-19T18:00:00.000Z",
+      "value": 3293.986069414169
+     },
+     {
+      "t": 1792434600000,
+      "iso": "2026-10-19T18:30:00.000Z",
+      "value": 3297.1937901363312
+     },
+     {
+      "t": 1792436400000,
+      "iso": "2026-10-19T19:00:00.000Z",
+      "value": 3299.2028215045966
+     },
+     {
+      "t": 1792438200000,
+      "iso": "2026-10-19T19:30:00.000Z",
+      "value": 3299.98838616941
+     },
+     {
+      "t": 1792440000000,
+      "iso": "2026-10-19T20:00:00.000Z",
+      "value": 3299.5407957751763
+     },
+     {
+      "t": 1792441800000,
+      "iso": "2026-10-19T20:30:00.000Z",
+      "value": 3297.8655704465837
+     },
+     {
+      "t": 1792443600000,
+      "iso": "2026-10-19T21:00:00.000Z",
+      "value": 3294.983370709
+     },
+     {
+      "t": 1792445400000,
+      "iso": "2026-10-19T21:30:00.000Z",
+      "value": 3290.9297426825683
+     },
+     {
+      "t": 1792447200000,
+      "iso": "2026-10-19T22:00:00.000Z",
+      "value": 3285.7546796925103
+     },
+     {
+      "t": 1792449000000,
+      "iso": "2026-10-19T22:30:00.000Z",
+      "value": 3279.522005702305
+     },
+     {
+      "t": 1792450800000,
+      "iso": "2026-10-19T23:00:00.000Z",
+      "value": 3272.3085881738325
+     },
+     {
+      "t": 1792452600000,
+      "iso": "2026-10-19T23:30:00.000Z",
+      "value": 3264.203390062283
+     },
+     {
+      "t": 1792454400000,
+      "iso": "2026-10-20T00:00:00.000Z",
+      "value": 3255.3063726375462
+     },
+     {
+      "t": 1792456200000,
+      "iso": "2026-10-20T00:30:00.000Z",
+      "value": 3245.7272626635813
+     },
+     {
+      "t": 1792458000000,
+      "iso": "2026-10-20T01:00:00.000Z",
+      "value": 3235.5841991401066
+     },
+     {
+      "t": 1792459800000,
+      "iso": "2026-10-20T01:30:00.000Z",
+      "value": 3225.0022762963363
+     },
+     {
+      "t": 1792461600000,
+      "iso": "2026-10-20T02:00:00.000Z",
+      "value": 3214.1120008059866
+     },
+     {
+      "t": 1792463400000,
+      "iso": "2026-10-20T02:30:00.000Z",
+      "value": 3203.0476822506985
+     },
+     {
+      "t": 1792465200000,
+      "iso": "2026-10-20T03:00:00.000Z",
+      "value": 3191.94577668226
+     },
+     {
+      "t": 1792467000000,
+      "iso": "2026-10-20T03:30:00.000Z",
+      "value": 3180.9432037124516
+     },
+     {
+      "t": 1792468800000,
+      "iso": "2026-10-20T04:00:00.000Z",
+      "value": 3170.175657885809
+     },
+     {
+      "t": 1792470600000,
+      "iso": "2026-10-20T04:30:00.000Z",
+      "value": 3159.7759351611276
+     },
+     {
+      "t": 1792472400000,
+      "iso": "2026-10-20T05:00:00.000Z",
+      "value": 3149.8722951411655
+     },
+     {
+      "t": 1792474200000,
+      "iso": "2026-10-20T05:30:00.000Z",
+      "value": 3140.5868792491574
+     },
+     {
+      "t": 1792476000000,
+      "iso": "2026-10-20T06:00:00.000Z",
+      "value": 3132.034204360725
+     },
+     {
+      "t": 1792477800000,
+      "iso": "2026-10-20T06:30:00.000Z",
+      "value": 3124.319750469207
+     },
+     {
+      "t": 1792479600000,
+      "iso": "2026-10-20T07:00:00.000Z",
+      "value": 3117.538659802701
+     },
+     {
+      "t": 1792481400000,
+      "iso": "2026-10-20T07:30:00.000Z",
+      "value": 3111.774563436592
+     },
+     {
+      "t": 1792483200000,
+      "iso": "2026-10-20T08:00:00.000Z",
+      "value": 3107.0985498729237
+     },
+     {
+      "t": 1792485000000,
+      "iso": "2026-10-20T08:30:00.000Z",
+      "value": 3103.568288307122
+     },
+     {
+      "t": 1792486800000,
+      "iso": "2026-10-20T09:00:00.000Z",
+      "value": 3101.2273173947888
+     },
+     {
+      "t": 1792488600000,
+      "iso": "2026-10-20T09:30:00.000Z",
+      "value": 3100.1045082902074
+     },
+     {
+      "t": 1792490400000,
+      "iso": "2026-10-20T10:00:00.000Z",
+      "value": 3100.2137085788886
+     },
+     {
+      "t": 1792492200000,
+      "iso": "2026-10-20T10:30:00.000Z",
+      "value": 3101.553571495538
+     },
+     {
+      "t": 1792494000000,
+      "iso": "2026-10-20T11:00:00.000Z",
+      "value": 3104.107572533686
+     },
+     {
+      "t": 1792495800000,
+      "iso": "2026-10-20T11:30:00.000Z",
+      "value": 3107.844213242146
+     },
+     {
+      "t": 1792497600000,
+      "iso": "2026-10-20T12:00:00.000Z",
+      "value": 3112.7174096948743
+     }
+    ]
+   },
+   "day_ahead_price": {
+    "points": []
+   }
+  },
+  "warnings": [],
+  "methodological_note": "Source-specific observed intervals; no aligned national supply-demand balance is calculated. Missing readings are not zero.",
+  "licensing": "Day-ahead price unavailable for public distribution until an appropriate license is confirmed."
+ }
+}

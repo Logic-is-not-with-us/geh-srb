@@ -9,7 +9,7 @@ const boxes=[[0,0,820,570],[46,225,420,295],[121,285,320,230],[360,302,214,180],
 const full=boxes[0],stepIdx=[1,2,3,4,5];let current=full.slice(),frame=0,focus=0,zoom=false;
 const stop=()=>{if(frame)cancelAnimationFrame(frame);frame=0};
 function changeBox(to,animate=true){stop();const start=current.slice(),target=to.slice();const reduced=motion.matches||document.body.classList.contains('bc-motion-off');if(!animate||reduced||!document.querySelector('[data-v17-panel="plant"]:not([hidden])')){current=target;svg.setAttribute('viewBox',current.join(' '));return}
-const t0=performance.now(),duration=780;function draw(time){let v=Math.min(1,(time-t0)/duration);v=1-Math.pow(1-v,3);current=start.map((n,i)=>n+(target[i]-n)*v);svg.setAttribute('viewBox',current.map(x=>x.toFixed(2)).join(' '));frame=v<1?requestAnimationFrame(draw):0}frame=requestAnimationFrame(draw)}
+const t0=performance.now(),duration=520;function draw(time){let v=Math.min(1,(time-t0)/duration);v=1-Math.pow(1-v,3);current=start.map((n,i)=>n+(target[i]-n)*v);svg.setAttribute('viewBox',current.map(x=>x.toFixed(2)).join(' '));frame=v<1?requestAnimationFrame(draw):0}frame=requestAnimationFrame(draw)}
 function setFocus(i,shouldZoom=true){focus=Math.max(0,Math.min(4,i));art.dataset.v18Focus=['gas','turbine','generator','heat','steam'][focus];zoom=shouldZoom;if(zoom)changeBox(boxes[stepIdx[focus]]);else changeBox(full)}
 function setCutaway(on){art.classList.toggle('is-cutaway',on);for(const btn of cutButtons)btn.setAttribute('aria-pressed',String(btn.dataset.v18Cutaway===String(on)))}
 cutButtons.forEach(btn=>btn.addEventListener('click',()=>setCutaway(btn.dataset.v18Cutaway==='true')));

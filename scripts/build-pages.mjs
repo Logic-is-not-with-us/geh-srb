@@ -11,7 +11,13 @@ for(const item of ['index.html','.nojekyll','assets','data','sr-lat','sr-cyr','e
   const from=path.join(root,item);const to=path.join(target,item);
   await fs.cp(from,to,{recursive:true,force:true});
 }
-const req=['sr-lat/energetski-monitor.html','assets/css/energy-v16.css','assets/js/energy-console-v15.js','assets/js/energy-v16.js',
-  'data/energy/24h.json','data/energy/7d.json','data/energy/30d.json'];
+const req=['sr-lat/energetski-monitor.html','sr-cyr/energetski-monitor.html','en/energetski-monitor.html','ru/energetski-monitor.html',
+'assets/css/energy-v19.css','assets/js/energy-app-v19.mjs','assets/js/energy-model-v18.mjs',
+'assets/video/geh-energy-film-web.mp4',
+'data/energy/24h.json','data/energy/7d.json','data/energy/30d.json'];
 for(const filename of req) await fs.access(path.join(target,filename));
-console.log('GEH V17.3 Signature Pages artifact ready: '+target);
+for(const period of ['24h','7d','30d']) {
+ const snap=JSON.parse(await fs.readFile(path.join(target,'data','energy',period+'.json'),'utf8'));
+ if(snap.v18?.schema_version!=='18.0.0')throw Error('V18 data contract missing in '+period+'; run the ingest/seed first');
+}
+console.log('GEH V19 Pages artifact ready: '+target);

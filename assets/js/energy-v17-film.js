@@ -5,7 +5,6 @@ if(!tabs.length)return;
 const panels=[...document.querySelectorAll('[data-v17-panel]')];
 const video=document.getElementById('v17-hero-video');
 const play=document.getElementById('v17-film-play');
-const sound=document.getElementById('v17-film-sound');
 const lang=document.body.dataset.intelLang;
 const labels={
 'sr-lat':{play:'Pokreni film',pause:'Pauziraj',sound:'Uključi zvuk',mute:'Isključi zvuk'},
@@ -15,7 +14,7 @@ ru:{play:'Воспроизвести фильм',pause:'Пауза',sound:'Вк�
 const motion=window.matchMedia('(prefers-reduced-motion: reduce)');
 const reduced=()=>motion.matches||document.body.classList.contains('bc-motion-off')||navigator.connection?.saveData===true;
 let current='intro';
-function paintPlayback(){if(play)play.innerHTML=(video?.paused?'▶ ':'Ⅱ ')+'<span>'+(video?.paused?labels.play:labels.pause)+'</span>';if(sound)sound.textContent=video?.muted?labels.sound:labels.mute;}
+function paintPlayback(){if(play)play.innerHTML=(video?.paused?'▶ ':'Ⅱ ')+'<span>'+(video?.paused?labels.play:labels.pause)+'</span>';}
 async function resume(){if(!video||reduced()||document.hidden||current!=='intro')return;try{await video.play()}catch{/* mobile autoplay policy; poster and explicit play remain available */}paintPlayback()}
 function switchTab(slug,opts={}){
  if(!panels.some(x=>x.dataset.v17Panel===slug))return;
@@ -24,7 +23,7 @@ function switchTab(slug,opts={}){
  for(const panel of panels)panel.hidden=panel.dataset.v17Panel!==slug;
  if(slug!=='intro')video?.pause();else void resume();
  if(!opts.noHistory){try{history.replaceState(null,'','#'+slug)}catch{}}
- if(!opts.noScroll){document.querySelector('.v17-nav')?.scrollIntoView({behavior:'instant',block:'start'})}
+ if(!opts.noScroll){window.scrollTo({top:0,behavior:'instant'})}
  window.dispatchEvent(new Event('resize'));
  paintPlayback();
 }
@@ -36,10 +35,9 @@ tabs.forEach((tab,i)=>{
 });
 document.querySelectorAll('[data-v17-open]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();switchTab(el.dataset.v17Open)}));
 // Existing data-driven links within a tab now open the correct destination panel.
-const panelByAnchor={ 'bc-top':'flow','bc-grid':'grid','bc-analysis':'analysis','bc-plant':'plant','method':'sources','overview':'flow'};
+const panelByAnchor={ 'bc-top':'flow','bc-grid':'grid','bc-analysis':'analysis','bc-plant':'plant','method':'sources','overview':'analysis'};
 document.addEventListener('click',e=>{const a=e.target.closest?.('a[href^="#"]');if(!a)return;const id=a.getAttribute('href').slice(1);if(panelByAnchor[id]&&panelByAnchor[id]!==current){switchTab(panelByAnchor[id]);}});
 play?.addEventListener('click',async()=>{if(!video)return;if(video.paused){try{await video.play()}catch{}}else video.pause();paintPlayback()});
-sound?.addEventListener('click',()=>{if(!video)return;video.muted=!video.muted;paintPlayback()});
 video?.addEventListener('play',paintPlayback);video?.addEventListener('pause',paintPlayback);
 document.addEventListener('visibilitychange',()=>{if(document.hidden)video?.pause();else if(current==='intro')void resume()});
 document.getElementById('bc-motion-toggle')?.addEventListener('click',()=>{if(reduced())video?.pause();else if(current==='intro')void resume()});

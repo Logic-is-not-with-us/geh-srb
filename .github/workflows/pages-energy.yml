@@ -1,3 +1,67 @@
+name: GEH Serbia | V23 Energy Intelligence
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # GitHub Actions scheduled runs are best-effort, not precise timers.
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: geh-pages
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Verify V23 project files
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in \
+            scripts/build-v19-site.py \
+            scripts/test-v152.mjs \
+            scripts/test-v19.mjs \
+            scripts/test-v20.mjs \
+            scripts/test-v22.mjs \
+            scripts/test-v23-gt01.mjs \
+            scripts/fetch-energy.mjs \
+            scripts/validate-v18-snapshots.mjs \
+            scripts/build-pages.mjs \
+            assets/js/te-to-gt01-pilot.mjs \
+            assets/css/te-to-gt01-pilot.css \
+            assets/img/gt01-pilot/gt01-shell.webp \
+            assets/img/gt01-pilot/gt01-exposed.webp \
+            assets/img/gt01-pilot/gt01-inner.webp; do
+            test -f "$file" || { echo "::error file=$file::V23 file missing"; exit 1; }
+          done
+
+      - name: Generate monitor pages in four languages
+        run: python3 scripts/build-v19-site.py
+
+      - name: V15.2/V19/V20/V22/V23 regression checks
+        run: |
+          set -euo pipefail
+          node scripts/test-v152.mjs
+          node scripts/test-v19.mjs
+          node scripts/test-v20.mjs
           node scripts/test-v22.mjs
           node scripts/test-v23-gt01.mjs
 

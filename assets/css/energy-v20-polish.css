@@ -1,0 +1,33 @@
+/* V20 Industrial Atlas: cinematic editorial plate, source is original generated imagery. */
+.v20-cinematic-scene{position:relative;isolation:isolate;overflow:hidden;background:#06172b;border:1px solid #41728c;aspect-ratio:3/2;box-shadow:inset 0 0 0 1px #9ed8ed18,0 32px 72px #020d1c70;margin-top:20px;margin-bottom:15px}
+.v20-cinematic-scene>img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.98) contrast(1.05);transition:filter .5s,transform .9s cubic-bezier(.2,.8,.2,1);transform:scale(1.01)}
+.v20-scene-tone{pointer-events:none;position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,18,32,.75),transparent 22%,transparent 63%,rgba(4,15,26,.92)),linear-gradient(90deg,rgba(4,16,28,.34),transparent 25%,transparent 76%,rgba(3,15,29,.2));z-index:1}
+.v20-circuit{position:absolute;inset:0;width:100%;height:100%;z-index:2;overflow:visible;pointer-events:none}
+.v20-circuit path{fill:none;stroke-width:5;opacity:.85;stroke-dasharray:14 30;filter:drop-shadow(0 0 5px currentColor);animation:v20-flow 13s linear infinite}
+.v20-circuit-heat{stroke:#fb9867}.v20-circuit-power{stroke:#75d9ff}.v20-circuit-steam{stroke:#a9e9fa}
+@keyframes v20-flow{to{stroke-dashoffset:-440}}
+.v20-scene-legend{position:absolute;z-index:3;top:18px;left:20px;right:20px;display:flex;justify-content:space-between;gap:12px;align-items:center;color:#ccefff;text-shadow:0 2px 12px #03101d;font-size:10px;letter-spacing:.13em;font-weight:800;text-transform:uppercase}
+.v20-scene-legend strong{color:#8cbfd2;font-size:9px;font-weight:700}
+.v20-scene-point{--x:50%;--y:50%;position:absolute;z-index:5;left:var(--x);top:var(--y);transform:translate(-50%,-50%);border:0;background:none;color:#fff;cursor:pointer;padding:0;display:flex;align-items:center;gap:9px;font:inherit;transition:filter .25s,transform .25s}
+.v20-point-num{width:42px;height:42px;flex:none;display:grid;place-items:center;border:1px solid #abebffb0;border-radius:50%;background:#06273fe0;backdrop-filter:blur(10px);box-shadow:0 0 0 6px #3abef418,0 0 21px #28b2ec66;color:#e6f9ff;font-size:11px;font-weight:850;letter-spacing:.05em;transition:background .2s,border-color .2s}
+.v20-point-label{border:1px solid #a4d9ee50;background:#061728e8;padding:9px 12px;white-space:nowrap;font-size:11px;font-weight:750;letter-spacing:.015em;backdrop-filter:blur(10px);box-shadow:0 10px 27px #00101d78}
+.v20-scene-point:hover .v20-point-num,.v20-scene-point:focus-visible .v20-point-num,.v20-scene-point[aria-pressed="true"] .v20-point-num{background:#1478ab;border-color:#f0fbff;box-shadow:0 0 0 8px #31c9fa39,0 0 30px #38c7fc}
+.v20-scene-point:focus-visible{outline:2px solid #a3e7ff;outline-offset:8px}
+.v20-scene-point[aria-pressed="true"] .v20-point-label{border-color:#9ee9ff;background:#104469f0}
+.v20-scene-bottom{position:absolute;z-index:3;bottom:18px;left:20px;right:20px;display:flex;justify-content:space-between;gap:20px;color:#d3edf7;text-shadow:0 3px 7px #020a11;font-size:10px;letter-spacing:.045em}
+.v20-scene-bottom span:last-child{color:#96c0d2}
+.v20-technical-detail{background:rgba(6,25,42,.62);border:1px solid #2c516a;margin-bottom:15px}
+.v20-technical-detail>summary{cursor:pointer;padding:16px 20px;color:#b5eaff;font-size:12px;font-weight:800;letter-spacing:.055em}
+.v20-technical-detail .v19-technical-desk{margin:0;border-top:1px solid #2d5671}
+.v20-cinematic-scene[data-active-stage="1"] .v20-circuit-heat,.v20-cinematic-scene[data-active-stage="2"] .v20-circuit-heat{stroke-opacity:.22}
+.v20-cinematic-scene[data-active-stage="3"] .v20-circuit-heat,.v20-cinematic-scene[data-active-stage="4"] .v20-circuit-steam{stroke-width:9}
+.ei-motion-off .v20-circuit path{animation:none!important;stroke-dasharray:none}
+@media(prefers-reduced-motion:reduce){.v20-circuit path{animation:none!important;stroke-dasharray:none}.v20-cinematic-scene>img{transition:none!important}}
+@media(max-width:780px){.v20-scene-point .v20-point-label{display:none}.v20-point-num{height:32px;width:32px;font-size:10px}.v20-scene-legend{top:10px;left:12px;right:12px;font-size:8px}.v20-scene-legend strong{font-size:7px}.v20-scene-bottom{bottom:9px;left:12px;right:12px;font-size:8px}.v20-scene-bottom span:last-child{display:none}.v20-cinematic-scene{margin-top:10px}.v20-technical-detail>summary{padding:13px;font-size:11px}}
+
+/* Stage lighting focuses a photographic region without moving interactive coordinates. */
+.v20-cinematic-scene::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;opacity:0;transition:opacity .45s;background:radial-gradient(ellipse 24% 33% at var(--focus-x,50%) var(--focus-y,50%), transparent 0%,#02122220 36%,#021222c7 100%)}
+.v20-cinematic-scene:not([data-active-stage="0"])::after{opacity:.65}
+.v20-cinematic-scene:not([data-active-stage="0"]) .v20-scene-point:not([aria-pressed="true"]){opacity:.65}
+.v20-cinematic-scene .v20-scene-point{transition:opacity .4s}
+.v20-technical-detail[open]>summary{border-bottom:1px solid #2d516a;color:#e9f9ff}

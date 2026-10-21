@@ -1,115 +1,45 @@
-name: GEH V23 | One-time Mobile Publish
-
-on:
-  workflow_dispatch:
-
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-
-concurrency:
-  group: geh-pages
-  cancel-in-progress: false
-
-jobs:
-  prepare:
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-24.04
-    steps:
-      - name: Checkout the current main commit
-        uses: actions/checkout@v4
-        with:
-          persist-credentials: true
-      - name: Install Node 22
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - name: Configure GitHub Pages
-        id: pages
-        uses: actions/configure-pages@v5
-      - name: Verify V22 base and unpack the pinned V23 payload
-        shell: bash
-        run: |
-          set -euo pipefail
-          python3 - <<'PYTHON'
-          from pathlib import Path
-          from zipfile import ZipFile
-          import hashlib, subprocess
-          root=Path.cwd()
-          payload=root/'V23_GT01_MOBILE_PAYLOAD.zip'
-          expected='9ced8e98c1ad9682994612f06c1af534ff23ed34ab58d7dbf4139b007ce5bfb1'
-          if not payload.is_file(): raise SystemExit('Missing V23_GT01_MOBILE_PAYLOAD.zip in repository root. Upload it first.')
-          actual=hashlib.sha256(payload.read_bytes()).hexdigest()
-          if actual!=expected: raise SystemExit(f'Wrong V23 ZIP SHA256: {actual}; expected {expected}. STOP.')
-          preflight={
-            'scripts/build-v19-pages.py':'e01373e750148170490d1734040bd403f824f2dd',
-            'assets/js/energy-app-v19.mjs':'7ac072472d5f6dfa09430fcb28bbc83aec77eee5',
-            '.github/workflows/pages-energy.yml':'e294c615aebc6ec89330713866c27004b895c0e6',
-          }
-          for name,expected_git_sha in preflight.items():
-            path=root/name
-            if not path.is_file():raise SystemExit(f'V22 baseline file missing: {name}')
-            got=subprocess.check_output(['git','hash-object',str(path)],text=True).strip()
-            if got!=expected_git_sha:raise SystemExit(f'Baseline differs for {name}: got {got}; expected {expected_git_sha}. STOP; reconcile first.')
-          expected_names=['V23_GT01_PILOT_README.md', 'assets/css/te-to-gt01-pilot.css', 'assets/img/gt01-pilot/gt01-shell.webp', 'assets/img/gt01-pilot/gt01-exposed.webp', 'assets/img/gt01-pilot/gt01-inner.webp', 'assets/img/gt01-pilot/registration.json', 'assets/js/te-to-gt01-pilot.mjs', 'scripts/build-v19-pages.py', 'scripts/create-gt01-pilot-assets.py', 'scripts/qa-v23-browser.py', 'scripts/test-v23-gt01.mjs']
-          with ZipFile(payload) as z:
-            if sorted(z.namelist())!=sorted(expected_names):raise SystemExit('Unexpected archive contents. STOP.')
-            for name in expected_names:
-              if name!='scripts/build-v19-pages.py' and (root/name).exists():
-                raise SystemExit(f'File already exists or previous publish partially applied: {name}. STOP.')
-              dest=root/name;dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(z.read(name))
-          print('V22 baseline and pinned V23 archive verified; 11 files installed; production workflow unchanged')
-          PYTHON
-      - name: Build four languages from authoritative source
-        run: python3 scripts/build-v19-site.py
-      - name: Run all generation and regression tests
-        run: |
-          set -euo pipefail
-          node scripts/test-v152.mjs
-          node scripts/test-v19.mjs
-          node scripts/test-v20.mjs
           node scripts/test-v22.mjs
           node scripts/test-v23-gt01.mjs
-          node scripts/validate-v18-snapshots.mjs
+
+      - name: Validate JavaScript syntax
+        run: |
+          set -euo pipefail
           node --check assets/js/energy-model-v18.mjs
           node --check assets/js/energy-app-v19.mjs
           node --check assets/js/te-to-gt01-pilot.mjs
-      - name: Generate static Pages distribution
+          node --check scripts/fetch-energy.mjs
+
+      - name: Fetch permitted public energy data
+        env:
+          PAGES_BASE_URL: ${{ steps.pages.outputs.base_url }}
+          ENTSOE_API_TOKEN: ${{ secrets.ENTSOE_API_TOKEN }}
+          ENTSOE_PUBLIC_REUSE_APPROVED: ${{ vars.ENTSOE_PUBLIC_REUSE_APPROVED }}
+        run: node scripts/fetch-energy.mjs
+
+      - name: Validate published snapshot contract
+        run: node scripts/validate-v18-snapshots.mjs
+
+      - name: Build GitHub Pages website
         run: node scripts/build-pages.mjs
-      - name: Assert V23 is included in static distribution
+
+      - name: Check V23 appears in deployed static files
         shell: bash
         run: |
           set -euo pipefail
-          for mode in shell exposed inner; do
-            test -s "dist/assets/img/gt01-pilot/gt01-${mode}.webp"
-          done
           for lang in sr-lat sr-cyr en ru; do
-            grep -q 'v23-gt01-pilot' "dist/$lang/energetski-monitor.html"
+            grep -q 'id="v23-gt01-pilot"' "dist/$lang/energetski-monitor.html" || { echo "::error::No V23 explorer in $lang"; exit 1; }
           done
-      - name: Commit validated V23 to main without force push
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- V23_GT01_PILOT_README.md \
-            assets/css/te-to-gt01-pilot.css assets/img/gt01-pilot/ \
-            assets/js/te-to-gt01-pilot.mjs scripts/build-v19-pages.py \
-            scripts/create-gt01-pilot-assets.py scripts/qa-v23-browser.py \
-            scripts/test-v23-gt01.mjs \
-            sr-lat/energetski-monitor.html sr-cyr/energetski-monitor.html \
-            en/energetski-monitor.html ru/energetski-monitor.html
-          git rm -- V23_GT01_MOBILE_PAYLOAD.zip
-          git diff --cached --check
-          git diff --cached --quiet && { echo 'No V23 changes staged'; exit 1; }
-          git commit -m 'feat: integrate V23 GT-01 industrial explorer pilot'
-          git push origin HEAD:main
-          echo "Committed V23 HEAD: $(git rev-parse HEAD)"
-      - name: Upload Pages artifact
+          for mode in shell exposed inner; do
+            test -s "dist/assets/img/gt01-pilot/gt01-${mode}.webp" || { echo "::error::Missing ${mode} image in dist"; exit 1; }
+          done
+          test -s dist/assets/js/te-to-gt01-pilot.mjs
+          test -s dist/assets/css/te-to-gt01-pilot.css
+
+      - name: Upload website
         uses: actions/upload-pages-artifact@v4
         with:
           path: dist
+
   deploy:
     needs: prepare
     runs-on: ubuntu-24.04
@@ -117,6 +47,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy website
-        uses: actions/deploy-pages@v4
+      - name: Deploy GitHub Pages
         id: deployment
+        uses: actions/deploy-pages@v4

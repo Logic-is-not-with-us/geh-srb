@@ -1,3 +1,67 @@
+name: GEH V23 | One-time Mobile Publish
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: geh-pages
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout the current main commit
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Install Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Verify V22 base and unpack the pinned V23 payload
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PYTHON'
+          from pathlib import Path
+          from zipfile import ZipFile
+          import hashlib, subprocess
+          root=Path.cwd()
+          payload=root/'V23_GT01_MOBILE_PAYLOAD.zip'
+          expected='9ced8e98c1ad9682994612f06c1af534ff23ed34ab58d7dbf4139b007ce5bfb1'
+          if not payload.is_file(): raise SystemExit('Missing V23_GT01_MOBILE_PAYLOAD.zip in repository root. Upload it first.')
+          actual=hashlib.sha256(payload.read_bytes()).hexdigest()
+          if actual!=expected: raise SystemExit(f'Wrong V23 ZIP SHA256: {actual}; expected {expected}. STOP.')
+          preflight={
+            'scripts/build-v19-pages.py':'e01373e750148170490d1734040bd403f824f2dd',
+            'assets/js/energy-app-v19.mjs':'7ac072472d5f6dfa09430fcb28bbc83aec77eee5',
+            '.github/workflows/pages-energy.yml':'e294c615aebc6ec89330713866c27004b895c0e6',
+          }
+          for name,expected_git_sha in preflight.items():
+            path=root/name
+            if not path.is_file():raise SystemExit(f'V22 baseline file missing: {name}')
+            got=subprocess.check_output(['git','hash-object',str(path)],text=True).strip()
+            if got!=expected_git_sha:raise SystemExit(f'Baseline differs for {name}: got {got}; expected {expected_git_sha}. STOP; reconcile first.')
+          expected_names=['V23_GT01_PILOT_README.md', 'assets/css/te-to-gt01-pilot.css', 'assets/img/gt01-pilot/gt01-shell.webp', 'assets/img/gt01-pilot/gt01-exposed.webp', 'assets/img/gt01-pilot/gt01-inner.webp', 'assets/img/gt01-pilot/registration.json', 'assets/js/te-to-gt01-pilot.mjs', 'scripts/build-v19-pages.py', 'scripts/create-gt01-pilot-assets.py', 'scripts/qa-v23-browser.py', 'scripts/test-v23-gt01.mjs']
+          with ZipFile(payload) as z:
+            if sorted(z.namelist())!=sorted(expected_names):raise SystemExit('Unexpected archive contents. STOP.')
+            for name in expected_names:
+              if name!='scripts/build-v19-pages.py' and (root/name).exists():
+                raise SystemExit(f'File already exists or previous publish partially applied: {name}. STOP.')
+              dest=root/name;dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(z.read(name))
+          print('V22 baseline and pinned V23 archive verified; 11 files installed; production workflow unchanged')
+          PYTHON
+      - name: Build four languages from authoritative source
         run: python3 scripts/build-v19-site.py
       - name: Run all generation and regression tests
         run: |
